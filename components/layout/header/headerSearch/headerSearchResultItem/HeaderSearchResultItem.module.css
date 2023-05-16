@@ -1,0 +1,20 @@
+.search__result-link {
+   display: flex;
+   padding: 10px 15px;
+   justify-content: space-between;
+   align-items: center;
+   transition: .15s;
+}
+
+.search__result-info {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 19px;
+}
+
+.search__result-link:hover {
+   background-color: var(--input-color);
+}

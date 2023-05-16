@@ -1,0 +1,42 @@
+.intro {
+   background-image: url('/images/homeIntroBg.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   padding: 158px 0px 292px;
+}
+
+.intro__label {
+   background: rgba(85, 53, 211, 0.75);
+   border-radius: 5px;
+   padding: 5px 10px;
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 17px;
+   display: block;
+   margin-bottom: 20px;
+   width: fit-content;
+}
+
+.intro__title {
+   max-width: 564px;
+   font-weight: 500;
+   font-size: 66px;
+   line-height: 80px;
+   width: 100%;
+   margin-bottom: 25px;
+}
+
+.intro__text {
+   font-size: 18px;
+   line-height: 24px;
+   max-width: 480px;
+   margin-bottom: 25px;
+}
+
+.intro__button {
+   padding: 15.5px 20px;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 19px;
+}

@@ -1,0 +1,27 @@
+.advantage__inner {
+   border-top: 1px solid var(--light-gray-color);
+   padding: 40px 0 150px;
+}
+
+.advantage__flex {
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+}
+
+.advantage__item {
+   display: flex;
+   gap: 40px;
+   align-items: center;
+}
+
+.advantage__item-image {
+   border-radius: 15px;
+}
+
+.advantage__item-info-title {
+   margin-bottom: 15px;
+   font-weight: 600;
+   font-size: 25px;
+   line-height: 30px;
+}

@@ -1,0 +1,91 @@
+.premium {
+   padding: 30px 25px 25px;
+   border-radius: 10px;
+   background-image: url('/images/prime-modal-bg.png');
+   background-repeat: no-repeat;
+   background-position: top center;
+}
+
+.premium__icon {
+   display: block;
+   margin-bottom: 28px;
+   margin-inline: auto;
+}
+
+.premium__title {
+   font-weight: 600;
+   font-size: 30px;
+   line-height: 30px;
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+.premium__text {
+   text-align: center;
+   margin-bottom: 30px;
+}
+
+.premium__benefits {
+   margin-bottom: 30px;
+   padding-bottom: 30px;
+   position: relative;
+}
+
+.premium__benefits-text {
+   margin-bottom: 15px;
+}
+
+.premium__benefits-list {
+   display: flex;
+   flex-direction: column;
+   gap: 22px;
+   list-style: none;
+}
+
+.premium__benefits::after {
+   content: '';
+   width: 100%;
+   height: 1px;
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: var(--light-gray-color);
+}
+
+.premium__benefits-item {
+   display: flex;
+   gap: 7px;
+}
+
+.premium__benefits-item-info {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
+.premium__benefits-item-text {
+   font-size: 14px;
+   line-height: 140%;
+}
+
+.premium__benefits-item-icon {
+   margin-top: 3px;
+}
+
+.premium__btn {
+   padding: 15.5px;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 19px;
+   letter-spacing: 0.02em;
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+.premium__subtext {
+   font-size: 12px;
+   line-height: 15px;
+   color: var(--input-color);
+   text-align: center;
+}

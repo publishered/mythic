@@ -1,0 +1,33 @@
+.stats {
+   padding: 30px 0px 150px;
+}
+
+.stats__inner {
+   display: flex;
+   justify-content: space-between;
+}
+
+.stats__item {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.stats__item-label {
+   font-weight: 500;
+   font-size: 66px;
+   line-height: 80px;
+   display: block;
+   position: relative;
+   padding-left: 20px;
+}
+
+.stats__item-label::before {
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 1px;
+   background: var(--light-gray-color);
+}

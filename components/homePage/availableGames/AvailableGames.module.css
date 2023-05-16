@@ -1,0 +1,23 @@
+.games__inner {
+   padding: 40px 0px 153px;
+   border-top: 1px solid var(--light-gray-color);
+}
+
+.games__card {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 53px;
+
+}
+
+.games__card-item-image {
+   border-radius: 10px;
+   margin-bottom: 20px;
+}
+
+.games__card-item-title {
+   font-weight: 600;
+   font-size: 25px;
+   line-height: 30px;
+   margin-bottom: 7px;
+}

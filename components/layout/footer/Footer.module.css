@@ -1,0 +1,68 @@
+.footer {
+   margin-top: 1px;
+   background: var(--purple-color);
+}
+
+.footer__top {
+   padding: 50px 0 46px;
+   background-image: url('/images/footer-logo-bg.svg');
+   background-color: var(--sidebar-bg-color);
+   background-size: 250px 250px;
+   background-repeat: no-repeat;
+   background-position: calc(100% + 50px) calc(100% + 40px);
+   border-radius: 0px 0px 15px 15px;
+}
+
+.footer__top-inner {
+   display: grid;
+   grid-template-columns: 2fr 1fr 1fr;
+   padding: 0px 78px;
+   row-gap: 21px;
+   column-gap: 40px;
+   align-items: flex-end;
+}
+
+.footer__column-title {
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 19px;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+   display: block;
+}
+
+.footer__column-list {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+.footer__column-list-info {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.footer__column-game .footer__column-title {
+   margin-bottom: 0;
+}
+ 
+.footer__column-game {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+.footer__copy {
+   display: grid;
+   grid-template-columns: 2fr 1fr 1fr;
+   padding: 20px 78px;
+   column-gap: 40px;
+}
+
+.footer__copy span {
+   font-size: 12px;
+   line-height: 15px;
+}

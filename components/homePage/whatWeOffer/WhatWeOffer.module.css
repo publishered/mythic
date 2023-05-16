@@ -1,0 +1,27 @@
+.offer__inner {
+   border-top: 1px solid var(--light-gray-color);
+   padding: 40px 0px 50px;
+}
+
+.offer__grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 51px;
+}
+
+.offer__item {
+   padding: 60px 25px;
+   border: 1px solid var(--light-gray-color);
+   border-radius: 10px;
+}
+
+.offer__item-image {
+   margin-bottom: 20px;
+}
+
+.offer__item-title {
+   margin-bottom: 20px;
+   font-weight: 600;
+   font-size: 25px;
+   line-height: 30px;
+}

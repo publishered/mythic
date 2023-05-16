@@ -1,0 +1,6 @@
+.border {
+   padding: 15.5px 20px;
+   border: 1px solid var(--light-gray-color);
+   border-radius: 10px;
+   width: fit-content;
+}

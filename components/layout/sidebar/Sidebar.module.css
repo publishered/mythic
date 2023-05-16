@@ -1,0 +1,25 @@
+.sidebar {
+   max-width: 80px;
+   width: 100%;
+   background: var(--sidebar-bg-color);
+   margin: 1px 0px 0px;
+   display: flex;
+   flex-direction: column;
+   gap: 1px;
+}
+
+.sidebar__item {
+   aspect-ratio: 1/1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--light-gray-color);
+}
+
+.sidebar__item img {
+   transition: .2s;
+}
+
+.sidebar__item:hover img {
+   transform: scale(.9);
+}
