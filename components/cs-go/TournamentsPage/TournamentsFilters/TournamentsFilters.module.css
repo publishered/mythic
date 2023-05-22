@@ -1,0 +1,11 @@
+.filters {
+   display: flex;
+   justify-content: space-between;
+   gap: 40px;
+   margin-bottom: 40px;
+}
+
+.filters__block {
+   display: flex;
+   gap: 15px;
+}

@@ -40,6 +40,7 @@ const MoreAdvantageItem = ({title, text, src}) => {
          width="638"
          height="418"
          alt={title}
+         quality={100}
       />
       <div className={styles['advantage__item-info']}>
          <h3 className={styles['advantage__item-info-title']}>{title}</h3>

@@ -1,0 +1,27 @@
+.prime__banner {
+   background-image: url('/images/prime-bg.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   padding: 60px 30px 66px;
+   border-radius: 10px;
+}
+
+.prime__banner-title {
+   max-width: 300px;
+   font-weight: 600;
+   font-size: 25px;
+   line-height: 30px;
+   margin-bottom: 30px;
+}
+
+.prime__banner-text {
+   margin-bottom: 10px;
+}
+
+.prime__banner-btn {
+   padding: 15px 20px;
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 19px;
+}

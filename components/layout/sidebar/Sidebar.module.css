@@ -16,10 +16,10 @@
    background-color: var(--light-gray-color);
 }
 
-.sidebar__item img {
+.sidebar__item img, .sidebar__item svg {
    transition: .2s;
 }
 
-.sidebar__item:hover img {
+.sidebar__item:hover img, .sidebar__item:hover svg {
    transform: scale(.9);
 }

@@ -1,0 +1,29 @@
+.notification {
+   padding: 15px;
+   width: 100%;
+   background: var(--purple-color);
+   display: flex;
+   gap: 15px;
+   align-items: center;
+   justify-content: center;
+}
+
+.notification__text {
+   font-weight: 500;
+   text-transform: uppercase;
+}
+
+.notification__button {
+   padding: 6.5px 20px;
+   border: 1px solid #FFFFFF;
+   border-radius: 10px;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 17px;
+   transition: .2s;
+}
+
+.notification__button:hover {
+   background: #fff;
+   color: var(--purple-color);
+}

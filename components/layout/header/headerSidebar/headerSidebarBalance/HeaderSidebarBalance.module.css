@@ -1,0 +1,25 @@
+.balance {
+   padding: 21px 0px 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid var(--light-gray-color);
+   margin-bottom: 20px;
+}
+
+.balance__value {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+
+.balance__button {
+   transition: .2s;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.balance__button:hover {
+   transform: scale(.9);
+}

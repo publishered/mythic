@@ -1,0 +1,81 @@
+.friends {
+   position: absolute;
+   width: 100%;
+   top: 0;
+   height: 100%;
+   transform: translateY(calc(100% - var(--offset-height)));
+   transition: .2s;
+   display: flex;
+   flex-direction: column;
+   background-color: var(--header-bg-color);
+   z-index: 2;
+}
+
+.friends.open {
+   transform: translateY(0);
+}
+
+.friends__top {
+   padding: 21px 30px 20px;
+   
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+
+   background-color: var(--sidebar-bg-color);
+}
+
+.friends__top-title {
+   font-weight: 500;
+   line-height: 19px;
+}
+
+.friends__top-arrow {
+   transition: .2s;
+}
+
+.friends.open .friends__top-arrow {
+   transform: rotate(-180deg);
+}
+
+.friends__body {
+   flex: 1 1 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: 0 55px;
+}
+
+.friends__add {
+   text-align: center;
+}
+
+.friends__add-image {
+   display: block;
+   margin: 0 auto 20px;
+}
+
+.friends__add-title {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+   margin-bottom: 10px;
+}
+
+.friends__add-text {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.friends__add-link {
+   color: var(--purple-color);
+   text-decoration-line: underline;
+   text-underline-offset: 2px;
+   transition: .15s;
+}
+
+.friends__add-link:hover {
+   color: #fff;
+}

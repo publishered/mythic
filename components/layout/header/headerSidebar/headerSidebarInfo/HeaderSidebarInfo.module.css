@@ -1,0 +1,72 @@
+.info {
+   margin-top: 10px;
+}
+
+.info__top {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   margin-bottom: 13px;
+}
+
+.info__top-nickname {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+}
+
+.info__stats {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.info__stats-tier {
+   max-width: 107px;
+   width: 100%;
+   padding: 3px 7px;
+   border: 1px solid var(--light-gray-color);
+   border-radius: 10px;
+   display: flex;
+   justify-content: space-between;
+   font-weight: 500;
+   font-size: 10px;
+   line-height: 12px;
+   text-transform: uppercase;
+   position: relative;
+   overflow: hidden;
+}
+
+.info__stats-tier::before {
+   content: '';
+   background-color: var(--light-gray-color);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 50%;
+   height: 100%;
+   z-index: -1;
+}
+
+.info__stats-other {
+   display: flex;
+   gap: 20px;
+}
+
+.info__stats-item {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.info__stats-item-text {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 19px;
+}
+
+.info__stats-item-text.info__stats-item-text--empty {
+   width: 16px;
+   display: block;
+}

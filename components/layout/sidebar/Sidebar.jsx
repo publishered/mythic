@@ -1,11 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Sidebar.module.css'
+import CsgoIcon from './icons/csgoIcon'
 
-const Sidebar = () => {
+const Sidebar = ({isCsGoPage}) => {
+
    return <aside className={styles.sidebar}>
-      <Link href="/game/csgo" className={styles.sidebar__item}>
-         <Image src="/images/icon/cs-go.svg" width="27" height="35" alt='cs:go game' />
+      <Link href="/cs-go/matchmaking" className={styles.sidebar__item}>
+         <CsgoIcon color={isCsGoPage ? 'var(--purple-color)' : 'white'}  />
       </Link>
       <Link href="/game/rust" className={styles.sidebar__item}>
          <Image src="/images/icon/rust.svg" width="40" height="40" alt='rust game' />

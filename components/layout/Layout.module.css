@@ -5,3 +5,8 @@
 .layout__content {
    flex: 1 0 auto;
 }
+
+.layout__top {
+   margin-left: 1px;
+   margin-top: 1px;
+}

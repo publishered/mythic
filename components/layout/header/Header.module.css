@@ -58,3 +58,18 @@
    background: transparent;
    color: inherit;
 }
+
+.header__left-menu {
+   display: flex;
+   list-style: none;
+   gap: 40px;
+   font-weight: 500;
+   line-height: 19px;
+}
+
+.header__left-link--prime {
+   display: flex;
+   gap: 5px;
+   color: var(--purple-color);
+   align-items: center;
+}
