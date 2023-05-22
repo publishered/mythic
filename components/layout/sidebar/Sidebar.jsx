@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Sidebar.module.css'
-import CsgoIcon from './icons/csgoIcon'
+import CsgoIcon from './icons/CsgoIcon'
 
 const Sidebar = ({isCsGoPage}) => {
 
