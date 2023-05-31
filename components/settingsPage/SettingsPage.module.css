@@ -1,0 +1,15 @@
+.settings {
+   padding: 90px 0px;
+}
+
+.settings__inner {
+   display: flex;
+   gap: 30px;
+   align-items: flex-start;
+}
+
+@media (max-width: 640px) {
+   .settings__inner {
+      flex-direction: column;
+   }
+}

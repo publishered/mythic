@@ -40,3 +40,19 @@
    font-size: 16px;
    line-height: 19px;
 }
+
+@media (max-width: 640px) {
+   .intro {
+      padding: 80px 0px 220px;
+   }
+
+   .intro__title {
+      font-size: 35px;
+      line-height: 42px;
+   }
+
+   .intro__text {
+      font-size: 16px;
+      line-height: 22px;
+   }
+}

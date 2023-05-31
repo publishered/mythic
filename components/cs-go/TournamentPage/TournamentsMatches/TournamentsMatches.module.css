@@ -46,3 +46,13 @@
    justify-content: center;
    gap: 15px;
 }
+
+@media (max-width: 640px) { 
+   .item__name span {
+      display: none;
+   }
+
+   .item {
+      gap: 10px;
+   }
+}

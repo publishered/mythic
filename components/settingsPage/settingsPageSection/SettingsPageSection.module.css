@@ -1,0 +1,23 @@
+.section {
+   flex: 1 1 auto;
+   border: 1px solid var(--light-gray-color);
+   border-radius: 10px;
+}
+
+.section__head {
+   padding: 15px 20px;
+   border-bottom: 1px solid var(--light-gray-color);
+   font-weight: 500;
+   line-height: 19px;
+   letter-spacing: 0.02em;
+}
+
+.section__inner > div:last-child {
+   border-bottom: none;
+}
+
+@media (max-width: 640px) {
+   .section {
+      width: 100%;
+   }
+}

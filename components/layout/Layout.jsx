@@ -26,10 +26,25 @@ const Layout = ({children}) => {
    const [isCsGoPage, setIsCsGoPage] = useState(pathname?.split('/')[1] === 'cs-go')
    const [isHomePage, setIsHomePage] = useState(pathname === '/')
 
+   const [isSidebarShow, setIsSidebarShow] = useState(false)
+
    useEffect(() => {
       setIsCsGoPage(pathname?.split('/')[1] === 'cs-go')
       setIsHomePage(pathname === '/' && pathname !== "/_error")
    }, [pathname])
+
+   const checkIsSidebarShow = () => {
+      if (window.innerWidth > 980) {
+         setIsSidebarShow(true)
+      } else {
+         setIsSidebarShow(false)
+      }
+   }
+
+   useEffect(() => {
+      checkIsSidebarShow()
+      window.addEventListener('resize', checkIsSidebarShow)
+   }, [])
 
    return <>
    <Header 
@@ -37,7 +52,7 @@ const Layout = ({children}) => {
       setIsSignInOpen={setIsSignInOpen} 
    />
    <main className={styles.layout__main}>
-      <Sidebar isCsGoPage={isCsGoPage} />
+      {isSidebarShow ? <Sidebar isCsGoPage={isCsGoPage} /> : ''}
       <div className={styles.layout__content}>
          <div className={styles.layout__top}>
             {isCsGoPage ? <HeaderCsGoMenu /> : ''}

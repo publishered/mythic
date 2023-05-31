@@ -8,9 +8,15 @@
    justify-content: center;
 }
 
+.notification__info {
+   display: flex;
+   gap: 15px;
+}
+
 .notification__text {
    font-weight: 500;
    text-transform: uppercase;
+   text-align: center;
 }
 
 .notification__button {
@@ -26,4 +32,14 @@
 .notification__button:hover {
    background: #fff;
    color: var(--purple-color);
+}
+
+@media (max-width: 640px) {
+   .notification {
+      flex-wrap: wrap;
+   }
+
+   .notification__button {
+      width: fit-content;
+   }
 }

@@ -1,0 +1,23 @@
+.link {
+   padding: 11px 17px 10px;
+   font-weight: 500;
+   line-height: 19px;
+   letter-spacing: 0.02em;
+   position: relative;
+   display: block;
+}
+
+.link::before {
+   content: '';
+   position: absolute;
+   left: -1px;
+   top: 0;
+   height: 100%;
+   width: 2px;
+   background-color: transparent;
+   
+}
+
+.link.active::before {
+   background-color: var(--purple-color);
+}

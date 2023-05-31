@@ -21,3 +21,13 @@
    font-size: 16px;
    line-height: 19px;
 }
+
+@media (max-width: 640px) {
+   .title-section {
+      padding: 30px 11px;
+   }
+   .title-section__title {
+      font-size: 16px;
+      line-height: 19px;
+   }
+}

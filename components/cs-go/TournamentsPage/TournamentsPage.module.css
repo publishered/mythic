@@ -27,3 +27,9 @@
 .tournaments__loadMore:hover {
    background: var(--purple-color);
 }
+
+@media (max-width: 1310px) {
+   .tournaments__date {
+      margin-bottom: 20px;
+   }
+}

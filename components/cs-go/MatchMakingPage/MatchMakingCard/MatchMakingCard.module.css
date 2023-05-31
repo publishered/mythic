@@ -58,3 +58,20 @@
    padding: 17.5px;
    width: 100%;
 }
+
+@media (max-width: 640px) {
+   .card__title {
+      font-size: 20px;
+      line-height: 24px;
+   }
+   
+   .card__maps {
+      font-size: 12px;
+      line-height: 15px;
+   }
+
+   .card__btn {
+      font-size: 9.13706px;
+      line-height: 11px;
+   }
+}

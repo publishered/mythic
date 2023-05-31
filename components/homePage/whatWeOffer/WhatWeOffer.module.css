@@ -25,3 +25,21 @@
    font-size: 25px;
    line-height: 30px;
 }
+
+@media (max-width: 1410px) {
+   .offer__grid {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+@media (max-width: 640px) {
+
+   .offer {
+      padding-bottom: 100px;
+   }
+   
+   .offer__grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+   }
+}

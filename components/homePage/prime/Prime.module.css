@@ -1,3 +1,9 @@
 .prime {
    margin-bottom: 150px;
 }
+
+@media (max-width: 640px) {
+   .prime {
+      display: none;
+   }
+}

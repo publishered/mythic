@@ -7,7 +7,6 @@
    display: grid;
    grid-template-columns: repeat(4, 1fr);
    gap: 53px;
-
 }
 
 .games__card-item-image {
@@ -20,4 +19,34 @@
    font-size: 25px;
    line-height: 30px;
    margin-bottom: 7px;
+}
+
+@media (max-width: 1410px) {
+   .games__card {
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+   }
+}
+
+@media (max-width: 640px) {
+
+   .games__card {
+      column-gap: 10px;
+      row-gap: 40px;
+   }
+
+   .games__card-item-image {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+   }
+
+   .games__card-item-title {
+      font-size: 16px;
+      line-height: 22px;
+   }
+
+   .games__card-item-text {
+      display: none;
+   }
 }

@@ -21,7 +21,7 @@ const TournamentsMatches = () => {
 const TournamentsMatchesItem = () => {
    return <div className={styles.item}>
       <div className={styles.item__left}>
-         <h3 className={styles.item__name}>Hidden information</h3>
+         <h3 className={styles.item__name}>Hidden <span>information</span></h3>
          <Image 
             src="/images/icon/hidden-img.svg"
             className={styles.item__img}
@@ -39,7 +39,7 @@ const TournamentsMatchesItem = () => {
             height="50"
             alt=''
          />
-         <h3 className={styles.item__name}>Hidden information</h3>
+         <h3 className={styles.item__name}>Hidden <span>information</span></h3>
       </div>
    </div>
 }

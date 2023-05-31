@@ -11,7 +11,7 @@ const ReadyTry = () => {
    return <section className={styles.ready}>
       <Container>
          <div className={styles.ready__info}>
-            <h2 className={styles['ready__info-title']}>TO TRY MYTHIC ESPORTS?</h2>
+            <h2 className={styles['ready__info-title']}>READY TO TRY MYTHIC ESPORTS?</h2>
             <p className={styles['ready__info-text']}>Compete with over 50.000 players now!</p>
             <DefaultButton 
                className={styles['ready__info-button']}

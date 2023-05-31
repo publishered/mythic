@@ -40,3 +40,11 @@
    height: 100%;
    backdrop-filter: blur(7.5px);
 }
+
+@media (max-width: 640px) {
+   .team__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+   }
+}

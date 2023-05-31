@@ -1,0 +1,8 @@
+.msg {
+   padding: 25px;
+   text-align: center;
+   font-weight: 500;
+   line-height: 19px;
+   letter-spacing: 0.02em;
+   color: var(--light-gray-color);
+}

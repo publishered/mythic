@@ -3,17 +3,14 @@
    background: var(--purple-color);
    border-radius: 10px;
    letter-spacing: 0.02em;
-
    font-weight: 600;
    font-size: 12px;
    line-height: 15px;
-   border: 2px solid var(--purple-color);
    transition: .15s;
 }
 
 .button:hover {
-   background: transparent;
-   color: var(--purple-color);
+   background: #5A37E1;
 }
 
 .button:disabled {

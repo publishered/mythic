@@ -1,0 +1,127 @@
+.item {
+   display: flex;
+   padding: 25px 20px;
+   gap: 15px;
+   border-bottom: 1px solid var(--light-gray-color);
+}
+
+.item__title-wrapper {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   max-width: 335px;
+   width: 100%;
+}
+
+.item__title {
+   font-weight: 500;
+   line-height: 19px;
+   letter-spacing: 0.02em;
+}
+
+.item__title-prime {
+   display: flex;
+   gap: 4px;
+   align-items: center;
+   color: var(--purple-color);
+   font-weight: 500;
+   line-height: 19px;
+}
+
+.item__value {
+   display: flex;
+   align-items: center;
+}
+
+.item__value-form {
+   display: flex;
+   align-items: center;
+}
+
+.item__value-input {
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 19px;
+   letter-spacing: 0.02em;
+   margin: 0;
+   padding: 0;
+}
+
+.item__value-input::placeholder {
+   color: var(--light-gray-color);
+}
+
+.item__value-form-hide-width {
+   display: block;
+   opacity: 0;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 19px;
+   letter-spacing: 0.02em;
+   pointer-events: none;
+   position: absolute;
+   width: fit-content;
+   max-width: 200px;
+}
+
+.item__value-form-label {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   cursor: pointer;
+}
+
+.item__file-label {
+   font-weight: 500;
+   line-height: 19px;
+   letter-spacing: 0.02em;
+   text-decoration-line: underline;
+   text-underline-offset: 2px;
+   cursor: pointer;
+}
+
+.item__value-form-input-wrapper {
+   display: flex;
+   align-items: center;
+}
+
+.item__value-form-pre-placeholder {
+   display: block;
+   width: fit-content;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 19px;
+   letter-spacing: 0.02em;
+   color: var(--light-gray-color);
+}
+
+.item__checkbox {
+   position: relative;
+   background: var(--light-gray-color);
+   border-radius: 10px;
+   width: 25px;
+   height: 10px;
+}
+
+.item__checkbox-circle {
+   width: 16px;
+   height: 16px;
+   border-radius: 50%;
+   background: var(--purple-color);
+   position: absolute;
+   left: -4px;
+   top: 50%;
+   transform: translateY(-50%);
+   transition: .2s;
+}
+
+.item__checkbox.checked .item__checkbox-circle {
+   left: 100%;
+   transform: translateY(-50%) translateX(calc(-100% + 4px));
+}
+
+@media (max-width: 1080px) {
+   .item {
+      flex-direction: column;
+   }
+}

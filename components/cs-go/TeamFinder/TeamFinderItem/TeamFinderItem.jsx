@@ -1,4 +1,5 @@
 import DefaultButton from '@/components/UI/defaultButton/DefaultButton'
+import GrayButton from '@/components/UI/grayButton/GrayButton'
 import Image from 'next/image'
 import styles from './TeamFinderItem.module.css'
 
@@ -34,9 +35,9 @@ const TeamFinderItem = () => {
             </div>
          </div>
          <div className={styles['item__top-btn']}>
-            <button className={styles['item__top-show-more']}>
+            <GrayButton className={styles['item__top-show-more']}>
                show more
-            </button>
+            </GrayButton>
             <DefaultButton className={styles['item__top-show-invite']}>
                invite to team
             </DefaultButton>
@@ -113,6 +114,14 @@ const TeamFinderItem = () => {
                <span style={{width: '25%'}}></span>
             </div>
          </div>
+      </div>
+      <div className={styles['item__top-mob-btn']}>
+         <GrayButton className={styles['item__top-show-more']}>
+            show more
+         </GrayButton>
+         <DefaultButton className={styles['item__top-show-invite']}>
+            invite to team
+         </DefaultButton>
       </div>
    </div>
 }

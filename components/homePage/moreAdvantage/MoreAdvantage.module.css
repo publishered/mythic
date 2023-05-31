@@ -25,3 +25,38 @@
    font-size: 25px;
    line-height: 30px;
 }
+
+@media (max-width: 1410px) {
+   .advantage__item-image {
+      max-width: 500px;
+      height: auto;
+   }
+}
+
+@media (max-width: 940px) {
+   .advantage__item-image {
+      max-width: 400px;
+   }
+}
+
+@media (max-width: 730px) {
+   .advantage__item-image {
+      max-width: 300px;
+   }
+}
+
+@media (max-width: 640px) {
+   .advantage__item-image {
+      max-width: 100%;
+      width: 100%;
+   }
+
+   .advantage__item {
+      flex-direction: column;
+   }
+
+   .advantage__item-info-title {
+      font-size: 16px;
+      line-height: 19px;
+   }
+}

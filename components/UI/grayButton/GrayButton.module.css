@@ -1,0 +1,14 @@
+.button {
+   display: block;
+   background: var(--light-gray-color);
+   border-radius: 10px;
+   letter-spacing: 0.02em;
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 15px;
+   transition: .15s;
+}
+
+.button:hover {
+   background: #35353B;
+}

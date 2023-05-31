@@ -11,9 +11,18 @@
    z-index: 2;
 }
 
+.friends.mobile {
+   pointer-events: all;
+}
+
 .friends.open {
    transform: translateY(0);
 }
+
+.friends.open.mobile {
+   transform: translateY(61px);
+}
+
 
 .friends__top {
    padding: 21px 30px 20px;

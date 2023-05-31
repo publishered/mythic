@@ -1,0 +1,233 @@
+.info {
+   border: 1px solid var(--light-gray-color);
+   border-radius: 10px;
+   margin-bottom: 20px;
+}
+
+.info__top {
+   display: flex;
+   gap: 20px;
+   width: 100%;
+   padding: 20px 0px 25px 20px;
+   border-bottom: 1px solid var(--light-gray-color);
+}
+
+.info__top-content {
+   flex: 1 1 auto;
+   padding: 13px 30px 13px 0px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   position: relative;
+}
+
+.info__top-content::after {
+   content: '';
+   width: 100%;
+   height: 1px;
+   position: absolute;
+   border-bottom: 1px solid var(--light-gray-color);
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 2;
+}
+
+.info__top-content-top {
+   display: flex;
+   justify-content: space-between;
+}
+
+.info__top-content-top-nickname-wrapper {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+
+.info__top-content-top-nickname {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+}
+
+.info__top-content-top-stats {
+   display: flex;
+   gap: 40px;
+   align-items: center;
+}
+
+.info__top-content-top-stats-item {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+
+.info__top-content-top-stats-item-title-wrapper {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+
+.info__top-content-top-stats-item-title {
+   font-weight: 500;
+   line-height: 19px;
+   color: var(--input-color);
+}
+
+.info__top-content-top-stats-item-title-value {
+   font-weight: 500;
+   line-height: 19px;
+}
+
+.info__top-content-top-stats-status {
+   font-weight: 500;
+   line-height: 19px;
+   color: var(--purple-color);
+}
+
+.info__top-content-bottom-inner {
+   display: flex;
+   gap: 40px;
+}
+
+.info__top-content-bottom-item-title {
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 15px;
+   color: var(--input-color);
+}
+
+.info__top-content-bottom-item-value {
+   font-weight: 500;
+   line-height: 19px;
+}
+
+.info__bottom {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.info__bottom-left {
+   padding: 20px;
+   display: flex;
+   gap: 40px;
+}
+
+.info__bottom-left-connect-steam, .info__bottom-left-settings {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   font-weight: 500;
+   line-height: 19px;
+   letter-spacing: 0.02em;
+}
+
+.info__bottom-left-settings {
+   color: var(--input-color);
+}
+
+.info__bottom-tabs {
+   display: flex;
+   gap: 40px;
+   padding: 0 30px;
+}
+
+.info__top-content-top-stats-mob {
+   display: none;
+}
+
+@media (max-width: 1100px) {
+   .info__top-content-top-stats-mob {
+      display: block;
+   }
+
+   .info__top-content-top-stats .info__top-content-top-stats-item {
+      display: none;
+   }
+
+   .info__top-content {
+      justify-content: space-between;
+   }
+
+   .info__bottom {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .info__top-content-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   .info__top-content-top-stats-mob {
+      display: flex;
+      gap: 20px;
+   }
+
+   .info__top-content::after {
+      display: none;
+   }
+   
+   .info__top-content {
+      padding-right: 20px;
+   }
+}
+
+@media (max-width: 770px) {
+   .info__top-content-top-stats-mob {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 10px;
+   }
+
+   .info__top-content, .info__top-content-bottom {
+      gap: 30px;
+   }
+
+   .info__top-content {
+      padding-top: 0;
+      margin-bottom: 0;
+   }
+
+   .info__top-img {
+      max-width: 75px;
+      height: 100%;
+   }
+}
+
+@media (max-width: 590px) {
+   .info__top-content-top-stats-mob {
+      grid-template-columns: 1fr;
+   }
+
+   .info__bottom-tabs {
+      overflow-x: auto;
+      max-width: calc(100vw - 40px);
+      padding-bottom: 5px;
+   }
+
+   .info__bottom-tabs::-webkit-scrollbar {
+      height: 5px;
+   }
+}
+
+@media (max-width: 450px) {
+   .info__bottom-left {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+   }
+
+   .info__top-content-top {
+      gap: 10px;
+      flex-direction: column-reverse;
+   }
+}
+
+@media (max-width: 390px) { 
+   .info__top-content-bottom-inner {
+      flex-direction: column;
+      row-gap: 10px;
+   }
+}

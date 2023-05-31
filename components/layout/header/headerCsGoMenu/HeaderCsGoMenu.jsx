@@ -18,10 +18,11 @@ const HeaderCsGoMenu = () => {
 
 const HeaderCsGoMenuItem = ({children, href, pathname}) => {
 
-   return <li className={styles.menu__item}>
+   return <li 
+   className={`${styles.menu__item} 
+   ${(href === '/cs-go/tournaments' && pathname.includes('/cs-go/tournament')) || pathname === href ? styles.active : ''}`}>
    <Link 
-      className={`${styles.menu__link} 
-      ${(href === '/cs-go/tournaments' && pathname.includes('/cs-go/tournament')) || pathname === href ? styles.active : ''}`} 
+      className={styles.menu__link} 
       href={href}
    >
       {children}

@@ -9,3 +9,20 @@
    display: flex;
    gap: 15px;
 }
+
+@media (max-width: 700px) {
+   .filters {
+      gap: 45px;
+      flex-direction: column;
+      margin-bottom: 60px;
+   }
+
+   .filters__block:first-child {
+      overflow-x: auto;
+      width: calc(100vw - 26px);
+   }
+
+   .filters__block:first-child::-webkit-scrollbar {
+      display: none;
+   }
+}

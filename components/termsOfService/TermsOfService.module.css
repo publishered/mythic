@@ -1,0 +1,40 @@
+.terms {
+   font-size: 16px;
+   line-height: 26px;
+}
+
+.terms__inner {
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+}
+
+.terms__section {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.terms__title {
+   font-weight: 500;
+   font-size: 25px;
+   line-height: 30px;
+}
+
+.terms__section-content {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.terms__section-content-item {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.terms__section-content-item-title {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 26px;
+}

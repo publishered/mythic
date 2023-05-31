@@ -31,3 +31,25 @@
    width: 1px;
    background: var(--light-gray-color);
 }
+
+@media (max-width: 910px) {
+   .stats {
+      padding: 10px 0px 100px;
+   }
+   .stats__inner {
+      flex-direction: column;
+      gap: 30px;
+   }
+}
+
+@media (max-width: 640px) {
+   .stats__item-label {
+      font-size: 35px;
+      line-height: 42px;
+   }
+
+   .stats__item-text {
+      font-size: 16px;
+      line-height: 24px;
+   }
+}

@@ -1,20 +1,53 @@
 import DefaultButton from '@/components/UI/defaultButton/DefaultButton'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useEffect, useRef, useState } from 'react'
 import styles from './Header.module.css'
 import AuthorizatedButton from './authorizatedButton/AuthorizatedButton'
+import HeaderMob from './headerMob/HeaderMob'
 import HeaderSidebar from './headerSidebar/HeaderSidebar'
 
 const Header = ({setIsSignUpOpen, setIsSignInOpen}) => {
 
    const headerRef = useRef()
    const [headerHeight, setHeaderHeight] = useState(0)
+   const [offsetForSidebar, setOffsetForSidebar] = useState(0)
    const [isOpenSidebar, setIsOpenSidebar] = useState(0)
+   const [isOpenMobHeader, setIsOpenMobHeader] = useState(false)
+
+   const getScrollToTop = () => {
+      setOffsetForSidebar(window.scrollY)
+   }
+
+   useEffect(() => {
+      window.addEventListener('scroll', getScrollToTop)
+
+      return () => window.removeEventListener('scroll', getScrollToTop)
+   }, [])
 
    useEffect(() => {
       setHeaderHeight(headerRef?.current?.offsetHeight)
    }, [headerRef])
+
+   const router = useRouter();
+
+   useEffect(() => {
+      if (isOpenMobHeader) {
+         document.documentElement.style.overflowY = 'auto'
+         setIsOpenMobHeader(!isOpenMobHeader);
+      }
+   }, [router.asPath]);
+
+   const toggleMobHeaderHandler = (value) => {
+      if (value) {
+         document.documentElement.style.overflowY = 'hidden'
+         window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+         document.documentElement.style.overflowY = 'auto'
+      }
+      setIsOpenMobHeader(value)
+   }
 
    return <header className={styles.header} ref={headerRef}> 
       <div className={styles.header__inner}>
@@ -68,11 +101,17 @@ const Header = ({setIsSignUpOpen, setIsSignInOpen}) => {
                </> :
                <>
                   <AuthorizatedButton setIsOpenSidebar={setIsOpenSidebar} />
-                  <HeaderSidebar headerHeight={headerHeight} isOpenSidebar={isOpenSidebar} />
+                  <HeaderSidebar offsetForSidebar={offsetForSidebar} headerHeight={headerHeight} isOpenSidebar={isOpenSidebar} />
                </>
             }
          </div>
+         <button className={styles['header__mob-btn']} onClick={() => toggleMobHeaderHandler(!isOpenMobHeader)}>
+            <span></span>
+            <span></span>
+            <span></span>
+         </button>
       </div>
+      <HeaderMob isOpenMobHeader={isOpenMobHeader} />
    </header>
 }
 

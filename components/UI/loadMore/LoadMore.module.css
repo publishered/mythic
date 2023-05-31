@@ -1,0 +1,12 @@
+.load__more {
+   padding: 17.5px 50px;
+   border-radius: 10px;
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 15px;
+   letter-spacing: 0.02em;
+   text-transform: uppercase;
+   margin: 0 auto;
+   display: block;
+   width: fit-content;
+}

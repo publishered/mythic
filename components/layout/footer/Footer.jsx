@@ -15,20 +15,20 @@ const Footer = () => {
                />
             </Link>
             <div className={styles['footer__column']}>
-               <Link href="/game/csgo" className={styles['footer__column-title']}>CS:GO</Link>
+               <Link href="/game/cs-go" className={styles['footer__column-title']}>CS:GO</Link>
                <ul className={styles['footer__column-list']}>
                   <li className={styles['footer__column-item']}>
-                     <Link href="/csgo/matchmaking" className={styles['footer__column-item']}>
+                     <Link href="/cs-go/matchmaking" className={styles['footer__column-item']}>
                         Matchmaking
                      </Link>
                   </li>
                   <li className={styles['footer__column-item']}>
-                     <Link href="/csgo/tournaments" className={styles['footer__column-item']}>
+                     <Link href="/cs-go/tournaments" className={styles['footer__column-item']}>
                         Tournaments
                      </Link>
                   </li>
                   <li className={styles['footer__column-item']}>
-                     <Link href="/csgo/team-finder" className={styles['footer__column-item']}>
+                     <Link href="/cs-go/team-finder" className={styles['footer__column-item']}>
                         Team finder
                      </Link>
                   </li>

@@ -1,0 +1,18 @@
+.button {
+   display: block;
+   background: transparent;
+   border: 1px solid var(--light-gray-color);
+   border-radius: 10px;
+   border-radius: 10px;
+   letter-spacing: 0.02em;
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 15px;
+   transition: .15s;
+}
+
+.button:hover {
+   background: transparent;
+   background: #35353B;
+   border-color: 1px solid #35353B;
+}

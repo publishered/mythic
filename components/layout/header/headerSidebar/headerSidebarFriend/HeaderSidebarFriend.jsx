@@ -3,9 +3,8 @@ import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import styles from './HeaderSidebarFriend.module.css'
 
-const HeaderSidebarFriend = () => {
+const HeaderSidebarFriend = ({mobile, isOpen, setIsOpen}) => {
 
-   const [isOpen, setIsOpen] = useState(false)
    const [friendsTopHeight, setFriendsTopHeight] = useState(false)
    const friendsTopRef = useRef()
 
@@ -14,7 +13,7 @@ const HeaderSidebarFriend = () => {
    }, [friendsTopRef])
 
    return <div 
-         className={`${styles.friends} ${isOpen ? styles.open : ''}`}
+         className={`${styles.friends} ${isOpen ? styles.open : ''} ${mobile ? styles.mobile : ''}`}
          style={{'--offset-height': `${friendsTopHeight}px`}}
       >
       <button 
@@ -43,7 +42,7 @@ const HeaderSidebarFriend = () => {
             <h2 className={styles['friends__add-title']}>You have no friends.</h2>
             <p className={styles['friends__add-text']}>You can add players as friends directly from their profiles.</p>
             <span className={styles['friends__add-search']}>
-               Search by <Link className={styles['friends__add-link']} href="/profile/friends">nickname</Link>
+               Search by <Link className={styles['friends__add-link']} href="/players-list">nickname</Link>
             </span>
          </div>
       </div>
