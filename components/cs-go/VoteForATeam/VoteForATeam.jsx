@@ -1,4 +1,4 @@
-import LoadMore from '@/components/UI/loadMore/Loadmore'
+import LoadMore from '@/components/UI/loadMore/LoadMore'
 import styles from './VoteForATeam.module.css'
 import VoteForATeamItem from './VoteForATeamItem/VoteForATeamItem'
 const VoteForATeam = () => {
