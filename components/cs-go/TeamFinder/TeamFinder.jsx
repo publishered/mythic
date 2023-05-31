@@ -1,5 +1,5 @@
 import DefaultSection from '@/components/UI/defaultSection/DefaultSection'
-import LoadMore from '@/components/UI/loadMore/Loadmore'
+import LoadMore from '@/components/UI/loadMore/LoadMore'
 import styles from './TeamFinder.module.css'
 import TeamFinderItem from './TeamFinderItem/TeamFinderItem'
 
