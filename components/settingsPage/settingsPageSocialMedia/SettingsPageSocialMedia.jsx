@@ -3,10 +3,10 @@ import SettingsPagesSettingItem from '../settingsPagesSettingItem/SettingsPagesS
 
 const SettingsPageSocialMedia = () => {
    return <SettingsPageSection title="Social media">
-      <SettingsPagesSettingItem title="Twitch" type="locked" />
-      <SettingsPagesSettingItem title="Shit" type="locked" />
-      <SettingsPagesSettingItem title="Shit" type="locked" />
-      <SettingsPagesSettingItem title="Shit" type="locked" />
+      <SettingsPagesSettingItem title="Twitch" placeholder="Add account" type="locked" />
+      <SettingsPagesSettingItem title="Facebook" placeholder="Add account" type="locked" />
+      <SettingsPagesSettingItem title="Twitter" placeholder="Add account" type="locked" />
+      <SettingsPagesSettingItem title="Google" placeholder="Add account" type="locked" />
    </SettingsPageSection>
 }
 

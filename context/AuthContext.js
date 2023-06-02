@@ -1,7 +1,10 @@
 import React from 'react'
 
-const ModalFunction = React.createContext({
-   isLogin: null,
+const AuthContext = React.createContext({
+   isLogin: false,
+   isConnected: false,
+   setIsLogin: () => {},
+   setIsConnected: () => {},
 })
 
-export default ModalFunction
+export default AuthContext

@@ -4,7 +4,7 @@ import Sidebar from '../../sidebar/Sidebar'
 import HeaderSidebar from '../headerSidebar/HeaderSidebar'
 import styles from './HeaderMob.module.css'
 
-const HeaderMob = ({isOpenMobHeader}) => {
+const HeaderMob = ({isOpenMobHeader, setIsPrimeOpen}) => {
    return <div className={`${styles.header} ${isOpenMobHeader ? styles.open : ''}`}>
       <Sidebar />
       <div className={styles.header__inner}>
@@ -16,10 +16,10 @@ const HeaderMob = ({isOpenMobHeader}) => {
                <Link href="/help" className={styles.header__link}>Help</Link>
             </li>
             <li className={styles.header__item}>
-               <Link href="/anticheat" className={styles.header__link}>Anticheat</Link>
+               <Link href="https://easy.ac/" className={styles.header__link}>Anticheat</Link>
             </li>
             <li className={styles.header__item}>
-               <Link href="/anticheat" className={`${styles.header__link} ${styles.header__premium}`}>
+               <button onClick={() => setIsPrimeOpen(true)} className={`${styles.header__link} ${styles.header__premium}`}>
                   <Image 
                      height="16"
                      width="16"
@@ -27,7 +27,7 @@ const HeaderMob = ({isOpenMobHeader}) => {
                      alt='premium'
                   />
                   Premium
-               </Link>
+               </button>
             </li>
          </ul>
          <HeaderSidebar headerHeight={120} isOpenSidebar={true} mobile={true} />

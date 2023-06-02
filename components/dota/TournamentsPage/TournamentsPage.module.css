@@ -1,0 +1,35 @@
+.tournaments__title {
+   margin-bottom: 30px;
+}
+
+.tournaments__date {
+   margin-bottom: 62px;
+   font-weight: 500;
+   font-size: 25px;
+   line-height: 30px;
+}
+
+.tournaments__loadMore {
+   padding: 17.5px 50px;
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 15px;
+   letter-spacing: 0.02em;
+   text-transform: uppercase;
+   border: 1px solid var(--light-gray-color);
+   border-radius: 10px;
+   margin: 0 auto;
+   display: block;
+   width: fit-content;
+   transition: .2s;
+}
+
+.tournaments__loadMore:hover {
+   background: var(--purple-color);
+}
+
+@media (max-width: 1310px) {
+   .tournaments__date {
+      margin-bottom: 20px;
+   }
+}

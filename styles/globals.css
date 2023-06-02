@@ -135,6 +135,10 @@ input, select {
    --purple-color: #694DD8;
 }
 
+html, body, #__next {
+   height: 100%;
+}
+
 body {
    background-color: var(--bg-color);
    background-color: var(--bg-color);

@@ -10,6 +10,9 @@ import Footer from './footer/Footer'
 import Header from './header/Header'
 import ConnectSteamNotification from './header/connectSteamNotification/ConnectSteamNotification'
 import HeaderCsGoMenu from './header/headerCsGoMenu/HeaderCsGoMenu'
+import HeaderDotaMenu from './header/headerDotaMenu/HeaderDotaMenu'
+import HeaderRustMenu from './header/headerRustMenu/HeaderRustMenu'
+import HeaderTeamFortressMenu from './header/headerTeamFortressMenu/HeaderTeamFortressMenu'
 import Sidebar from './sidebar/Sidebar'
 
 const Layout = ({children}) => {
@@ -23,13 +26,13 @@ const Layout = ({children}) => {
    const [isPrimeOpen, setIsPrimeOpen] = useState(false)
    const [isConnectSteamOpen, setIsConnectSteamOpen] = useState(false)
 
-   const [isCsGoPage, setIsCsGoPage] = useState(pathname?.split('/')[1] === 'cs-go')
+   const [gamePage, setGamePage] = useState(pathname?.split('/')[1])
    const [isHomePage, setIsHomePage] = useState(pathname === '/')
 
    const [isSidebarShow, setIsSidebarShow] = useState(false)
 
    useEffect(() => {
-      setIsCsGoPage(pathname?.split('/')[1] === 'cs-go')
+      setGamePage(pathname?.split('/')[1])
       setIsHomePage(pathname === '/' && pathname !== "/_error")
    }, [pathname])
 
@@ -46,17 +49,22 @@ const Layout = ({children}) => {
       window.addEventListener('resize', checkIsSidebarShow)
    }, [])
 
-   return <>
+   return <div className={styles.layout}>
    <Header 
       setIsSignUpOpen={setIsSignUpOpen}
       setIsSignInOpen={setIsSignInOpen} 
+      setIsPrimeOpen={setIsPrimeOpen}
    />
    <main className={styles.layout__main}>
-      {isSidebarShow ? <Sidebar isCsGoPage={isCsGoPage} /> : ''}
+      {isSidebarShow ? <Sidebar gamePage={gamePage} /> : ''}
       <div className={styles.layout__content}>
          <div className={styles.layout__top}>
-            {isCsGoPage ? <HeaderCsGoMenu /> : ''}
-            {!isHomePage ? <ConnectSteamNotification setIsConnectSteamOpen={setIsConnectSteamOpen} /> : ''}
+            {gamePage === 'cs-go' ? <HeaderCsGoMenu /> : ''}
+            {gamePage === 'rust' ? <HeaderRustMenu /> : ''}
+            {gamePage === 'dota' ? <HeaderDotaMenu /> : ''}
+            {gamePage === 'team-fortress' ? <HeaderTeamFortressMenu /> : ''}
+            {/* {!isHomePage ? <ConnectSteamNotification setIsConnectSteamOpen={setIsConnectSteamOpen} /> : ''} */}
+            <ConnectSteamNotification setIsConnectSteamOpen={setIsConnectSteamOpen} />
          </div>
          <ModalFunction.Provider value={{
             setIsSignUpOpen,
@@ -87,7 +95,7 @@ const Layout = ({children}) => {
       setIsConnectSteamOpen={setIsConnectSteamOpen}
    />
    <Footer />
-   </>
+   </div>
 }
 
 export default Layout

@@ -1,0 +1,9 @@
+.prime {
+   margin-bottom: 60px;
+}
+
+@media (max-width: 640px) {
+   .prime {
+      background-position: left center;
+   }
+}

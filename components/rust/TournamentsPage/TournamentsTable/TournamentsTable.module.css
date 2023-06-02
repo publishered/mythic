@@ -1,0 +1,19 @@
+.table__head {
+   display: grid;
+   grid-template-columns: 90px 235px 44px 167px 58px 82px 104px 90px;
+   justify-content: space-between;
+   margin-bottom: 20px;
+}
+
+.table__body {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin-bottom: 40px;
+}
+
+@media (max-width: 1300px) { 
+   .table__head {
+      display: none;
+   }
+}

@@ -21,6 +21,24 @@ const SettingsPagesSettingItem = ({title, prime = false, placeholder, type = 'de
    const onInputHandler = e => setInputValue(e.target.value)
    const onInputBlur = e => initInputWidth()
 
+   let lockedPlaceholder
+   
+   if (type === 'locked') {
+      if (placeholder === 'background') {
+         lockedPlaceholder = <div className={styles['item__background-type']}></div>
+      } else if (placeholder === 'status') {
+         lockedPlaceholder = <Image 
+            className={styles['item__status-img']}
+            src="/images/icon/status.svg"
+            width="24"
+            height="24"
+            alt='change status'
+         />
+      } else if (placeholder) {
+         lockedPlaceholder = <span className={styles['item__locked-placeholder']}>{placeholder}</span>
+      }
+   }
+
    return <div className={styles.item}>
       <div className={styles['item__title-wrapper']}>
          <h3 className={styles.item__title}>{title}</h3>
@@ -69,13 +87,16 @@ const SettingsPagesSettingItem = ({title, prime = false, placeholder, type = 'de
                <input type="file" hidden />
             </label>
          : ''}
-         {type === 'locked' ? 
+         {type === 'locked' ?
+            <div className={styles.locked}>
+            {lockedPlaceholder}
             <Image 
                src="/images/icon/locked.svg"
                width="10"
                height="13"
                alt='locked'
             />
+            </div>
          : ''}
          {type === 'checkbox' ? 
             <button className={`${styles.item__checkbox} ${isChecked ? styles.checked : ''}`} onClick={() => setIsChecked(prevState => !prevState)}>

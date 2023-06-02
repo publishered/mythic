@@ -1,3 +1,4 @@
+import AuthContext from '@/context/AuthContext'
 import ModalFunction from '@/context/ModalFunction'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -8,7 +9,7 @@ import ProfilePageTopSectionTab from './profilePageTopSectionTab/ProfilePageTopS
 const ProfilePageTopSection = ({activeAnchor}) => {
 
    const modalContext = useContext(ModalFunction)
-
+   const authContext = useContext(AuthContext)
 
    return <div className={styles.info}>
       <div className={styles.info__top}>
@@ -166,15 +167,27 @@ const ProfilePageTopSection = ({activeAnchor}) => {
       </div>
       <div className={styles.info__bottom}>
          <div className={styles['info__bottom-left']}>
-            <button className={styles['info__bottom-left-connect-steam']} onClick={() => modalContext.setIsConnectSteamOpen(true)}>
-               <Image 
-                  src="/images/icon/steam.svg"
-                  width="18"
-                  height="18"
-                  alt="steam icon"
-               />
-               Connect your Steam
-            </button>
+            {
+               authContext.isConnected ? 
+               <span className={styles['info__bottom-left-connect-steam']}>
+                  <Image 
+                     src="/images/icon/steam.svg"
+                     width="18"
+                     height="18"
+                     alt="steam icon"
+                  />
+                  Connected
+               </span> :
+               <button className={styles['info__bottom-left-connect-steam']} onClick={() => modalContext.setIsConnectSteamOpen(true)}>
+                  <Image 
+                     src="/images/icon/steam.svg"
+                     width="18"
+                     height="18"
+                     alt="steam icon"
+                  />
+                  Connect your Steam
+               </button> 
+            }
             <Link href="/profile/settings" className={styles['info__bottom-left-settings']}>
                <Image
                   src="/images/icon/settings-gray.svg"

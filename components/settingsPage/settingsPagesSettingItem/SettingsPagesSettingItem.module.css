@@ -120,6 +120,25 @@
    transform: translateY(-50%) translateX(calc(-100% + 4px));
 }
 
+.locked {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   cursor: not-allowed;
+}
+
+.item__background-type {
+   width: 60px;
+   height: 25px;
+   background: var(--light-gray-color);
+   border-radius: 2px;
+}
+
+.item__locked-placeholder {
+   font-weight: 500;
+   color: var(--light-gray-color);
+}
+
 @media (max-width: 1080px) {
    .item {
       flex-direction: column;

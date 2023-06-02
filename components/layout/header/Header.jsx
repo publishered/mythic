@@ -1,14 +1,15 @@
 import DefaultButton from '@/components/UI/defaultButton/DefaultButton'
+import AuthContext from '@/context/AuthContext'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import styles from './Header.module.css'
 import AuthorizatedButton from './authorizatedButton/AuthorizatedButton'
 import HeaderMob from './headerMob/HeaderMob'
 import HeaderSidebar from './headerSidebar/HeaderSidebar'
 
-const Header = ({setIsSignUpOpen, setIsSignInOpen}) => {
+const Header = ({setIsSignUpOpen, setIsSignInOpen, setIsPrimeOpen}) => {
 
    const headerRef = useRef()
    const [headerHeight, setHeaderHeight] = useState(0)
@@ -49,6 +50,8 @@ const Header = ({setIsSignUpOpen, setIsSignInOpen}) => {
       setIsOpenMobHeader(value)
    }
 
+   const authContext = useContext(AuthContext)
+
    return <header className={styles.header} ref={headerRef}> 
       <div className={styles.header__inner}>
          <div className={styles.header__left}>
@@ -68,12 +71,12 @@ const Header = ({setIsSignUpOpen, setIsSignInOpen}) => {
                      </Link>
                   </li>
                   <li className={styles['header__left-item']}>
-                     <Link href='/anticheat' className={styles['header__left-link']}>
+                     <a href='https://easy.ac/' className={styles['header__left-link']}>
                         Anticheat
-                     </Link>
+                     </a>
                   </li>
                   <li className={styles['header__left-item']}>
-                     <Link href='/' className={`${styles['header__left-link']} ${styles['header__left-link--prime']}`}>
+                     <button onClick={() => setIsPrimeOpen(true)} className={`${styles['header__left-link']} ${styles['header__left-link--prime']}`}>
                         <Image 
                            src="/images/icon/prime.svg"
                            alt='prime icon'
@@ -81,13 +84,13 @@ const Header = ({setIsSignUpOpen, setIsSignInOpen}) => {
                            height="13"
                         />
                         Premium
-                     </Link>
+                     </button>
                   </li>
                </ul>
             </div>
          </div>
          <div className={styles.header__right}>
-            {false ? 
+            {!authContext.isLogin ? 
                <>
                <DefaultButton 
                   className={`${styles['header__right-btn']} ${styles['header__right-login']}`}
@@ -111,7 +114,7 @@ const Header = ({setIsSignUpOpen, setIsSignInOpen}) => {
             <span></span>
          </button>
       </div>
-      <HeaderMob isOpenMobHeader={isOpenMobHeader} />
+      <HeaderMob isOpenMobHeader={isOpenMobHeader} setIsPrimeOpen={setIsPrimeOpen} />
    </header>
 }
 

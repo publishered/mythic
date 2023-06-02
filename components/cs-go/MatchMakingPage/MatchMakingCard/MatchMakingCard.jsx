@@ -1,4 +1,4 @@
-import DefaultButton from '@/components/UI/defaultButton/DefaultButton'
+import DefaultButtonWithState from '@/components/UI/defaultButtonWithState/DefaultButtonWithState'
 import Image from 'next/image'
 import styles from './MatchMakingCard.module.css'
 
@@ -18,9 +18,9 @@ const MatchMakingCard = ({title, mode, maps, src, onClick}) => {
          <span className={styles['card__mode']}>{mode}</span>
          <h2 className={styles['card__title']}>{title}</h2>
          <p className={styles['card__maps']}>{maps}</p>
-         <DefaultButton className={styles.card__btn} onClick={onClick}>
+         <DefaultButtonWithState className={styles.card__btn} onClick={onClick}>
             Join now
-         </DefaultButton>
+         </DefaultButtonWithState>
       </div>
    </div>
 }

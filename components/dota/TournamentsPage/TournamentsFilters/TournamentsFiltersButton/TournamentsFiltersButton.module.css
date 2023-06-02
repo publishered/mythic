@@ -1,0 +1,12 @@
+.btn {
+   line-height: 19px;
+   letter-spacing: 0.02em;
+   padding: 15.5px 20px;
+   border: 1px solid var(--light-gray-color);
+   border-radius: 10px;
+   transition: .2s;
+}
+
+.btn.active, .btn:hover {
+   background: var(--purple-color);
+}

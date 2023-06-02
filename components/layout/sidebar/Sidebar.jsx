@@ -1,22 +1,24 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Sidebar.module.css'
 import CsgoIcon from './icons/CsgoIcon'
+import DotaIcon from './icons/DotaIcon'
+import RustIcon from './icons/RustIcon'
+import TeamFortressIcon from './icons/TeamFortressIcon'
 
-const Sidebar = ({isCsGoPage}) => {
+const Sidebar = ({gamePage}) => {
 
    return <aside className={styles.sidebar}>
       <Link href="/cs-go/matchmaking" className={styles.sidebar__item}>
-         <CsgoIcon color={isCsGoPage ? 'var(--purple-color)' : 'white'}  />
+         <CsgoIcon color={gamePage === 'cs-go' ? 'var(--purple-color)' : 'white'}  />
       </Link>
-      <Link href="/game/rust" className={styles.sidebar__item}>
-         <Image src="/images/icon/rust.svg" width="40" height="40" alt='rust game' />
+      <Link href="/rust/tournaments" className={styles.sidebar__item}>
+         <RustIcon color={gamePage === 'rust' ? 'var(--purple-color)' : 'white'} />
       </Link>
-      <Link href="/game/dota" className={styles.sidebar__item}>
-         <Image src="/images/icon/dota2.svg" width="35" height="35" alt='dota2 game' />
+      <Link href="/dota/tournaments" className={styles.sidebar__item}>
+         <DotaIcon color={gamePage === 'dota' ? 'var(--purple-color)' : 'white'} />
       </Link>
-      <Link href="/game/team-fortress" className={styles.sidebar__item}>
-         <Image src="/images/icon/tf2.svg" width="40" height="40" alt='team fortress game' />
+      <Link href="/team-fortress/tournaments" className={styles.sidebar__item}>
+         <TeamFortressIcon color={gamePage === 'team-fortress' ? 'var(--purple-color)' : 'white'} />
       </Link>
    </aside>
 }

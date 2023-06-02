@@ -1,0 +1,14 @@
+.text {
+   text-align: center;
+   font-size: 14px;
+   color: var(--input-color);
+   margin-top: 6px;
+   font-weight: 500;
+   line-height: 18px;
+}
+
+.text span {
+   color:var(--purple-color);
+   cursor: pointer;
+}
+

@@ -14,6 +14,7 @@
 .item__top-info {
    display: flex;
    gap: 10px;
+   align-items: center;
 }
 
 .item__top-info-content {
@@ -68,7 +69,7 @@
 }
 
 .item__top-show-more {
-   padding: 0 50.5px;
+   padding: 17.5px 50.5px;
    font-size: 12px;
    line-height: 15px;
    letter-spacing: 0.02em;
@@ -76,13 +77,14 @@
 }
 
 .item__top-show-invite {
-   padding: 0 50.5px;
+   padding: 17.5px 50.5px;
    text-transform: uppercase;
 }
 
 .item__top-btn {
    display: flex;
    gap: 20px;
+   align-items: flex-start;
 }
 
 .item__bottom {
@@ -176,6 +178,10 @@
    background-color: var(--purple-color);
 }
 
+.item__top-mob-btn {
+   display: none;
+}
+
 @media (max-width: 1220px) {
 
    .item__bottom  {
@@ -191,7 +197,7 @@
    .item__top-mob-btn {
       display: flex;
       gap: 20px;
-      align-items: center;
+      align-items: flex-start;
       padding: 20px;
    }
 
@@ -212,7 +218,7 @@
       flex-direction: column;
    }
 
-   .item__top-mob-btn > button {
+   .item__top-mob-btn button, .item__top-mob-btn > div {
       width: 100%;
    }
 

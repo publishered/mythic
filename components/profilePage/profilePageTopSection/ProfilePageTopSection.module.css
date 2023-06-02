@@ -122,10 +122,6 @@
    letter-spacing: 0.02em;
 }
 
-.info__bottom-left-settings {
-   color: var(--input-color);
-}
-
 .info__bottom-tabs {
    display: flex;
    gap: 40px;
