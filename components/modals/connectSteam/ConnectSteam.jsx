@@ -6,6 +6,9 @@ import styles from './ConnectSteam.module.css'
 const ConnectSteam = ({isConnectSteamOpen, setIsConnectSteamOpen}) => {
    return <Modal isModalOpen={isConnectSteamOpen} setIsModalOpen={setIsConnectSteamOpen}>
       <div className={styles.connect}>
+         <button className={styles.connect__close} onClick={e => setIsConnectSteamOpen(false)}>
+            <Image src="/images/icon/close.svg" width="15" height="15" alt='close' />
+         </button>
          <h2 className={styles.connect__title}>Connect with Steam</h2>
          <p className={styles.connect__subtitle}>Add your Steam account to Mythic Esports.</p>
          <ul className={styles.connect__list}>

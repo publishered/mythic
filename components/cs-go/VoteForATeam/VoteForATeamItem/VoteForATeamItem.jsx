@@ -30,6 +30,8 @@ const VoteForATeamItem = () => {
          <div className={styles['item__top-button-wrapper']}>
             <DefaultButtonWithState 
                className={styles['item__top-button']}
+               steamMsg={"You can't vote for a team until you connect your "}
+               verifyMsg={"You can't vote for a team until your account is verified."}
             >
                vote for a team
             </DefaultButtonWithState>
@@ -62,6 +64,8 @@ const VoteForATeamItem = () => {
       <div className={styles['item__top-mob-button-wrapper']}>
          <DefaultButtonWithState
             className={styles['item__top-mob-button']}
+            steamMsg={"You can't vote for a team until you connect your "}
+            verifyMsg={"You can't vote for a team until your account is verified."}
          >
             vote for a team
          </DefaultButtonWithState>

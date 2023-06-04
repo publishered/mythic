@@ -17,7 +17,7 @@ const HeaderSidebarMenu = () => {
             </Link>
          </li>
          <li className={styles['menu__list-item']}>
-            <Link href="/profile" className={styles['menu__list-link']}>
+            <Link href="/profile/settings" className={styles['menu__list-link']}>
                <Image 
                   src="/images/icon/settings.svg"
                   width="17"
@@ -28,7 +28,7 @@ const HeaderSidebarMenu = () => {
             </Link>
          </li>
          <li className={styles['menu__list-item']}>
-            <Link href="/profile" className={styles['menu__list-link']}>
+            <Link href="/log-out" className={styles['menu__list-link']}>
                <Image 
                   src="/images/icon/logout.svg"
                   width="17"

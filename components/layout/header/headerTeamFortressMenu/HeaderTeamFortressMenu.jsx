@@ -1,15 +1,22 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import styles from './HeaderTeamFortressMenu.module.css'
+import useEmblaCarousel from 'embla-carousel-react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import styles from './HeaderTeamFortressMenu.module.css';
 
 const HeaderTeamFortressMenu = () => {
 
    const {pathname} = useRouter()
+   const [emblaRef] = useEmblaCarousel()
 
    return <nav className={styles.menu}>
       <ul className={styles.menu__list}>
          <HeaderTeamFortressMenuItem pathname={pathname} href="/team-fortress/tournaments">Tournaments</HeaderTeamFortressMenuItem>
       </ul>
+      <div className={styles.slider} ref={emblaRef}>
+         <ul className={styles.slider__container}>
+            <HeaderTeamFortressMenuItem pathname={pathname} href="/team-fortress/tournaments">Tournaments</HeaderTeamFortressMenuItem>
+         </ul>
+      </div>
    </nav>
 }
 

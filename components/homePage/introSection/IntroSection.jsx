@@ -1,12 +1,23 @@
 import Container from '@/components/UI/container/Container'
 import DefaultButton from '@/components/UI/defaultButton/DefaultButton'
 import ModalFunction from '@/context/ModalFunction'
-import { useContext } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import styles from './IntroSection.module.css'
+import IntroSectionVideo from './introSectionVideo/IntroSectionVideo'
 
 const IntroSection = () => {
+   
    const ModalFunctionContext = useContext(ModalFunction)
-   return <section className={styles.intro}>
+
+   const [topOffset, setTopOffset] = useState(0)
+   const introRef = useRef()
+
+   useEffect(() => {
+      setTopOffset(introRef?.current?.getBoundingClientRect().top)
+   }, [introRef?.current])
+
+   return <section ref={introRef} className={styles.intro} style={{"--top-offset": `${topOffset}px`}}>
+      <IntroSectionVideo />
       <Container>
          <div className={styles.intro__inner}>
             <span className={styles.intro__label}>Beta</span>

@@ -32,11 +32,15 @@
    transition: .15s;
 }
 
-.sidebar__tab:not(.open) .sidebar__tab-btn {
+.sidebar__tab.mobile:not(.open) .sidebar__tab-btn {
    color: #fff;
 }
 
-.sidebar__tab.open .sidebar__tab-btn.active {
+.sidebar__tab.mobile.open .sidebar__tab-btn.active {
+   color: #fff;
+}
+
+.sidebar__tab:not(.mobile) .sidebar__tab-btn.active {
    color: #fff;
 }
 
@@ -54,7 +58,11 @@
    transition: .15s;
 }
 
-.sidebar__tab.open .sidebar__tab-btn.active::before {
+.sidebar__tab.open.mobile .sidebar__tab-btn.active::before {
+   opacity: 1;
+}
+
+.sidebar__tab:not(.mobile) .sidebar__tab-btn.active::before {
    opacity: 1;
 }
 

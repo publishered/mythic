@@ -7,6 +7,9 @@ import PremiumPlans from './premiumPlans/PremiumPlans'
 const Premium = ({isPrimeOpen, setIsPrimeOpen}) => {
    return <Modal isModalOpen={isPrimeOpen} setIsModalOpen={setIsPrimeOpen}>
       <div className={styles.premium}>
+         <button className={styles.premium__close} onClick={e => setIsPrimeOpen(false)}>
+            <Image src="/images/icon/close.svg" width="15" height="15" alt='close' />
+         </button>
          <Image 
             src="/images/icon/prime.svg"
             className={styles.premium__icon} 

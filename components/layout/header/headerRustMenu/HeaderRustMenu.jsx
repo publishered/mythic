@@ -1,9 +1,12 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import styles from './HeaderRustMenu.module.css'
+import useEmblaCarousel from 'embla-carousel-react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import styles from './HeaderRustMenu.module.css';
+
 
 const HeaderRustMenu = () => {
 
+   const [emblaRef] = useEmblaCarousel()
    const {pathname} = useRouter()
 
    return <nav className={styles.menu}>
@@ -11,6 +14,12 @@ const HeaderRustMenu = () => {
          <HeaderCsGoMenuItem pathname={pathname} href="/rust/tournaments">Tournaments</HeaderCsGoMenuItem>
          <HeaderCsGoMenuItem pathname={pathname} href="/rust/vote-for-a-teams">Vote for a teams</HeaderCsGoMenuItem>
       </ul>
+      <div className={styles.slider} ref={emblaRef}>
+         <ul className={styles.slider__container}>
+            <HeaderCsGoMenuItem pathname={pathname} href="/rust/tournaments">Tournaments</HeaderCsGoMenuItem>
+            <HeaderCsGoMenuItem pathname={pathname} href="/rust/vote-for-a-teams">Vote for a teams</HeaderCsGoMenuItem>
+         </ul>
+      </div>
    </nav>
 }
 

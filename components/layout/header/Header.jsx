@@ -29,7 +29,7 @@ const Header = ({setIsSignUpOpen, setIsSignInOpen, setIsPrimeOpen}) => {
 
    useEffect(() => {
       setHeaderHeight(headerRef?.current?.offsetHeight)
-   }, [headerRef])
+   }, [headerRef.current])
 
    const router = useRouter();
 

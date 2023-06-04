@@ -1,9 +1,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
 import styles from './TeamFortressTournaments.module.css'
 
 const TeamFortressTournaments = () => {
-   return <section className={styles.section}>
+
+   const [topOffset, setTopOffset] = useState(0)
+   const introRef = useRef()
+
+   useEffect(() => {
+      setTopOffset(introRef?.current?.getBoundingClientRect().top)
+   }, [introRef?.current])
+
+   return <section ref={introRef} className={styles.section} style={{"--top-offset": `${topOffset}px`}}>
       <Image
          className={styles.section__bg}
          width="2140"

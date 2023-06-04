@@ -4,7 +4,8 @@
    /* background-position: center top;
    background-size: contain; */
 
-   background-position: right top;
+   background-position: center top;
+   background-size: auto 270px;
    background-size: auto 270px;
    padding-top: 75px;
    margin-bottom: 20px;
@@ -112,8 +113,7 @@
 
 @media (max-width: 640px) {
    .tournament__intro {
-      background-position: 60% 10%;
-      background-size: auto 180px;
+      background-position: 55% top;
    }
 
    .tournament__intro-join {

@@ -117,6 +117,10 @@
    display: none;
 }
 
+.item__top-button {
+   margin-left: auto;
+}
+
 @media (max-width: 720px) {
 
    .item__top-button-wrapper {

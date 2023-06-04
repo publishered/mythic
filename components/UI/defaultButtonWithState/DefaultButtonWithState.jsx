@@ -4,9 +4,7 @@ import { useContext, useEffect, useRef, useState } from 'react'
 import DefaultButton from '../defaultButton/DefaultButton'
 import styles from './DefaultButtonWithState.module.css'
 
-
-
-const DefaultButtonWithState = ({href, children, className, onClick, disabled}) => {
+const DefaultButtonWithState = ({href, children, className, onClick, disabled, steamMsg, verifyMsg}) => {
 
    const [widthOfButton, setWidthOfButton] = useState(0)
 
@@ -35,7 +33,7 @@ const DefaultButtonWithState = ({href, children, className, onClick, disabled}) 
 
    console.log(authContext)
 
-   return <div className={styles.wrapper}>
+   return <>
       <DefaultButton
          ref={buttonRef}
          href={href} 
@@ -45,16 +43,16 @@ const DefaultButtonWithState = ({href, children, className, onClick, disabled}) 
          disabled={authContext.isLogin}
       />
       { (authContext.isLogin && !authContext.isConnected) ? 
-         <p className={styles.text} style={{maxWidth: `${widthOfButton}px`}}>You can't play until you connect your 
-            <span onClick={() => modalContext.setIsConnectSteamOpen(true)}>(Steam account)</span>.
+         <p className={styles.text} >{steamMsg} 
+            <span onClick={() => modalContext.setIsConnectSteamOpen(true)}>Steam account</span>.
          </p>
          : ''
       }
       { (authContext.isLogin && authContext.isConnected) ? 
-         <p className={styles.text} style={{maxWidth: `${widthOfButton}px`}}>You cannot play until your account is verified.</p>
+         <p className={styles.text}>{verifyMsg}</p>
          : ''
       }
-   </div>
+   </>
 }
 
 export default DefaultButtonWithState

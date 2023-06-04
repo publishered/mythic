@@ -4,8 +4,12 @@ import styles from './HeaderSidebarTab.module.css'
 const HeaderSidebarTab = ({isActiveTab, setIsActiveTab, mobile, playHandler, isPlayTabOpen}) => {
 
    const clickHandler = mobile ? () => playHandler(!isPlayTabOpen) : () => ''
-
+   console.log(isActiveTab)
    const changeTabHandler = (e, tab) => {
+      if (!mobile) {
+         setIsActiveTab(tab)
+      }
+
       if (isPlayTabOpen) {
          e.stopPropagation()
          setIsActiveTab(tab)

@@ -29,7 +29,7 @@ const TeamFinderItem = () => {
                   />
                   <ul className={styles['item__top-info-content-about-list']}>
                      <li className={styles['item__top-info-content-about-item']}>joined about 4 hours ago</li>
-                     <li className={styles['item__top-info-content-about-item']}>reputation</li>
+                     <li className={styles['item__top-info-content-about-item']}>0 reputation</li>
                   </ul>
                </div>
             </div>
@@ -38,7 +38,11 @@ const TeamFinderItem = () => {
             <GrayButton className={styles['item__top-show-more']}>
                show more
             </GrayButton>
-            <DefaultButtonWithState className={styles['item__top-show-invite']}>
+            <DefaultButtonWithState
+               className={styles['item__top-show-invite']}
+               steamMsg={"You can't join the team until you connect your "}
+               verifyMsg={"You can't join the team until your account is verified."}
+            >
                invite to team
             </DefaultButtonWithState>
          </div>
@@ -119,7 +123,11 @@ const TeamFinderItem = () => {
          <GrayButton className={styles['item__top-show-more']}>
             show more
          </GrayButton>
-         <DefaultButtonWithState className={styles['item__top-show-invite']}>
+         <DefaultButtonWithState 
+            className={styles['item__top-show-invite']}
+            steamMsg={"You can't join the team until you connect your "}
+            verifyMsg={"You can't join the team until your account is verified."}
+         >
             invite to team
          </DefaultButtonWithState>
       </div>

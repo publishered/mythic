@@ -1,5 +1,5 @@
 .settings {
-   padding: 90px 0px;
+   padding: 50px 0px 90px;
 }
 
 .settings__inner {
@@ -12,4 +12,27 @@
    .settings__inner {
       flex-direction: column;
    }
+}
+
+.buttons {
+   margin-top: 30px;
+   display: flex;
+   gap: 15px;
+   justify-content: flex-end;
+}
+
+.button__discard {
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 15px;
+   letter-spacing: 0.02em;
+   text-transform: uppercase;
+}
+
+.button__save {
+   text-transform: uppercase;
+}
+
+.button__discard, .button__save {
+   padding: 17.5px 25px;
 }
