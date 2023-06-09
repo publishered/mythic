@@ -71,7 +71,7 @@ const Header = ({setIsSignUpOpen, setIsSignInOpen, setIsPrimeOpen}) => {
                      </Link>
                   </li>
                   <li className={styles['header__left-item']}>
-                     <a href='https://easy.ac/' className={styles['header__left-link']}>
+                     <a href='https://easy.ac/' target='_blank' className={styles['header__left-link']}>
                         Anticheat
                      </a>
                   </li>

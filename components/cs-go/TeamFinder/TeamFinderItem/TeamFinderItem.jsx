@@ -29,7 +29,7 @@ const TeamFinderItem = () => {
                   />
                   <ul className={styles['item__top-info-content-about-list']}>
                      <li className={styles['item__top-info-content-about-item']}>joined about 4 hours ago</li>
-                     <li className={styles['item__top-info-content-about-item']}>0 reputation</li>
+                     {/* <li className={styles['item__top-info-content-about-item']}>0 reputation</li> */}
                   </ul>
                </div>
             </div>

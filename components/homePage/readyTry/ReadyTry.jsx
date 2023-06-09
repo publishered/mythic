@@ -1,12 +1,17 @@
 import Container from '@/components/UI/container/Container'
 import DefaultButton from '@/components/UI/defaultButton/DefaultButton'
+import AuthContext from '@/context/AuthContext'
 import ModalFunction from '@/context/ModalFunction'
+import { useRouter } from 'next/router'
 import { useContext } from 'react'
 import styles from './ReadyTry.module.css'
 
 const ReadyTry = () => {
 
    const ModalFunctionContext = useContext(ModalFunction)
+   const authContext = useContext(AuthContext)
+
+   const {push} = useRouter()
 
    return <section className={styles.ready}>
       <Container>
@@ -15,7 +20,9 @@ const ReadyTry = () => {
             <p className={styles['ready__info-text']}>Compete with over 50.000 players now!</p>
             <DefaultButton 
                className={styles['ready__info-button']}
-               onClick={() => ModalFunctionContext.setIsSignUpOpen(true)}
+               onClick={() => {
+                  authContext.isLogin ? push('/profile') : ModalFunctionContext.setIsSignUpOpen(true)
+               }}
             >
                Create account
             </DefaultButton>

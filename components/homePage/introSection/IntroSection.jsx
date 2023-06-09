@@ -1,6 +1,8 @@
 import Container from '@/components/UI/container/Container'
 import DefaultButton from '@/components/UI/defaultButton/DefaultButton'
+import AuthContext from '@/context/AuthContext'
 import ModalFunction from '@/context/ModalFunction'
+import { useRouter } from 'next/router'
 import { useContext, useEffect, useRef, useState } from 'react'
 import styles from './IntroSection.module.css'
 import IntroSectionVideo from './introSectionVideo/IntroSectionVideo'
@@ -8,9 +10,11 @@ import IntroSectionVideo from './introSectionVideo/IntroSectionVideo'
 const IntroSection = () => {
    
    const ModalFunctionContext = useContext(ModalFunction)
+   const authContext = useContext(AuthContext)
 
    const [topOffset, setTopOffset] = useState(0)
    const introRef = useRef()
+   const {push} = useRouter()
 
    useEffect(() => {
       setTopOffset(introRef?.current?.getBoundingClientRect().top)
@@ -28,7 +32,9 @@ const IntroSection = () => {
             </p>
          </div>
          <DefaultButton 
-            onClick={() => ModalFunctionContext.setIsSignUpOpen(true)}
+            onClick={() => {
+               authContext.isLogin ? push('/profile') : ModalFunctionContext.setIsSignUpOpen(true)
+            }}
             className={styles.intro__button}
          >
             Play now

@@ -62,6 +62,7 @@ const HeaderSidebar = ({headerHeight, isOpenSidebar, mobile = false, offsetForSi
             <div className={styles.sidebar__inner}>
                {isActiveTab !== 'solo' ?
                   <HeaderSidebarPlayers 
+                     setIsFriendOpen={setIsFriendOpen}
                      maxPlayer={isActiveTab === 'wingman' ? 2 : 5}
                   /> 
                : ''}

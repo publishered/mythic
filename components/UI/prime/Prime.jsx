@@ -13,7 +13,7 @@ const Prime = ({className, title}) => {
          <div className={styles.prime__banner}>
             <div className={styles['prime__banner-info']}>
                <h3 className={styles['prime__banner-title']}>{title}</h3>
-               <p className={styles['prime__banner-text']}>Plans start at only €4.49/month. Cancel anytime.</p>
+               <p className={styles['prime__banner-text']}>Plans start at only $4.49/month. Cancel anytime.</p>
                <DefaultButton 
                   className={styles['prime__banner-btn']}
                   onClick={() => ModalFunctionContext.setIsPrimeOpen(true)}

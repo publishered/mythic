@@ -190,7 +190,7 @@ const ProfilePageTopSection = ({activeAnchor}) => {
             }
             <Link href="/profile/settings" className={styles['info__bottom-left-settings']}>
                <Image
-                  src="/images/icon/settings-gray.svg"
+                  src="/images/icon/settings.svg"
                   width="16"
                   height="16"
                   alt='settings'

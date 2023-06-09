@@ -2,8 +2,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import styles from './HeaderSidebarPlayers.module.css'
 
-const HeaderSidebarPlayers = ({maxPlayer: maxPlayerInt}) => {
-
+const HeaderSidebarPlayers = ({maxPlayer: maxPlayerInt, setIsFriendOpen}) => {
    const [playersInLobby, setPlayersInLobby] = useState([
       {
          id: 1,
@@ -29,6 +28,7 @@ const HeaderSidebarPlayers = ({maxPlayer: maxPlayerInt}) => {
    return <div className={styles.players}>
       <div className={styles.players__inner}>
          {playersInLobby.map((player, index) => <PlayerAddButton 
+            setIsFriendOpen={setIsFriendOpen}
             id={player.id}
             avatar={player.avatar}
             key={index}
@@ -43,8 +43,8 @@ const HeaderSidebarPlayers = ({maxPlayer: maxPlayerInt}) => {
 }
 
 
-const PlayerAddButton = ({id, avatar}) => {
-   return <button className={`${styles['players__btn']} ${!id ? styles.empty : ''}`}>
+const PlayerAddButton = ({id, avatar, setIsFriendOpen}) => {
+   return <button onClick={() => setIsFriendOpen(true)} className={`${styles['players__btn']} ${!id ? styles.empty : ''}`}>
       {id ?
          <Image 
             src={avatar}
@@ -53,7 +53,7 @@ const PlayerAddButton = ({id, avatar}) => {
             alt='avatar'
          />
          :
-         <Image 
+         <Image
             src="/images/icon/plus.svg"
             width="20"
             height="20"

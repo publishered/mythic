@@ -4,7 +4,7 @@ import styles from './AuthorizatedButton.module.css'
 
 const AuthorizatedButton = ({setIsOpenSidebar}) => {
    return <>
-      <Link href="/profile/invites" className={styles['header__right-notification']}>
+      <Link href="/profile#invites" className={styles['header__right-notification']}>
       <Image 
          className={styles['header__right-notification-image']}
          src="/images/icon/notification.svg"

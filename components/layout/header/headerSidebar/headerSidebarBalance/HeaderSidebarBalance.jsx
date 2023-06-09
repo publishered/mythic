@@ -13,14 +13,14 @@ const HeaderSidebarBalance = () => {
          <span>Balance</span>
          <span>0.00$</span>
       </div>
-      <button className={styles['balance__button']}>
+      {/* <button className={styles['balance__button']}>
          <Image
             src="/images/icon/plus.svg"
             width="20"
             height="20" 
             alt='add balance'
          />
-      </button>
+      </button> */}
    </div>
 }
 

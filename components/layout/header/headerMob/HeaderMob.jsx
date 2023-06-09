@@ -16,7 +16,7 @@ const HeaderMob = ({isOpenMobHeader, setIsPrimeOpen}) => {
                <Link href="/help" className={styles.header__link}>Help</Link>
             </li>
             <li className={styles.header__item}>
-               <Link href="https://easy.ac/" className={styles.header__link}>Anticheat</Link>
+               <a target='_blank' href="https://easy.ac/" className={styles.header__link}>Anticheat</a>
             </li>
             <li className={styles.header__item}>
                <button onClick={() => setIsPrimeOpen(true)} className={`${styles.header__link} ${styles.header__premium}`}>
