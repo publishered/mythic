@@ -1,0 +1,152 @@
+.layout {
+   padding: 50px 30px 100px 120px;
+   display: flex;
+   gap: 20px;
+}
+
+.layout__aside {
+   max-width: 270px;
+   width: 100%;
+   flex: 1 0 auto;
+}
+
+.layout__aside-list {
+   display: flex;
+   flex-direction: column;
+}
+
+.layout__aside-list-item {
+   list-style: none;
+}
+
+.layout__aside-list-item-link {
+   padding: 10px 20px;
+   display: block;
+}
+
+.layout__aside-sublist {
+   display: flex;
+   flex-direction: column;
+   padding-left: 10px;
+   list-style: none;
+}
+
+.layout__aside-sublist-item-link {
+   display: block;
+   padding: 10px 30px;
+}
+
+.layout__aside-list-item--active .layout__aside-list-item-link {
+   background-color: var(--purple-color);
+}
+
+.layout__aside-list-item--active .layout__aside-sublist {
+   background-color: var(--light-gray-color);
+}
+
+.layout__aside-sublist-item--active {
+   font-weight: 600;
+}
+
+.layout__aside-sublist {
+   display: none;
+}
+
+.layout__aside-list-item--active .layout__aside-sublist {
+   display: flex;
+}
+/* .layout__aside-list-item--active  */
+
+.text {
+   flex: 1 1 auto;
+}
+
+.text h1 {
+   font-weight: 500;
+   font-size: 25px;
+   line-height: 30px;
+   margin-bottom: 30px;
+   font-weight: 400;
+}
+
+.text h2 { 
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+}
+
+.text ul {
+   display: flex;
+   flex-direction: column;
+   list-style: none;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 30px;
+}
+
+.text ul:last-child {
+   margin-bottom: 0;
+}
+
+.text ul li {
+   padding-left: 25px;
+   position: relative;
+}
+
+.text ul li::before {
+   content: '';
+   position: absolute;
+   left: 10px;
+   top: 13px;
+   width: 4px;
+   height: 4px;
+   background-color: #fff;
+   border-radius: 50%;
+}
+
+.text a {
+   text-decoration: underline;
+   text-underline-offset: 3px;
+}
+
+.text [data-section="section"] {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   margin-bottom: 30px;
+}
+
+.text [data-section="section"]:last-child {
+   margin-bottom: 0;
+}
+
+.text {
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 26px;
+}
+
+.text ol {
+   list-style-position:inside;
+}
+
+.text [data-section="big-section"] {
+   margin-bottom: 50px;
+}
+
+.text [data-section="big-section"]:last-child {
+   margin-bottom: 0;
+}
+
+@media (max-width: 1135px) {
+   .layout {
+      flex-direction: column;
+      gap: 40px;
+      padding: 50px 15px 80px;
+   }  
+
+   .layout__aside {
+      max-width: 100%;
+      width: 100%;
+   }
+}

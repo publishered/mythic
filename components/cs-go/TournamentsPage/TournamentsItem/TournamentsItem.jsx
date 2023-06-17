@@ -1,6 +1,8 @@
 import DefaultButton from '@/components/UI/defaultButton/DefaultButton'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
 import styles from './TournamentsItem.module.css'
 
 const TournamentsItem = ({title, mode, src, startsIn, checkIn, reward, registered, verified = true, steam = true, prime = true}) => {
@@ -24,33 +26,51 @@ const TournamentsItem = ({title, mode, src, startsIn, checkIn, reward, registere
          <span className={styles.tournament__registered}>{registered}</span>
          <div className={styles.tournament__requirements}>
             {steam ?
-               <Image 
-                  className={styles['tournament__requirements-img']}
-                  src="/images/icon/requirements-steam.svg"
-                  width="25"
-                  height="25"
-                  alt='required steam'
-               />
+               <a 
+                  className={styles['tournament__requirements-link']}
+                  data-tooltip-id="my-tooltip" 
+                  data-tooltip-content="Connected Steam account"
+               >
+                  <Image 
+                     className={styles['tournament__requirements-img']}
+                     src="/images/icon/requirements-steam.svg"
+                     width="25"
+                     height="25"
+                     alt='required steam'
+                  />
+               </a>
                : ''
             }
             {verified ?
-               <Image 
-                  className={styles['tournament__requirements-img']}
-                  src="/images/icon/requirements-verified.svg"
-                  width="25"
-                  height="25"
-                  alt='required verify'
-               />
+               <a 
+                  className={styles['tournament__requirements-link']}
+                  data-tooltip-id="my-tooltip" 
+                  data-tooltip-content="Mythic account verification"
+               >
+                  <Image 
+                     className={styles['tournament__requirements-img']}
+                     src="/images/icon/requirements-verified.svg"
+                     width="25"
+                     height="25"
+                     alt='required verify'
+                  />
+               </a>
                : ''
             }
             {prime ?
-               <Image
-                  className={styles['tournament__requirements-img']}
-                  src="/images/icon/requirements-prime.svg"
-                  width="25"
-                  height="25"
-                  alt='required prime'
-               />
+               <a 
+                  className={styles['tournament__requirements-link']}
+                  data-tooltip-id="my-tooltip" 
+                  data-tooltip-content="Mythic Premium"
+               >
+                  <Image
+                     className={styles['tournament__requirements-img']}
+                     src="/images/icon/requirements-prime.svg"
+                     width="25"
+                     height="25"
+                     alt='required prime'
+                  />
+               </a>
                : ''
             }
          </div>
@@ -73,6 +93,7 @@ const TournamentsItem = ({title, mode, src, startsIn, checkIn, reward, registere
             <span className={styles['tournament__registered']}>{mode}, {registered}</span>
          </div>
       </Link>
+      <Tooltip id="my-tooltip" className="require-tooltip" classNameArrow="require-tooltip-arrow"/>
    </>
 }
 

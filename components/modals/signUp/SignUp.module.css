@@ -31,13 +31,13 @@
 .signUp__form {
    display: flex;
    flex-direction: column;
-   gap: 25px;
 }
 
 .signUp__form-button {
    padding: 15.5px;
    font-size: 16px;
    line-height: 19px;
+   margin-bottom: 10px;
 }
 
 .signUp__form-alternative {
@@ -52,4 +52,16 @@
 
 .signUp__form-alternative-btn {
    color: #694DD8;
+}
+
+.signUp__form-error {
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 15px;
+   letter-spacing: 0.02em;
+   color: #FF4F4D;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   margin-bottom: 10px;
 }

@@ -1,3 +1,7 @@
+.signUp__form-group {
+   margin-bottom: 25px;
+}
+
 .signUp__form-group-label {
    display: flex;
    flex-direction: column;
@@ -41,4 +45,8 @@
 .signUp__form-group-input:focus {
    background: #000000;
    border: 2px solid #694DD8;
+}
+
+.input__error {
+   border-color: #FF4F4D;
 }

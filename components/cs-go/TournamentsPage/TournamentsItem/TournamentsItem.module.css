@@ -39,8 +39,14 @@
 
 .tournament__requirements {
    display: flex;
-   gap: 2px;
+   gap: 3px;
    align-items: center;
+}
+
+.tournament__requirements-link {
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .tournament__btn {

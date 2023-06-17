@@ -169,15 +169,25 @@ const ProfilePageTopSection = ({activeAnchor}) => {
          <div className={styles['info__bottom-left']}>
             {
                authContext.isConnected ? 
-               <span className={styles['info__bottom-left-connect-steam']}>
+               // <span className={styles['info__bottom-left-connect-steam']}>
+               //    <Image 
+               //       src="/images/icon/steam.svg"
+               //       width="18"
+               //       height="18"
+               //       alt="steam icon"
+               //    />
+               //    Connected
+               // </span> :
+
+               <button className={styles['info__bottom-left-connect-steam']} onClick={() => modalContext.setIsConnectSteamOpen(true)}>
                   <Image 
                      src="/images/icon/steam.svg"
                      width="18"
                      height="18"
                      alt="steam icon"
                   />
-                  Connected
-               </span> :
+                  Reconnect your Steam
+               </button> :
                <button className={styles['info__bottom-left-connect-steam']} onClick={() => modalContext.setIsConnectSteamOpen(true)}>
                   <Image 
                      src="/images/icon/steam.svg"

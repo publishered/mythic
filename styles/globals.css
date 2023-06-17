@@ -199,3 +199,22 @@ body.popup-open {
       opacity: 1;
    }
 }
+
+div.require-tooltip {
+   background: var(--purple-color);
+   padding: 10px;
+   margin: 0;
+   border-radius: 7px;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 17px;
+   letter-spacing: 0.02em;
+}
+
+div.require-tooltip-arrow {
+   top: calc(100% + 2px);
+   transform: translateY(-100%) rotate(45deg);
+   width: 19px;
+   height: 19px;
+   z-index: -1;
+}
