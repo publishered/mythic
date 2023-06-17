@@ -1,4 +1,4 @@
-import ConnectError from '@/components/additionalPages/connectError/connectError'
+import ConnectError from '@/components/additionalPages/connectError/ConnectError'
 
 const connectError = () => {
    return <ConnectError />
