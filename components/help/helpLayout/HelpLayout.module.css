@@ -138,6 +138,10 @@
    margin-bottom: 0;
 }
 
+.text table {
+   border-collapse: separate; 
+   border-spacing: 20px;
+}
 @media (max-width: 1135px) {
    .layout {
       flex-direction: column;

@@ -45,10 +45,10 @@ const HelpLayout = ({children}) => {
                      </li>
 
                      <li className={styles['layout__aside-sublist-item']}>
-                        <Link href="/help/cookie-policy"
+                        <Link href="/help/privacy-policy#cookie"
                          className={`
                            ${styles['layout__aside-sublist-item-link']}
-                           ${pathnameArr[2] === 'cookie-policy' ? styles['layout__aside-sublist-item--active'] : ''}
+                           ${pathnameArr[2] === 'privacy-policy#cookie' ? styles['layout__aside-sublist-item--active'] : ''}
                          `}>
                            Cookie policy
                         </Link>
