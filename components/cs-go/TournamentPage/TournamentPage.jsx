@@ -4,10 +4,13 @@ import TournamentPrime from './TournamentPrime/TournamentPrime'
 import TournamentTeams from './TournamentTeams/TournamentTeams'
 import TournamentsMatches from './TournamentsMatches/TournamentsMatches'
 
-const TournamentPage = () => {
+const TournamentPage = ({tournament}) => {
+
+   console.log(tournament)
+
    return <>
-      <TournamentIntro />
-      <TournamentOverview />
+      <TournamentIntro tournament={tournament} />
+      <TournamentOverview tournament={tournament} />
       <TournamentPrime />
       <TournamentsMatches />
       <TournamentTeams />

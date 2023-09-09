@@ -1,9 +1,14 @@
-import { useState } from 'react'
+import AuthContext from '@/context/AuthContext'
+import login from '@/services/authentication/login'
+import { useContext, useState } from 'react'
+import Cookies from 'universal-cookie'
 import SignIn from './SignIn'
 
 const SignInWrapper = ({isSignInOpen, setIsSignInOpen, setIsSignUpOpen}) => {
 
-   const [signInData, setSignInData] = useState({
+   const authContext = useContext(AuthContext)
+
+   const signInDataInitState = {
       nickname: {
          value: '',
          error: false,
@@ -12,14 +17,19 @@ const SignInWrapper = ({isSignInOpen, setIsSignInOpen, setIsSignUpOpen}) => {
          value: '',
          error: false,
       },
-   })
+   }
 
-   const [signInError, setSignInError] = useState({
+   const [signInData, setSignInData] = useState(signInDataInitState)
+
+   const signInErrorInitState = {
       isNicknameEmpty: false,
       isPasswordEmpty: false,
       isNicknameLess4: false,
       isPasswordLess4: false,
-   })
+      isNotValid: false,
+   }
+
+   const [signInError, setSignInError] = useState(signInErrorInitState)
 
    const nicknameInputHandler = e => {
       setSignInData(prevState => ({...prevState, nickname: {...prevState.nickname, value: e.target.value}}))
@@ -29,7 +39,7 @@ const SignInWrapper = ({isSignInOpen, setIsSignInOpen, setIsSignUpOpen}) => {
       setSignInData(prevState => ({...prevState, password: {...prevState.password, value: e.target.value}}))
    }
 
-   const formSubmitHandler = e => {
+   const formSubmitHandler = async e => {
       e.preventDefault()
 
       let isNicknameError = false
@@ -75,6 +85,29 @@ const SignInWrapper = ({isSignInOpen, setIsSignInOpen, setIsSignUpOpen}) => {
          setSignInData(prevState => ({...prevState, password: {...prevState.password, error: true}}))
       } else {
          setSignInData(prevState => ({...prevState, password: {...prevState.password, error: false}}))
+      }
+
+      if (!isNicknameError && !isPasswordError) {
+
+         const response_token = await login(signInData.nickname.value, signInData.password.value)
+
+         if (response_token?.status === 'success') {
+
+            const cookies = new Cookies()
+            cookies.set('auth_token', response_token.token, {path: '/', expires: new Date(Date.now()+2592000000)})
+
+            authContext.setIsLogin(true, response_token.userInfo.email, response_token.userInfo.nickname)
+
+            setIsSignInOpen(false)
+
+            setSignInData(signInDataInitState)
+            setSignInError(signInErrorInitState)
+         }
+
+         if (response_token === 'not_valid' || response_token === 'error') {
+            setSignInError(prevState => ({...prevState, isNotValid: true}))
+            setSignInData(prevState => ({...prevState, nickname: {...prevState.nickname, error: true}, password: {...prevState.password, error: true}}))
+         }
       }
    }
 

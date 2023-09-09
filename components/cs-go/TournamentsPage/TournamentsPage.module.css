@@ -28,6 +28,14 @@
    background: var(--purple-color);
 }
 
+.group {
+   margin-bottom: 40px;
+}
+
+.group:last-child {
+   margin-bottom: 0;
+}
+
 @media (max-width: 1310px) {
    .tournaments__date {
       margin-bottom: 20px;

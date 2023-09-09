@@ -47,6 +47,7 @@ const SignIn = ({isSignInOpen, setIsSignInOpen, setIsSignUpOpen,
                {signInError.isPasswordEmpty ? <p>Password field can not be empty</p> : ""}
                {signInError.isNicknameLess4 ? <p>Nickname field can not be less than 4</p> : ""}
                {signInError.isPasswordLess4 ? <p>Password field can not be less than 4</p> : ""}
+               {signInError.isNotValid ? <p>Your credentials are invalid</p> : ""}
             </div>
             <p className={styles['signUp__form-alternative']}>
                Don’t have an account?

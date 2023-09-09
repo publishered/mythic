@@ -5,7 +5,9 @@ import { Tooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
 import styles from './TournamentsItem.module.css'
 
-const TournamentsItem = ({title, mode, src, startsIn, checkIn, reward, registered, verified = true, steam = true, prime = true}) => {
+const TournamentsItem = ({title, mode, src, startsIn, checkIn, reward, registered,
+   steamGuard, mythicVerification, mythicPrime, game, url}) => {
+
    return <>
       <div className={styles.tournament}>
          <div className={styles['tournament__image-wrapper']}>
@@ -25,7 +27,7 @@ const TournamentsItem = ({title, mode, src, startsIn, checkIn, reward, registere
          <span className={styles.tournament__reward}>{reward}</span>
          <span className={styles.tournament__registered}>{registered}</span>
          <div className={styles.tournament__requirements}>
-            {steam ?
+            {steamGuard ?
                <a 
                   className={styles['tournament__requirements-link']}
                   data-tooltip-id="my-tooltip" 
@@ -41,7 +43,7 @@ const TournamentsItem = ({title, mode, src, startsIn, checkIn, reward, registere
                </a>
                : ''
             }
-            {verified ?
+            {mythicVerification ?
                <a 
                   className={styles['tournament__requirements-link']}
                   data-tooltip-id="my-tooltip" 
@@ -57,7 +59,7 @@ const TournamentsItem = ({title, mode, src, startsIn, checkIn, reward, registere
                </a>
                : ''
             }
-            {prime ?
+            {mythicPrime ?
                <a 
                   className={styles['tournament__requirements-link']}
                   data-tooltip-id="my-tooltip" 
@@ -74,11 +76,11 @@ const TournamentsItem = ({title, mode, src, startsIn, checkIn, reward, registere
                : ''
             }
          </div>
-         <DefaultButton className={styles.tournament__btn} href="/cs-go/tournament">
+         <DefaultButton className={styles.tournament__btn} href={`/${game}/tournament/${url}`}>
             Join
          </DefaultButton>
       </div>
-      <Link className={styles['tournament-mob']} href="/cs-go/tournament">
+      <Link className={styles['tournament-mob']} href={url}>
          <div className={styles['tournament__image-wrapper']}>
             <Image 
                src={src}

@@ -1,0 +1,10 @@
+// import TournamentPage from '@/components/dota/TournamentPage/TournamentPage'
+
+
+// const DotaTournament = () => {
+//    return <>
+//       <TournamentPage />
+//    </>
+// }
+
+// export default DotaTournament

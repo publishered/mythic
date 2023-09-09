@@ -1,11 +1,16 @@
+import AuthContext from '@/context/AuthContext'
 import Image from 'next/image'
+import { useContext } from 'react'
 import styles from './HeaderSidebarInfo.module.css'
 
 const HeaderSidebarInfo = () => {
+
+   const authContext = useContext(AuthContext)
+
    return <div className={styles.info}>
       <div className={styles.info__top}>
          <h2 className={styles['info__top-nickname']}>
-            monkey
+            {authContext.loginInfo.nickname}
          </h2>
          <Image 
             className={styles['info__top-flag']}

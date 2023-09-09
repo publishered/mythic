@@ -1,8 +1,13 @@
+import AuthContext from '@/context/AuthContext'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useContext } from 'react'
 import styles from './AuthorizatedButton.module.css'
 
 const AuthorizatedButton = ({setIsOpenSidebar}) => {
+
+   const authContext = useContext(AuthContext)
+
    return <>
       <Link href="/profile#invites" className={styles['header__right-notification']}>
       <Image 
@@ -15,7 +20,7 @@ const AuthorizatedButton = ({setIsOpenSidebar}) => {
       <span className={styles['header__right-notification-circle']}></span>
       </Link>
       <Link href="/profile" className={styles['header__right-user']}>
-         <span className={styles['header__right-user-nickname']}>monkey</span>
+         <span className={styles['header__right-user-nickname']}>{authContext?.loginInfo?.nickname}</span>
          <Image 
             className={styles['header__right-user-nickname']} 
             src="/images/avatar.svg"

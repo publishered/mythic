@@ -24,7 +24,7 @@ const ProfilePageTopSection = ({activeAnchor}) => {
             <div className={styles['info__top-content-top']}>
                <div className={styles['info__top-content-top-nickname-wrapper']}>
                   <h2 className={styles['info__top-content-top-nickname']}>
-                     monkey
+                     {authContext.loginInfo.nickname}
                   </h2>
                   <Image 
                      className={styles['info__top-content-top-nickname-flag']}

@@ -2,7 +2,11 @@ import Container from '@/components/UI/container/Container'
 import Image from 'next/image'
 import styles from './TournamentOverview.module.css'
 
-const TournamentOverview = () => {
+const formatToDoubleDecimalSymbol = price => {
+
+}
+
+const TournamentOverview = ({tournament}) => {
    return <section className={styles.overview}>
       <Container>
          <h2 className={styles.overview__title}>Overview</h2>
@@ -21,7 +25,7 @@ const TournamentOverview = () => {
                            />
                            First Place
                         </div>
-                        <span className={styles['overview__group-list-item-right']}>1.00$</span>
+                        <span className={styles['overview__group-list-item-right']}>{tournament.first_place.toFixed(2)}$</span>
                      </li>
                      <li className={styles['overview__group-list-item']}>
                         <div className={styles['overview__group-list-item-left']}>
@@ -33,7 +37,7 @@ const TournamentOverview = () => {
                            />
                            Second Place
                         </div>
-                        <span className={styles['overview__group-list-item-right']}>0.00$</span>
+                        <span className={styles['overview__group-list-item-right']}>{tournament.second_place.toFixed(2)}$</span>
                      </li>
                      <li className={styles['overview__group-list-item']}>
                         <div className={styles['overview__group-list-item-left']}>
@@ -45,7 +49,7 @@ const TournamentOverview = () => {
                            />
                            Third Place
                         </div>
-                        <span className={styles['overview__group-list-item-right']}>0.00$</span>
+                        <span className={styles['overview__group-list-item-right']}>{tournament.third_place.toFixed(2)}$</span>
                      </li>
                   </ul>
                </div>
@@ -56,15 +60,15 @@ const TournamentOverview = () => {
                   <ul className={styles['overview__group-list']}>
                      <li className={styles['overview__group-list-item']}>
                         <span>Max rounds</span>
-                        <span className={styles['overview__group-list-item-right']}>30</span>
+                        <span className={styles['overview__group-list-item-right']}>{tournament.max_rounds}</span>
                      </li>
                      <li className={styles['overview__group-list-item']}>
                         <span>Map pool</span>
-                        <span className={styles['overview__group-list-item-right']}>Competitive de_* maps</span>
+                        <span className={styles['overview__group-list-item-right']}>{tournament.map_pool}</span>
                      </li>
                      <li className={styles['overview__group-list-item']}>
                         <span>Game mode</span>
-                        <span className={styles['overview__group-list-item-right']}>Bomb Defusal</span>
+                        <span className={styles['overview__group-list-item-right']}>{tournament.game_mode}</span>
                      </li>
                   </ul>
                </div>
@@ -73,6 +77,7 @@ const TournamentOverview = () => {
                <h3 className={styles['overview__group-title']}>Player requirements</h3>
                <div className={styles['overview__group-body']}>
                   <ul className={styles['overview__group-requirements']}>
+                     {tournament.req_steam_guard ? 
                      <li className={styles['overview__group-requirements-item']}>
                         <Image 
                            src="/images/icon/requirements-steam.svg"
@@ -82,6 +87,8 @@ const TournamentOverview = () => {
                         />
                         Steam Mobile Guard
                      </li>
+                     : ''}
+                     {tournament.req_mythic_verification ? 
                      <li className={styles['overview__group-requirements-item']}>
                         <Image 
                            src="/images/icon/requirements-verified.svg"
@@ -91,6 +98,8 @@ const TournamentOverview = () => {
                         />
                         Mythic Verification
                      </li>
+                     : ''}
+                     {tournament.req_mythic_prime ?
                      <li className={styles['overview__group-requirements-item']}>
                         <Image 
                            src="/images/icon/requirements-prime.svg"
@@ -100,14 +109,15 @@ const TournamentOverview = () => {
                         />
                         Mythic Prime
                      </li>
+                     : ''}
                   </ul>
                </div>
             </div>
             <div className={styles.overview__group}>
-               <h3 className={styles['overview__group-title']}>NA Server</h3>
+               <h3 className={styles['overview__group-title']}>{tournament.server} Server</h3>
                <div className={styles['overview__group-body']}>
                   <p className={styles['overview__group-body-text']}>
-                     Tournament is hosted on an NA server. If you are located outside of the NA, we suggest choosing a tournament hosted on another server for the better gaming experience.
+                     Tournament is hosted on an {tournament.server} server. If you are located outside of the {tournament.server}, we suggest choosing a tournament hosted on another server for the better gaming experience.
                   </p>
                </div>
             </div>

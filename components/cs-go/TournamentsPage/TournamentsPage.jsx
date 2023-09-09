@@ -4,10 +4,35 @@ import TournamentsFilters from './TournamentsFilters/TournamentsFilters'
 import styles from './TournamentsPage.module.css'
 import TournamentsTable from './TournamentsTable/TournamentsTable'
 
-const TournamentsPage = () => {
+function filterAndSortData(data, mode, time) {
+   const result = {}; // Новый объект для хранения отфильтрованных данных
+ 
+   for (const timestamp in data) {
+     if (data.hasOwnProperty(timestamp)) {
+       const tournaments = data[timestamp];
+       const filteredTournaments = tournaments
+       .filter(tournament => tournament.mode === mode)
+       .filter(tournament => tournament.status === time);
+ 
+       // Если остались турниры после фильтрации, сохраняем их в новом объекте
+       if (filteredTournaments.length > 0) {
+         result[timestamp] = filteredTournaments;
+       }
+     }
+   }
+ 
+   return result;
+}
+
+const TournamentsPage = ({tournaments}) => {
 
    const [timeFilter, setTimeFilter] = useState('upcoming')
    const [modeFilter, setModeFilter] = useState('1v1')
+
+
+   const filteredTournamentsByModeAndTime = filterAndSortData(tournaments, modeFilter, timeFilter)
+
+   console.log(filteredTournamentsByModeAndTime)
 
    return <>
       <TitleSection 
@@ -24,11 +49,19 @@ const TournamentsPage = () => {
          modeFilter={modeFilter}
          setModeFilter={setModeFilter}
       />
-      <h2 className={styles.tournaments__date}>Sunday, 04/03</h2>
-      <TournamentsTable />
-      <button className={styles.tournaments__loadMore}>
-         load more
-      </button>
+      {
+         Object.keys(filteredTournamentsByModeAndTime).map((keyName, index) => (
+            <div className={styles.group} key={index}>
+               <h2 className={styles.tournaments__date}>{tournaments[keyName][0].date}</h2>
+               <TournamentsTable tournaments={tournaments[keyName]}/>
+               {/* <button className={styles.tournaments__loadMore}>
+                  load more
+               </button> */}
+            </div>
+         ))
+      }
+      
+      
    </>
 }
 
