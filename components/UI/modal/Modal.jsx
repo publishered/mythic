@@ -21,8 +21,8 @@ const Modal = ({isModalOpen, children, setIsModalOpen, timeout = 500}) => {
                mountOnEnter
                classNames='modal__animation'
             >
-               <div className={styles.modal__wrapper} onClick={() => setIsModalOpen(false)}>
-                  <div className={styles.modal} onClick={e => e.stopPropagation()}>
+               <div className={styles.modal__wrapper} onClick={() => {}}>
+                  <div className={styles.modal} onClick={e => {}}>
                      {children}
                   </div>
                </div>
