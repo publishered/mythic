@@ -24,13 +24,14 @@ function filterAndSortData(data, mode, time) {
    return result;
 }
 
+const sortObject = o => Object.keys(o).sort((a, b) => a < b).reduce((r, k) => (r[k] = o[k], r), {})
+
 const TournamentsPage = ({tournaments}) => {
 
    const [timeFilter, setTimeFilter] = useState('upcoming')
    const [modeFilter, setModeFilter] = useState('1v1')
 
-
-   const filteredTournamentsByModeAndTime = filterAndSortData(tournaments, modeFilter, timeFilter)
+   const filteredTournamentsByModeAndTime = sortObject(filterAndSortData(tournaments, modeFilter, timeFilter))
 
    console.log(filteredTournamentsByModeAndTime)
 

@@ -19,8 +19,6 @@ const Layout = ({children}) => {
 
    const {pathname} = useRouter()
 
-   console.log(pathname)
-
    const [isSignUpOpen, setIsSignUpOpen] = useState(false)
    const [isSignInOpen, setIsSignInOpen] = useState(false)
    const [isPrimeOpen, setIsPrimeOpen] = useState(false)
@@ -80,6 +78,7 @@ const Layout = ({children}) => {
       isSignUpOpen={isSignUpOpen}
       setIsSignUpOpen={setIsSignUpOpen}
       setIsSignInOpen={setIsSignInOpen}
+      setIsConnectSteamOpen={setIsConnectSteamOpen}
    />
    <SignInWrapper 
       isSignInOpen={isSignInOpen}

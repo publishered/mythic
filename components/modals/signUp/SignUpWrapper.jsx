@@ -1,12 +1,14 @@
 import AuthContext from '@/context/AuthContext'
 import register from '@/services/authentication/register'
+import { useRouter } from 'next/router'
 import { useContext, useState } from 'react'
 import Cookies from 'universal-cookie'
 import SignUp from './SignUp'
 
-const SignUpWrapper = ({isSignUpOpen, setIsSignUpOpen, setIsSignInOpen}) => {
+const SignUpWrapper = ({isSignUpOpen, setIsSignUpOpen, setIsSignInOpen, setIsConnectSteamOpen}) => {
 
    const authContext = useContext(AuthContext)
+   const {push} = useRouter()
 
    const signUpDataInitState = {
       email: {
@@ -130,6 +132,9 @@ const SignUpWrapper = ({isSignUpOpen, setIsSignUpOpen, setIsSignInOpen}) => {
 
             setSignUpError(signUpErrorInitState)
             setSignUpData(signUpDataInitState)
+
+            push('/profile')
+            setIsConnectSteamOpen(true)
          }
 
          if (response === 'already_taken') {

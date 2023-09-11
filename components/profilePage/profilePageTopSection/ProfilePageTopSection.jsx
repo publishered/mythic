@@ -159,7 +159,7 @@ const ProfilePageTopSection = ({activeAnchor}) => {
                   </div>
                   <div className={styles['info__top-content-bottom-item']}>
                      <h3 className={styles['info__top-content-bottom-item-title']}>Joined</h3>
-                     <span className={styles['info__top-content-bottom-item-value']}>2 months ago</span>
+                     <span className={styles['info__top-content-bottom-item-value']}>less than a month ago</span>
                   </div>
                </div>
             </div>

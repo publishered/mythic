@@ -1,5 +1,6 @@
 import AuthContext from '@/context/AuthContext'
 import login from '@/services/authentication/login'
+import { useRouter } from 'next/router'
 import { useContext, useState } from 'react'
 import Cookies from 'universal-cookie'
 import SignIn from './SignIn'
@@ -7,6 +8,8 @@ import SignIn from './SignIn'
 const SignInWrapper = ({isSignInOpen, setIsSignInOpen, setIsSignUpOpen}) => {
 
    const authContext = useContext(AuthContext)
+
+   const {push} = useRouter()
 
    const signInDataInitState = {
       nickname: {
@@ -102,6 +105,8 @@ const SignInWrapper = ({isSignInOpen, setIsSignInOpen, setIsSignUpOpen}) => {
 
             setSignInData(signInDataInitState)
             setSignInError(signInErrorInitState)
+
+            push('/profile')
          }
 
          if (response_token === 'not_valid' || response_token === 'error') {

@@ -11,7 +11,7 @@ const CsGoTournaments = ({tournaments}) => {
 
 export async function getServerSideProps() {
    const tournaments = await getTournaments('cs-go')
-
+   
    return { props: { tournaments } }
 }
 

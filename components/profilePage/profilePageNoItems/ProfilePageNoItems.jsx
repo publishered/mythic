@@ -1,7 +1,12 @@
+import AuthContext from '@/context/AuthContext'
 import Image from 'next/image'
+import { useContext } from 'react'
 import styles from './ProfilePageNoItems.module.css'
 
-const ProfilePageNoItems = ({src, title, text, nickname}) => {
+const ProfilePageNoItems = ({src, title, text}) => {
+
+   const authContext = useContext(AuthContext)
+
    return <div className={styles.inner}>
       <Image
          className={styles.img}
@@ -11,7 +16,7 @@ const ProfilePageNoItems = ({src, title, text, nickname}) => {
          alt='icon'
       />
       <h2 className={styles.title}>{title}</h2>
-      <p className={styles.text}><b>{nickname}</b> {text}</p>
+      <p className={styles.text}><b>{authContext.loginInfo.nickname}</b> {text}</p>
    </div>
 }
 
