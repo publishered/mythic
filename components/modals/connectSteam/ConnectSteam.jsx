@@ -4,6 +4,13 @@ import Image from 'next/image'
 import styles from './ConnectSteam.module.css'
 
 const ConnectSteam = ({isConnectSteamOpen, setIsConnectSteamOpen}) => {
+
+   const connectSteamHandler = e => {
+      if (typeof window !== "undefined") {
+         document.querySelector('.murly5wwiq8a').click()
+      }
+   }
+
    return <Modal isModalOpen={isConnectSteamOpen} setIsModalOpen={setIsConnectSteamOpen}>
       <div className={styles.connect}>
          <button className={styles.connect__close} onClick={e => setIsConnectSteamOpen(false)}>
@@ -44,7 +51,7 @@ const ConnectSteam = ({isConnectSteamOpen, setIsConnectSteamOpen}) => {
                </div>
             </li>
          </ul>
-         <DefaultButton className={styles['connect__btn']}>Connect with Steam</DefaultButton>
+         <DefaultButton onClick={connectSteamHandler} className={styles['connect__btn']}>Connect with Steam</DefaultButton>
       </div>
    </Modal>
 }

@@ -36,11 +36,13 @@ export default function App({ Component, pageProps }) {
          if (info?.status === 'success') {
             console.log("Email: ", info.nickname)
             setIsLogin(true, info.email, info.nickname)
+            if (info.is_connected) {
+               setIsConnected(true)
+            }
          }
 
          })()
       }
-      
    }, [])
 
   return <>
