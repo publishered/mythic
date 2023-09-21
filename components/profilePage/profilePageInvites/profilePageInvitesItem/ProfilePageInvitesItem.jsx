@@ -14,10 +14,10 @@ const ProfilePageInvitesItem = ({src, title, onClick}) => {
          />
          <div className={styles.item__info}>
             <p className={styles['item__info-title']}>{title}</p>
-            <p className={styles['item__info-text']}>You will not be able to accept this invitation until your account has been verified</p>
+            {/* <p className={styles['item__info-text']}>You will not be able to accept this invitation until your account has been verified</p> */}
          </div>
       </div>
-      <DefaultButton className={styles.item__btn} onClick={onClick} disabled>
+      <DefaultButton className={styles.item__btn} onClick={onClick}>
          Accept invite
       </DefaultButton>
    </div>

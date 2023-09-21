@@ -132,6 +132,10 @@
    display: none;
 }
 
+.info__top-img {
+   border-radius: 10px;
+}
+
 @media (max-width: 1100px) {
    .info__top-content-top-stats-mob {
       display: block;

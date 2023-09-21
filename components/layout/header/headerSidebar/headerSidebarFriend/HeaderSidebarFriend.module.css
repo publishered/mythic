@@ -51,10 +51,16 @@
 .friends__body {
    flex: 1 1 auto;
    display: flex;
+   flex-direction: column;
+   padding: 25px;
+   gap: 20px;
+   overflow: auto;
+}
+
+.friends__body.notfound {
+   padding: 0 55px;
    align-items: center;
    justify-content: center;
-   flex-direction: column;
-   padding: 0 55px;
 }
 
 .friends__add {
@@ -87,4 +93,9 @@
 
 .friends__add-link:hover {
    color: #fff;
+}
+
+.add__friend {
+   text-align: center;
+   margin-top: 20px;
 }

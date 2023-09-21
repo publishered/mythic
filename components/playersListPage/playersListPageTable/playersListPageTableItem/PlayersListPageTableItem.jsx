@@ -1,39 +1,109 @@
+import DefaultButton from '@/components/UI/defaultButton/DefaultButton'
+import getColorForRank from '@/functions/getColorForRank'
+import addFriends from '@/services/friends/addFriends'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
+import ReactCountryFlag from 'react-country-flag'
 import styles from './PlayersListPageTableItem.module.css'
 
-const PlayersListPageTableItem = ({change}) => {
+const PlayersListPageTableItem = ({nickname, country_code, rank, avatar_path, isAuth, id, auth_token, friend_status}) => {
+
+   const [friendStatus, setFriendStatus] = useState(friend_status)
+
+   useEffect(() => {
+      setFriendStatus(friend_status)
+   }, [friend_status])
+
+   const rankColor = getColorForRank(rank)
+
+   const addFriendHandler = async () => {
+      const response = await addFriends(auth_token, id)
+
+      if (response === 'success') {
+         setFriendStatus('Request sent')
+      }
+   }
+
+   const {push} = useRouter()
+
+   const acceptFriendHandler = () => {
+      push('/profile#invites')
+   }
+
+   let btnDisabled = false
+
+   switch (friendStatus) {
+      case 'friend':
+      case 'Request sent':
+         btnDisabled = true
+         break
+   }
+
+   let btnText = 'Add friend'
+
+   switch (friendStatus) {
+      case 'friend':
+         btnText = 'Your friend'
+         break
+      case 'Request sent':
+         btnText = 'Request sent'
+         break
+      case 'Accept Invite':
+         btnText = 'Accept Invite'
+         break
+   }
+
    return <>
-      <Link href="#" className={`${styles.item} ${change === 'down' ? styles.down : styles.up}`}>
+      <div className={`${styles.item}`}>
          <div className={styles.item__username}>
             <Image 
                className={styles['item__username-avatar']}
-               src="/images/avatar.svg"
+               src={avatar_path}
                width="70"
                height="70"
                alt="avatar"
             />
             <div className={styles['item__username-nick-wrapper']}>
-               <h2 className={styles['item__username-nick']}>Sooren</h2>
-               <Image
+               <h2 className={styles['item__username-nick']}>{nickname}</h2>
+               {/* <Image
                   className={styles['item__username-nick-flag']}
                   width="17"
                   height="13"
                   src="/images/flags/sweden.svg"
+               /> */}
+               <ReactCountryFlag 
+                  className={styles['item__username-nick-flag']}
+                  countryCode={country_code}
+                  width="17"
+                  height="13"
+                  alt='flag'
+                  svg
+                  style={
+                     {
+                        width: "17px", 
+                        height: "13px",
+                        borderRadius: "3px"
+                     }
+                  }
                />
-               <span className={styles['item__username-nick-rank']}>tier 5</span>
+               <span 
+                  className={styles['item__username-nick-rank']}
+                  style={{backgroundColor: rankColor.rankBackground, color: rankColor.isBlack ? 'var(--light-gray-color)' : ''}}
+               >
+                  {rank}
+               </span>
             </div>
          </div>
-         <button className={styles['item__btn']}>
-            <Image 
-               className={styles['item__btn-img']}
-               width="15"
-               height="15"
-               alt='arrow right'
-               src="/images/icon/arrow-right.svg"
-            />
-         </button>
-      </Link>
+         {isAuth ? <DefaultButton 
+            className={styles.item__btn}
+            onClick={friendStatus === 'Accept Invite' ? acceptFriendHandler : addFriendHandler}
+            disabled={btnDisabled}
+         >
+            
+            {btnText}
+         </DefaultButton> : ''}
+      </div>
    </>
 }
 

@@ -35,6 +35,7 @@ const SignUpWrapper = ({isSignUpOpen, setIsSignUpOpen, setIsSignInOpen, setIsCon
       isEmailLess4: false,
       isPasswordLess4: false,
       isAlreadyTaken: false,
+      isNicknameLength: false,
    }
    
    const [signUpError, setSignUpError] = useState(signUpErrorInitState)
@@ -120,14 +121,14 @@ const SignUpWrapper = ({isSignUpOpen, setIsSignUpOpen, setIsSignInOpen, setIsCon
 
       if (!isNicknameError && !isEmailError && !isPasswordError) {
          const response = await register(signUpData.email.value, signUpData.nickname.value, signUpData.password.value)
-
-         console.log(response)
          
          if (response?.status === 'success') {
             const cookies = new Cookies()
             cookies.set('auth_token', response.token, {path: '/', expires: new Date(Date.now()+2592000000)})
             
-            authContext.setIsLogin(true, response.userInfo.email, response.userInfo.nickname)
+            authContext.setIsLogin(true, 
+               response.userInfo.id, response.userInfo.email, response.userInfo.nickname, response.userInfo.avatar_path, response.userInfo.rank, response.userInfo.country_code, response.userInfo.is_notif
+            )
             setIsSignUpOpen(false)
 
             setSignUpError(signUpErrorInitState)
@@ -139,6 +140,11 @@ const SignUpWrapper = ({isSignUpOpen, setIsSignUpOpen, setIsSignInOpen, setIsCon
 
          if (response === 'already_taken') {
             setSignUpError(prevState => ({...prevState, isAlreadyTaken: true}))
+            setSignUpData(prevState => ({...prevState, nickname: {...prevState.nickname, error: true}}))
+         }
+
+         if (response === 'nickname_length') {
+            setSignUpError(prevState => ({...prevState, isNicknameLength: true}))
             setSignUpData(prevState => ({...prevState, nickname: {...prevState.nickname, error: true}}))
          }
 

@@ -1,12 +1,37 @@
 import AuthContext from '@/context/AuthContext'
+import settings from '@/websocket/settings'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
+import useWebSocket from 'react-use-websocket'
 import styles from './AuthorizatedButton.module.css'
 
 const AuthorizatedButton = ({setIsOpenSidebar}) => {
 
    const authContext = useContext(AuthContext)
+
+   const { sendMessage, lastMessage, readyState } = useWebSocket(settings.WS_URL, {
+      share: true,
+      onOpen: () => {
+        console.log('WebSocket connection established.');
+      }
+   })
+
+   useEffect(() => {
+
+      if (lastMessage?.data) {
+
+         const data = JSON.parse(lastMessage.data)
+
+         if (data.action === 'new_friend_invite') {
+            authContext.setIsLogin(authContext.isLogin, authContext.loginInfo.id, authContext.loginInfo.email, 
+               authContext.loginInfo.nickname, authContext.loginInfo.avatar_path, authContext.loginInfo.rank,
+               authContext.loginInfo.country_code, true)
+         }
+
+      }
+   }, [lastMessage])
+
 
    return <>
       <Link href="/profile#invites" className={styles['header__right-notification']}>
@@ -17,13 +42,15 @@ const AuthorizatedButton = ({setIsOpenSidebar}) => {
          height="24"
          alt='notification'
       />
-      <span className={styles['header__right-notification-circle']}></span>
+      {authContext.loginInfo.is_notif ? 
+         <span className={styles['header__right-notification-circle']}></span>
+      : ''}
       </Link>
       <Link href="/profile" className={styles['header__right-user']}>
          <span className={styles['header__right-user-nickname']}>{authContext?.loginInfo?.nickname}</span>
          <Image 
             className={styles['header__right-user-nickname']} 
-            src="/images/avatar.svg"
+            src={authContext.loginInfo.avatar_path}
             width="50"
             height="50"
             alt='avatar'

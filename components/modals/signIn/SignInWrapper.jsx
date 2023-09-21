@@ -99,7 +99,7 @@ const SignInWrapper = ({isSignInOpen, setIsSignInOpen, setIsSignUpOpen}) => {
             const cookies = new Cookies()
             cookies.set('auth_token', response_token.token, {path: '/', expires: new Date(Date.now()+2592000000)})
 
-            authContext.setIsLogin(true, response_token.userInfo.email, response_token.userInfo.nickname)
+            authContext.setIsLogin(true, response_token.userInfo.id, response_token.userInfo.email, response_token.userInfo.nickname, response_token.userInfo.avatar_path, response_token.userInfo.rank, response_token.userInfo.country_code, response_token.userInfo.is_notif)
 
             setIsSignInOpen(false)
 

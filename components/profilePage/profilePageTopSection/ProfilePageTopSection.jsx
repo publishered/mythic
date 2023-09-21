@@ -3,6 +3,7 @@ import ModalFunction from '@/context/ModalFunction'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useContext } from 'react'
+import ReactCountryFlag from 'react-country-flag'
 import styles from './ProfilePageTopSection.module.css'
 import ProfilePageTopSectionTab from './profilePageTopSectionTab/ProfilePageTopSectionTab'
 
@@ -15,7 +16,7 @@ const ProfilePageTopSection = ({activeAnchor}) => {
       <div className={styles.info__top}>
          <Image 
             className={styles['info__top-img']}
-            src="/images/avatar.svg"
+            src={authContext.loginInfo.avatar_path}
             width="150"
             height="150"
             alt='avatar'
@@ -26,13 +27,29 @@ const ProfilePageTopSection = ({activeAnchor}) => {
                   <h2 className={styles['info__top-content-top-nickname']}>
                      {authContext.loginInfo.nickname}
                   </h2>
-                  <Image 
+                  {/* <Image 
                      className={styles['info__top-content-top-nickname-flag']}
                      src="/images/flags/sweden.svg"
                      width="28"
                      height="21"
                      alt='flag'
-                  />
+                  /> */}
+                  {authContext.loginInfo.country_code !== '-' ?
+                  <ReactCountryFlag 
+                     className={styles['info__top-content-top-nickname-flag']}
+                     countryCode={authContext.loginInfo.country_code}
+                     width="28"
+                     height="21"
+                     alt='flag'
+                     svg
+                     style={
+                        {
+                           width: "28px", 
+                           height: "21px",
+                           borderRadius: "3px"
+                        }
+                     }
+                  />: ''}
                </div>
                <div className={styles['info__top-content-top-stats']}>
                   <div className={styles['info__top-content-top-stats-item']}>

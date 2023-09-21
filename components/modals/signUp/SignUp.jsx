@@ -55,6 +55,7 @@ const SignUp = ({isSignUpOpen, setIsSignUpOpen, setIsSignInOpen, emailInputHandl
                {signUpError.isEmailLess4 ? <p>Email field can not be less than 4</p> : ""}
                {signUpError.isPasswordLess4 ? <p>Password field can not be less than 4</p> : ""}
                {signUpError.isAlreadyTaken ? <p>This username is already taken</p> : ""}
+               {signUpError.isNicknameLength ? <p>Nickname's max length is 24 symbols</p> : ""}
             </div>
             <p className={styles['signUp__form-alternative']}>
             Already have account?

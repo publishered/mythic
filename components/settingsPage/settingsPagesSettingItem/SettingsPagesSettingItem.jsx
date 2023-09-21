@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import styles from './SettingsPagesSettingItem.module.css'
 
-const SettingsPagesSettingItem = ({title, prime = false, placeholder, type = 'default', preplaceholder, checkDefault = false}) => {
+const SettingsPagesSettingItem = ({title, prime = false, placeholder, type = 'default', preplaceholder, checkDefault = false, onChange}) => {
 
    const inputWidthRef = useRef()
 
@@ -84,7 +84,7 @@ const SettingsPagesSettingItem = ({title, prime = false, placeholder, type = 'de
          {type === 'file' ? 
             <label className={styles['item__file-label']}>
                Select file
-               <input type="file" hidden />
+               <input type="file" hidden onChange={onChange} accept="image/png, image/webp, image/jpeg" />
             </label>
          : ''}
          {type === 'locked' ?

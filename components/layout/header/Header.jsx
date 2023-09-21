@@ -11,6 +11,8 @@ import HeaderSidebar from './headerSidebar/HeaderSidebar'
 
 const Header = ({setIsSignUpOpen, setIsSignInOpen, setIsPrimeOpen}) => {
 
+   
+
    const headerRef = useRef()
    const [headerHeight, setHeaderHeight] = useState(0)
    const [offsetForSidebar, setOffsetForSidebar] = useState(0)

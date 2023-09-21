@@ -1,34 +1,54 @@
 import DefaultButtonWithState from '@/components/UI/defaultButtonWithState/DefaultButtonWithState'
 import GrayButton from '@/components/UI/grayButton/GrayButton'
+import getColorForRank from '@/functions/getColorForRank'
 import Image from 'next/image'
+import ReactCountryFlag from 'react-country-flag'
 import styles from './TeamFinderItem.module.css'
 
-const TeamFinderItem = () => {
+const TeamFinderItem = ({avatar_path, nickname, country_code, register_date, rank, all_matches, win_matches, loose_matches}) => {
+
+   const winRate = Math.round((((win_matches * 100 / all_matches)) + Number.EPSILON) * 100) / 100
+
+   const rankColor = getColorForRank(rank)
+
    return <div className={styles.item}>
       <div className={styles.item__top}>
          <div className={styles['item__top-info']}>
             <Image 
                className={styles['item__top-info-img']}
-               src="/images/avatar.svg"
+               src={avatar_path}
                width="50"
                height="50"
                alt="avatar"
             />
             <div className={styles['item__top-info-content']}>
                <div className={styles['item__top-info-title-wrapper']}>
-                  <h2 className={styles['item__top-info-title']}>monkey</h2>
-                  <span className={styles['item__top-info-rank']}>unranked</span>
+                  <h2 className={styles['item__top-info-title']}>{nickname}</h2>
+                  <span 
+                     className={styles['item__top-info-rank']} 
+                     style={{backgroundColor: rankColor.rankBackground, color: rankColor.isBlack ? 'var(--light-gray-color)' : ''}}
+                  >
+                     {rank}
+                     </span>
                </div>
                <div className={styles['item__top-info-content-about']}>
-                  <Image 
+                  <ReactCountryFlag 
                      className={styles['item__top-info-content-flag']}
-                     src="/images/flags/sweden.svg"
+                     countryCode={country_code}
                      width="17"
                      height="13"
-                     alt="flag"
+                     alt='flag'
+                     svg
+                     style={
+                        {
+                           width: "17px", 
+                           height: "13px",
+                           borderRadius: "3px"
+                        }
+                     }
                   />
                   <ul className={styles['item__top-info-content-about-list']}>
-                     <li className={styles['item__top-info-content-about-item']}>joined about 4 hours ago</li>
+                     <li className={styles['item__top-info-content-about-item']}>{register_date}</li>
                      {/* <li className={styles['item__top-info-content-about-item']}>0 reputation</li> */}
                   </ul>
                </div>
@@ -95,7 +115,7 @@ const TeamFinderItem = () => {
                      alt="avatar"
                   />
                   <div className={styles['item__bottom-steam-nickname-wrapper']}>
-                     <span className={styles['item__bottom-steam-nickname']}>monkey</span>
+                     <span className={styles['item__bottom-steam-nickname']}>{nickname}</span>
                      <Image 
                         className={styles['item__bottom-steam-img']}
                         src="/images/icon/requirements-verified.svg"
@@ -110,12 +130,12 @@ const TeamFinderItem = () => {
          <div className={styles['item__bottom-right']}>
             <h3 className={styles['item__bottom-right-title']}>Stats</h3>
             <div className={styles['item__bottom-right-inner']}>
-               <span className={styles['item__bottom-right-win']}>5W</span>
-               <span className={styles['item__bottom-right-loose']}>20L</span>
-               <span className={styles['item__bottom-right-percent']}>(25%)</span>
+               <span className={styles['item__bottom-right-win']}>{win_matches}W</span>
+               <span className={styles['item__bottom-right-loose']}>{loose_matches}L</span>
+               <span className={styles['item__bottom-right-percent']}>({winRate}%)</span>
             </div>
             <div className={styles['item__bottom-right-scale']}>
-               <span style={{width: '25%'}}></span>
+               <span style={{width: `${winRate}%`}}></span>
             </div>
          </div>
       </div>

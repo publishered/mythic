@@ -24,16 +24,35 @@ function filterAndSortData(data, mode, time) {
    return result;
 }
 
+function filterAndSortDataWithoutMode(data, time) {
+   const result = {}; // Новый объект для хранения отфильтрованных данных
+ 
+   for (const timestamp in data) {
+     if (data.hasOwnProperty(timestamp)) {
+       const tournaments = data[timestamp];
+       const filteredTournaments = tournaments
+       .filter(tournament => tournament.status === time);
+ 
+       // Если остались турниры после фильтрации, сохраняем их в новом объекте
+       if (filteredTournaments.length > 0) {
+         result[timestamp] = filteredTournaments;
+       }
+     }
+   }
+ 
+   return result;
+}
+
 const sortObject = o => Object.keys(o).sort((a, b) => a < b).reduce((r, k) => (r[k] = o[k], r), {})
 
-const TournamentsPage = ({tournaments}) => {
+const TournamentsPage = ({tournaments, game}) => {
 
    const [timeFilter, setTimeFilter] = useState('upcoming')
    const [modeFilter, setModeFilter] = useState('1v1')
 
-   const filteredTournamentsByModeAndTime = sortObject(filterAndSortData(tournaments, modeFilter, timeFilter))
-
-   console.log(filteredTournamentsByModeAndTime)
+   const filteredTournamentsByModeAndTime = (game === 'cs-go') ?
+   sortObject(filterAndSortData(tournaments, modeFilter, timeFilter)) :
+   sortObject(filterAndSortDataWithoutMode(tournaments, timeFilter))
 
    return <>
       <TitleSection 
@@ -49,6 +68,8 @@ const TournamentsPage = ({tournaments}) => {
 
          modeFilter={modeFilter}
          setModeFilter={setModeFilter}
+
+         game={game}
       />
       {
          Object.keys(filteredTournamentsByModeAndTime).map((keyName, index) => (

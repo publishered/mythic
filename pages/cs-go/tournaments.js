@@ -5,7 +5,7 @@ import getTournaments from '@/services/tournaments/getTournaments'
 const CsGoTournaments = ({tournaments}) => {
 
    return <DefaultSection>
-      <TournamentsPage tournaments={tournaments} />
+      <TournamentsPage tournaments={tournaments} game="cs-go" />
    </DefaultSection>
 }
 

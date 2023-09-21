@@ -76,7 +76,7 @@ const Footer = () => {
          </div>
       </div>
       <div className={styles.footer__copy}>
-         <span>2021 - 2022 MYTHIC ESPORTS LTD</span>
+         <span>2021 - {new Date().getFullYear()} MYTHIC ESPORTS LTD</span>
          <span>ALL RIGHTS RESERVED</span>
          <a href="https://techiia.com" target='_blank'>PART OF TECHIIA IT-HOLDING</a>
       </div>

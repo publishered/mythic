@@ -16,33 +16,40 @@ export default function App({ Component, pageProps }) {
       loginInfo: {},
    })
 
-   const setIsLogin = (isLogin, email = null, nickname = null) => setAuthState(prevState => ({...prevState, 
+   const setIsLogin = (isLogin, id = null, email = null, nickname = null, avatar_path = null, rank = null, country_code = null, is_notif = null) => setAuthState(prevState => ({...prevState, 
       isLogin: isLogin,
       loginInfo: {
+         id: id,
          email: email,
          nickname: nickname,
+         avatar_path: avatar_path,
+         rank: rank,
+         country_code: country_code,
+         is_notif: is_notif,
       }
    }))
 
    const setIsConnected = (value) => setAuthState(prevState => ({...prevState, isConnected: value}))
 
-   useEffect(() => {
+
+   const getInfoFunc = async () => {
       const cookies = new Cookies()
 
       if (cookies.get('auth_token')) {
-         (async () => {
          const info = await getInfo(cookies.get('auth_token'))
-         
+      
          if (info?.status === 'success') {
-            console.log("Email: ", info.nickname)
-            setIsLogin(true, info.email, info.nickname)
+            setIsLogin(true, info.id, info.email, info.nickname, info.avatar_path, info.rank, info.country_code, info.is_notif)
             if (info.is_connected) {
                setIsConnected(true)
             }
          }
-
-         })()
       }
+
+   }
+
+   useEffect(() => {
+      getInfoFunc()
    }, [])
 
   return <>
@@ -59,6 +66,7 @@ export default function App({ Component, pageProps }) {
       loginInfo: authState.loginInfo,
       setIsLogin,
       setIsConnected,
+      getMainInfo: getInfoFunc,
    }}>
       <Layout>
          <Component {...pageProps} />

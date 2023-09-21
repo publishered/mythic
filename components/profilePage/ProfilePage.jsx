@@ -9,7 +9,7 @@ import ProfilePageTeams from './profilePageTeams/ProfilePageTeams'
 import ProfilePageTopSection from './profilePageTopSection/ProfilePageTopSection'
 import ProfilePageTournaments from './profilePageTournaments/ProfilePageTournaments'
 
-const ProfilePage = () => {
+const ProfilePage = ({friendInvites}) => {
 
    const {asPath} = useRouter()
    const [activeAnchor, setActiveAnchor] = useState('matches')
@@ -38,7 +38,7 @@ const ProfilePage = () => {
          : ''}
 
          {activeAnchor === 'invites' ? 
-            <ProfilePageInvites />
+            <ProfilePageInvites friendInvites={friendInvites} />
          : ''}
       </Container>
    </section>

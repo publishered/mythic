@@ -1,12 +1,29 @@
+import searchAllFriends from '@/services/players/searchAllFriends'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Cookies from 'universal-cookie'
 import Container from '../UI/container/Container'
 import styles from './PlayersListPage.module.css'
 import PlayersListPageTable from './playersListPageTable/PlayersListPageTable'
 
-const PlayersListPage = () => {
+const PlayersListPage = ({players}) => {
 
    const [chosenMode, setChosenMode] = useState('5v5')
+   const [searchInput, setSearchInput] = useState('')
+   const [playersSorted, setPlayersSorted] = useState([])
+
+   const cookie = new Cookies()
+
+   useEffect(() => {
+      if (searchInput.trim()) {
+         (async () => {
+            const searchPlayers = await searchAllFriends(searchInput, cookie.get('auth_token'))
+            setPlayersSorted(searchPlayers)
+         })()
+      } else {
+         setPlayersSorted([])
+      }
+   }, [searchInput])
 
    return <section className={styles.players}>
       <Container>
@@ -16,7 +33,13 @@ const PlayersListPage = () => {
             </h1>
             <div className={styles['players__top-right']}>
                <form action="#" className={styles['players__top-search']}>
-                  <input type="text" className={styles['players__top-search-input']} placeholder='Search for friends or people...' />
+                  <input 
+                     type="text" 
+                     className={styles['players__top-search-input']} 
+                     placeholder='Search for friends or people...' 
+                     value={searchInput}
+                     onInput={e => setSearchInput(e.target.value)}
+                  />
                   <button type="submit" className={styles['players__top-search-submit']}>
                      <Image 
                         src="/images/icon/search.svg"
@@ -33,7 +56,7 @@ const PlayersListPage = () => {
                </div>
             </div>
          </div>
-         <PlayersListPageTable />
+         <PlayersListPageTable players={searchInput.length ? playersSorted : players} searchInput={searchInput} />
       </Container>
    </section>
 }
