@@ -69,7 +69,7 @@ const HeaderSidebarFriend = ({mobile, isOpen, setIsOpen}) => {
          />
       </button>
       <div className={`${styles.friends__body} ${!friendsList?.length ? styles.notfound : ''}`}>
-         {friendsList.map(friend => (
+         {friendsList?.length ? friendsList.map(friend => (
             <HeaderSidebarFriendItem
                nickname={friend.nickname}   
                avatar_path={friend.avatar_path}
@@ -80,7 +80,7 @@ const HeaderSidebarFriend = ({mobile, isOpen, setIsOpen}) => {
 
                key={friend.friend_id}
             />
-         ))}
+         )) : ''}
          {!friendsList.length ? 
          <div className={styles['friends__add']}>
             <Image 
