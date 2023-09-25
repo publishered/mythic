@@ -39,6 +39,11 @@
    flex: 0 0 auto;
 }
 
+.item__username-avatar {
+   border-radius: 10px;
+   object-fit: cover;
+}
+
 @media (max-width: 500px) {
    .item__username-nick {
       text-overflow: ellipsis;

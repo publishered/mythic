@@ -49,7 +49,7 @@ const AuthorizatedButton = ({setIsOpenSidebar}) => {
       <Link href="/profile" className={styles['header__right-user']}>
          <span className={styles['header__right-user-nickname']}>{authContext?.loginInfo?.nickname}</span>
          <Image 
-            className={styles['header__right-user-nickname']} 
+            className={styles['header__right-user-img']} 
             src={authContext.loginInfo.avatar_path}
             width="50"
             height="50"

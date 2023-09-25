@@ -79,3 +79,8 @@
    list-style: none;
    font-size: 14px;
 }
+
+.item__username-avatar {
+   border-radius: 10px;
+   object-fit: cover;
+}

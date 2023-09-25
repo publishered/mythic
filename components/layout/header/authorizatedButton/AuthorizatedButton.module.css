@@ -36,3 +36,8 @@
 .header__right-sidebar-btn:hover {
    border-color: var(--purple-color);
 }
+
+.header__right-user-img {
+   border-radius: 10px;
+   object-fit: cover;
+}

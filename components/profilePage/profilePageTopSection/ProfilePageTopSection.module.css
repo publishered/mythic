@@ -134,6 +134,7 @@
 
 .info__top-img {
    border-radius: 10px;
+   object-fit: cover;
 }
 
 @media (max-width: 1100px) {
