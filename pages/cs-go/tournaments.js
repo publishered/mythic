@@ -16,7 +16,6 @@ const CsGoTournaments = ({tournaments}) => {
 
 export async function getStaticProps() {
    const tournaments = await getTournaments('cs-go')
-   
    return { props: { tournaments }, revalidate: 10 }
 }
 

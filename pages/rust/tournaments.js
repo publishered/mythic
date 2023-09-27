@@ -13,10 +13,10 @@ const CsGoTournaments = ({tournaments}) => {
    </DefaultSection>
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
    const tournaments = await getTournaments('rust')
    
-   return { props: { tournaments } }
+   return { props: { tournaments }, revalidate: 10 }
 }
 
 export default CsGoTournaments

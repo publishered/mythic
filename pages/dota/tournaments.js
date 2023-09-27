@@ -13,10 +13,10 @@ const DotaTournaments = ({tournaments}) => {
    </DefaultSection>
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
    const tournaments = await getTournaments('dota')
    
-   return { props: { tournaments } }
+   return { props: { tournaments }, revalidate: 10 }
 }
 
 export default DotaTournaments
