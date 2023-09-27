@@ -43,6 +43,10 @@ const HeaderSidebarFriend = ({mobile, isOpen, setIsOpen}) => {
             getAllFriendsFunc()
          }
 
+         if (data.action === 'delete_friend') {
+            setFriendList(prevState => [...prevState.filter(player => +player.id !== +data.delete_id)])
+         }
+
       }
    }, [lastMessage])
 

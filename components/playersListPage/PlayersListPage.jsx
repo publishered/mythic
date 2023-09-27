@@ -1,3 +1,4 @@
+import getAllFriends from '@/services/players/getAllFriends'
 import searchAllFriends from '@/services/players/searchAllFriends'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
@@ -6,8 +7,13 @@ import Container from '../UI/container/Container'
 import styles from './PlayersListPage.module.css'
 import PlayersListPageTable from './playersListPageTable/PlayersListPageTable'
 
-const PlayersListPage = ({players}) => {
+const PlayersListPage = ({startTotalPages, startPlayers}) => {
 
+   const [pageView, setPageView] = useState(1)
+
+   const [totalPages, setTotalPages] = useState(startTotalPages)
+   const [players, setPlayers] = useState(startPlayers)
+   
    const [chosenMode, setChosenMode] = useState('5v5')
    const [searchInput, setSearchInput] = useState('')
    const [playersSorted, setPlayersSorted] = useState([])
@@ -17,13 +23,34 @@ const PlayersListPage = ({players}) => {
    useEffect(() => {
       if (searchInput.trim()) {
          (async () => {
-            const searchPlayers = await searchAllFriends(searchInput, cookie.get('auth_token'))
-            setPlayersSorted(searchPlayers)
+            const searchPlayers = await searchAllFriends(searchInput, cookie.get('auth_token'), 1)
+            setPageView(1)
+            setPlayersSorted([...searchPlayers.players])
+            setTotalPages(searchPlayers.totalPages)
          })()
       } else {
-         setPlayersSorted([])
+         getAllFriends(cookie.get('auth_token'), pageView).then(res => {
+            setPageView(1)
+            setPlayers([...res.players])
+            setTotalPages(res.totalPages)
+         })
       }
    }, [searchInput])
+
+   useEffect(() => {
+      if (searchInput.trim()) {
+         (async () => {
+            const searchPlayers = await searchAllFriends(searchInput, cookie.get('auth_token'), pageView)
+            setPlayersSorted(prevState => [...prevState, ...searchPlayers.players])
+            setTotalPages(searchPlayers.totalPages)
+         })()
+      } else if (pageView > 1) {
+         getAllFriends(cookie.get('auth_token'), pageView).then(res => {
+            setPlayers(prevState => [...prevState, ...res.players])
+            setTotalPages(res.totalPages)
+         })
+      }
+   }, [pageView])
 
    return <section className={styles.players}>
       <Container>
@@ -56,7 +83,16 @@ const PlayersListPage = ({players}) => {
                </div>
             </div>
          </div>
-         <PlayersListPageTable players={searchInput.length ? playersSorted : players} searchInput={searchInput} />
+         <PlayersListPageTable 
+            players={searchInput.length ? playersSorted : players} 
+            searchInput={searchInput}
+            pageView={pageView}
+            setPageView={setPageView}
+            totalPages={totalPages}
+
+            setPlayers={setPlayers}
+            setPlayersSorted={setPlayersSorted}
+         />
       </Container>
    </section>
 }

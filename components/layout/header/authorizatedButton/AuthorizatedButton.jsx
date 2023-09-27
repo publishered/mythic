@@ -26,7 +26,7 @@ const AuthorizatedButton = ({setIsOpenSidebar}) => {
          if (data.action === 'new_friend_invite') {
             authContext.setIsLogin(authContext.isLogin, authContext.loginInfo.id, authContext.loginInfo.email, 
                authContext.loginInfo.nickname, authContext.loginInfo.avatar_path, authContext.loginInfo.rank,
-               authContext.loginInfo.country_code, true)
+               authContext.loginInfo.country_code, authContext.loginInfo.is_notif + 1)
          }
 
       }
@@ -38,12 +38,12 @@ const AuthorizatedButton = ({setIsOpenSidebar}) => {
       <Image 
          className={styles['header__right-notification-image']}
          src="/images/icon/notification.svg"
-         width="24"
-         height="24"
+         width="34"
+         height="34"
          alt='notification'
       />
-      {authContext.loginInfo.is_notif ? 
-         <span className={styles['header__right-notification-circle']}></span>
+      {+authContext.loginInfo.is_notif ? 
+         <span className={styles['header__right-notification-circle']}>{authContext.loginInfo.is_notif}</span>
       : ''}
       </Link>
       <Link href="/profile" className={styles['header__right-user']}>

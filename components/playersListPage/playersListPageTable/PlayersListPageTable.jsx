@@ -1,17 +1,14 @@
 import LoadMore from '@/components/UI/loadMore/LoadMore'
 import AuthContext from '@/context/AuthContext'
-import getAllFriends from '@/services/players/getAllFriends'
-import searchAllFriends from '@/services/players/searchAllFriends'
+import updateOneFromAllFriends from '@/services/players/updateOneFromAllFriends'
 import settings from '@/websocket/settings'
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import useWebSocket from 'react-use-websocket'
 import Cookies from 'universal-cookie'
 import styles from './PlayersListPageTable.module.css'
 import PlayersListPageTableItem from './playersListPageTableItem/PlayersListPageTableItem'
 
-const PlayersListPageTable = ({players, searchInput}) => {
-
-   const [playersList, setPlayersList] = useState(players)
+const PlayersListPageTable = ({players, searchInput, pageView, setPageView, totalPages, setPlayers, setPlayersSorted}) => {
 
    const { sendMessage, lastMessage, readyState } = useWebSocket(settings.WS_URL, {
       share: true,
@@ -23,22 +20,35 @@ const PlayersListPageTable = ({players, searchInput}) => {
    const cookie = new Cookies()
 
    useEffect(() => {
-      setPlayersList(players)
-   }, [players])
-
-   useEffect(() => {
       if (authContext.isLogin) {
          if (lastMessage?.data) {
 
             const data = JSON.parse(lastMessage.data)
 
             if (data.action === 'update_friend') {
+
                (async () => {
-                  if (searchInput) {
-                     setPlayersList(await searchAllFriends(searchInput, cookie.get('auth_token')))
+                  // if (searchInput) {
+                  //    setPlayersList(await searchAllFriends(searchInput, cookie.get('auth_token')))
+                  // } else {
+                  //    setPlayersList(await getAllFriends(cookie.get('auth_token')))
+                  // }
+                  const updatedUser = await updateOneFromAllFriends(cookie.get('auth_token'), data.update_id)
+                  
+                  if (searchInput.trim()) {
+                     setPlayersSorted(prevState => {
+                        if (prevState.findIndex(player => +player.id === +updatedUser.id) !== -1) {
+                           return [...prevState.filter(player => +player.id !== +updatedUser.id), updatedUser]
+                        }
+                     })
                   } else {
-                     setPlayersList(await getAllFriends(cookie.get('auth_token')))
+                     setPlayers(prevState => {
+                        if (prevState.findIndex(player => +player.id === +updatedUser.id) !== -1) {
+                           return [...prevState.filter(player => +player.id !== +updatedUser.id), updatedUser]
+                        }
+                     })
                   }
+                  
                })()
             }
 
@@ -47,22 +57,17 @@ const PlayersListPageTable = ({players, searchInput}) => {
    }, [lastMessage])
 
 
-   const [pageView, setPageView] = useState(1)
 
    const authContext = useContext(AuthContext)
 
-   const filterWithMe = authContext?.loginInfo?.id ? playersList.filter(player => +player.id !== +authContext.loginInfo.id) : playersList
-
-   const slicedPlayers = filterWithMe.filter(player => player.id != authContext.loginInfo.id).slice(0, 12 * pageView)
-
-
+   const filterWithMe = authContext?.loginInfo?.id ? players.filter(player => +player.id !== +authContext.loginInfo.id) : players
 
    return <div className={styles.table}>
       <div className={styles.table__head}>
          {/* <span className={styles['table__head-item']}>Username</span> */}
       </div>
       <div className={styles.table__body}>
-         {slicedPlayers.map((player, index) => (
+         {filterWithMe.map((player, index) => (
             <PlayersListPageTableItem
                nickname={player.nickname}
                country_code={player.country_code}
@@ -77,7 +82,7 @@ const PlayersListPageTable = ({players, searchInput}) => {
             />
          ))}
       </div>
-      {slicedPlayers.length !== filterWithMe.length ? <LoadMore onClick={e => setPageView(pageView + 1)} /> : ''}
+      {totalPages > 0 && totalPages !== pageView ? <LoadMore onClick={e => setPageView(pageView + 1)} /> : ''}
    </div>
 }
 

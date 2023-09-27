@@ -7,6 +7,8 @@ import StatsSection from '@/components/homePage/statsSection/StatsSection'
 import WhatWeOffer from '@/components/homePage/whatWeOffer/WhatWeOffer'
 import AuthContext from '@/context/AuthContext'
 import setConnected from '@/services/authentication/setConnected'
+import seo from '@/services/seo'
+import Head from 'next/head'
 import { useContext, useEffect } from 'react'
 import Cookies from 'universal-cookie'
 
@@ -28,6 +30,9 @@ const Home = ({action = null}) => {
    }, [action])
 
    return <>
+      <Head>
+         <title>{seo.generateTitle('Play. Become Pro')}</title>
+      </Head>
       <IntroSection />
       <StatsSection />
       <AvailableGames />

@@ -1,8 +1,13 @@
 import TournamentPage from '@/components/cs-go/TournamentPage/TournamentPage'
+import seo from '@/services/seo'
 import getTournament from '@/services/tournaments/getTournament'
+import Head from 'next/head'
 
 const CsGoTournament = ({tournament}) => {
    return <>
+      <Head>
+         <title>{seo.generateTitle(`Play ${tournament.name} in Dota 2`)}</title>
+      </Head>
       <TournamentPage tournament={tournament} />
    </>
 }

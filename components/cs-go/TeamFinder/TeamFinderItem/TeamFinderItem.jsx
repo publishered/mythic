@@ -5,7 +5,7 @@ import Image from 'next/image'
 import ReactCountryFlag from 'react-country-flag'
 import styles from './TeamFinderItem.module.css'
 
-const TeamFinderItem = ({avatar_path, nickname, country_code, register_date, rank, all_matches, win_matches, loose_matches}) => {
+const TeamFinderItem = ({avatar_path, nickname, country_code, register_date, rank, all_matches, win_matches, loose_matches, steam_id}) => {
 
    const winRate = Math.round((((win_matches * 100 / all_matches)) + Number.EPSILON) * 100) / 100
 
@@ -104,12 +104,12 @@ const TeamFinderItem = ({avatar_path, nickname, country_code, register_date, ran
                   />
                </div>
             </div>
-            <div className={styles['item__bottom-steam']}>
+            <a href={`https://steamcommunity.com/profiles/${steam_id}`} target='_blank' className={styles['item__bottom-steam']}>
                <h3 className={styles['item__bottom-steam-title']}>Steam account</h3>
                <div className={styles['item__bottom-steam-inner']}>
                   <Image 
                      className={styles['item__bottom-steam-img']}
-                     src="/images/avatar.svg"
+                     src="/images/steam-img.jpg"
                      width="50"
                      height="50"
                      alt="avatar"
@@ -125,7 +125,7 @@ const TeamFinderItem = ({avatar_path, nickname, country_code, register_date, ran
                      />
                   </div>
                </div>
-            </div>
+            </a>
          </div>
          <div className={styles['item__bottom-right']}>
             <h3 className={styles['item__bottom-right-title']}>Stats</h3>

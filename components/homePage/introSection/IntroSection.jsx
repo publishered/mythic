@@ -27,7 +27,7 @@ const IntroSection = () => {
             <span className={styles.intro__label}>Beta</span>
             <h1 className={styles.intro__title}>Play. Become Pro. Get prizes.</h1>
             <p className={styles.intro__text}>
-               Mythic Esports has everything for everyone to compete 
+               Mythic Play has everything for everyone to compete 
                in a competitive environment in their favorite games.
             </p>
          </div>

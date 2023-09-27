@@ -15,7 +15,7 @@ const Footer = () => {
                />
             </Link>
             <div className={styles['footer__column']}>
-               <Link href="/game/cs-go" className={styles['footer__column-title']}>CS:GO</Link>
+               <Link href="/cs-go/matchmaking" className={styles['footer__column-title']}>CS:GO</Link>
                <ul className={styles['footer__column-list']}>
                   <li className={styles['footer__column-item']}>
                      <Link href="/cs-go/matchmaking" className={styles['footer__column-item']}>
@@ -35,7 +35,7 @@ const Footer = () => {
                </ul>
             </div>
             <div className={styles['footer__column']}>
-               <h2 className={styles['footer__column-title']}>Legal</h2>
+               <Link href="/help/terms-and-conditions" className={styles['footer__column-title']}>Legal</Link>
                <ul className={styles['footer__column-list']}>
                   <li className={styles['footer__column-item']}>
                      <Link href="/terms-of-service" className={styles['footer__column-item']}>
@@ -43,19 +43,19 @@ const Footer = () => {
                      </Link>
                   </li>
                   <li className={styles['footer__column-item']}>
-                     <Link href="/privacy-policy" className={styles['footer__column-item']}>
+                     <Link href="/help/privacy-policy" className={styles['footer__column-item']}>
                         Privacy policy
                      </Link>
                   </li>
                   <li className={styles['footer__column-item']}>
-                     <Link href="/cookie-policy" className={styles['footer__column-item']}>
+                     <Link href="/help/privacy-policy#cookie" className={styles['footer__column-item']}>
                         Cookie policy
                      </Link>
                   </li>
                </ul>
             </div>
             <div className={styles['footer__column']}>
-               <h2 className={styles['footer__column-title']}>MYTHIC ESPORTS LTD</h2>
+               <h2 className={styles['footer__column-title']}>MYTHIC PLAY LTD</h2>
                <ul className={styles['footer__column-list-info']}>
                   <li className={styles['footer__column-list-info-item']}>
                      1013 Centre RD STE 403B, Wilmington, DE, USA
@@ -69,14 +69,14 @@ const Footer = () => {
                </ul>
             </div>
             <div className={styles['footer__column-game']}>
-               <Link href="/game/rust" className={styles['footer__column-title']}>RUST</Link>
-               <Link href="/game/dota" className={styles['footer__column-title']}>DOTA 2</Link>
-               <Link href="/game/team-fortress" className={styles['footer__column-title']}>TEAM FORTRESS 2</Link>
+               <Link href="/rust/tournaments" className={styles['footer__column-title']}>RUST</Link>
+               <Link href="/dota/tournaments" className={styles['footer__column-title']}>DOTA 2</Link>
+               <Link href="/team-fortress/tournaments" className={styles['footer__column-title']}>TEAM FORTRESS 2</Link>
             </div>
          </div>
       </div>
       <div className={styles.footer__copy}>
-         <span>2021 - {new Date().getFullYear()} MYTHIC ESPORTS LTD</span>
+         <span>2021 - {new Date().getFullYear()} MYTHIC PLAY LTD</span>
          <span>ALL RIGHTS RESERVED</span>
          <a href="https://techiia.com" target='_blank'>PART OF TECHIIA IT-HOLDING</a>
       </div>

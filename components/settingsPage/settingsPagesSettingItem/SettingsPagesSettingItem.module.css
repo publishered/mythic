@@ -107,7 +107,8 @@
    width: 16px;
    height: 16px;
    border-radius: 50%;
-   background: var(--purple-color);
+   background: var(--light-gray-color);
+   box-shadow: 0 0 4px 1px var(--sidebar-bg-color);
    position: absolute;
    left: -4px;
    top: 50%;
@@ -116,8 +117,10 @@
 }
 
 .item__checkbox.checked .item__checkbox-circle {
+   box-shadow: none;
    left: 100%;
    transform: translateY(-50%) translateX(calc(-100% + 4px));
+   background: var(--purple-color);
 }
 
 .locked {

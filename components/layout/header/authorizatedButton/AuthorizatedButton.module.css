@@ -7,13 +7,18 @@
 }
 
 .header__right-notification-circle {
-   width: 9px;
-   height: 9px;
+   width: 15px;
+   height: 15px;
    border-radius: 50%;
    background-color: var(--purple-color);
    position: absolute;
    right: 0;
    top: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 9px;
+   font-weight: 700;
 }
 
 .header__right-user {

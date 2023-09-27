@@ -5,10 +5,10 @@ const TermsOfService = () => {
    return <DefaultSection>
       <div className={styles.terms__inner}>
          <div className={styles.terms__section}>
-            <h1 className={styles.terms__title}>MythicEsports! Terms of Service</h1>
+            <h1 className={styles.terms__title}>Mythic Play! Terms of Service</h1>
             <div className={styles['terms__section-content']}>
                <p>These Terms of Service (“Terms”) are a contract between you and MYTHIC MEDIA, INC. They govern your use of our sites, services, mobile apps, products, and content (“Services”).</p>
-               <p>By visiting mythicesports.com, you agree to these Terms. If you don’t agree to any of the Terms, you can’t use the services.</p>
+               <p>By visiting mythicplay.com, you agree to these Terms. If you don’t agree to any of the Terms, you can’t use the services.</p>
             </div>
          </div>
          <div className={styles.terms__section}>
@@ -21,7 +21,7 @@ const TermsOfService = () => {
          <div className={styles.terms__section}>
             <h2 className={styles.terms__title}>No children</h2>
             <div className={styles['terms__section-content']}>
-               <p>Mythic is only for people 13 years old and over. By using , you affirm that you are over 13. If we learn someone under 13 is using mythicesports.com, we’ll terminate their account.</p>
+               <p>Mythic is only for people 13 years old and over. By using , you affirm that you are over 13. If we learn someone under 13 is using mythicplay.com, we’ll terminate their account.</p>
             </div>
          </div>
          <div className={styles.terms__section}>
@@ -31,8 +31,8 @@ const TermsOfService = () => {
                <p>Your account must be active, have hours for the last two weeks spent in the games that are used on our website, and also have a minimum playing hours. For more information, contact the support service of our service or the captain of your team, as these figures may change.</p>
                <p>The service has a system to reduce the load on the tournament server. In order to correctly link your Steam account to the profile on the site, the CS: GO and DOTA 2 items must not be present in your account inventory. Since Steam has a system, which blocks the trade for items for a certain period of time, (new users) our service allows you to send an trade (to a friend, to your other account or site) without accepting it from the other side. After a successful binding, it is allowed to cancel the trade, in order to avoid the trade of items and their subsequent trade ban. After participating in 5 online tournaments, you will need to, without fail, empty your inventory to participate in further tournaments or attach a new account.</p>
                <p>If your account meets all the above requirements, but the Steam account is not linked to your profile on the site, you need to change the password for the Steam account, go to https://steamcommunity.com/dev/apikey and untie the Steam web API key, after that go to the Steam profile section "About account", in the Steam Guard settings and click the "Exit from all devices" button, after completing the steps specified in the instructions, try trying to link the Steam account to the account on our service, again.</p>
-               <p>By using the Services, you agree to let Medium collect and use information as detailed in our Privacy Policy. If you’re outside the United States, you consent to letting mythicesports.com! transfer, store, and process your information (including your personal information and content) in and out of the United States.</p>
-               <p>By using mythicesports.com, you agree to follow these Policies. If you don’t, we may suspend or delete your account.</p>
+               <p>By using the Services, you agree to let Medium collect and use information as detailed in our Privacy Policy. If you’re outside the United States, you consent to letting mythicplay.com! transfer, store, and process your information (including your personal information and content) in and out of the United States.</p>
+               <p>By using mythicplay.com, you agree to follow these Policies. If you don’t, we may suspend or delete your account.</p>
                <p>We may deny access to functionality for emails at our sole discretion, for example, created using the services of generating temporary emails, and whose reliability level is below the maximum permissible according to the respective ratings. Should it happen please use email with another domain.</p>
             </div>
          </div>
@@ -41,11 +41,11 @@ const TermsOfService = () => {
             <div className={styles['terms__section-content']}>
                <div className={styles['terms__section-content-item']}>
                   <h3 className={styles['terms__section-content-item-title']}>Disclaimer of warranty.</h3>
-                  <p>mythicesports.com! provides the Services to you as is. You use them at your own risk and discretion. That means they don’t come with any warranty. None express, none implied. No implied warranty of merchantability, fitness for a particular purpose, availability, security, title or non-infringement.</p>
+                  <p>mythicplay.com! provides the Services to you as is. You use them at your own risk and discretion. That means they don’t come with any warranty. None express, none implied. No implied warranty of merchantability, fitness for a particular purpose, availability, security, title or non-infringement.</p>
                </div>
                <div className={styles['terms__section-content-item']}>
                   <h3 className={styles['terms__section-content-item-title']}>Limitation of Liability.</h3>
-                  <p>mythicesports.com! won’t be liable to you for any damages that arise from your using the Services. This includes if the Services are hacked or unavailable. This includes all types of damages (indirect, incidental, consequential, special or exemplary). And it includes all kinds of legal claims, such as breach of contract, breach of warranty, tort, or any other loss.</p>
+                  <p>mythicplay.com! won’t be liable to you for any damages that arise from your using the Services. This includes if the Services are hacked or unavailable. This includes all types of damages (indirect, incidental, consequential, special or exemplary). And it includes all kinds of legal claims, such as breach of contract, breach of warranty, tort, or any other loss.</p>
                </div>
                <div className={styles['terms__section-content-item']}>
                   <h3 className={styles['terms__section-content-item-title']}>Severability</h3>
@@ -54,7 +54,7 @@ const TermsOfService = () => {
                </div>
                <div className={styles['terms__section-content-item']}>
                   <h3 className={styles['terms__section-content-item-title']}>Entire agreement.</h3>
-                  <p>These Terms (including any document incorporated by reference into them) are the whole agreement between MYTHIC ESPORTS MEDIA, INC. and you concerning the Services.</p>
+                  <p>These Terms (including any document incorporated by reference into them) are the whole agreement between MYTHIC PLAY MEDIA, INC. and you concerning the Services.</p>
                </div>
             </div>
          </div>

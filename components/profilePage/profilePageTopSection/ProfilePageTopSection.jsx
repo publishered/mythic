@@ -2,7 +2,7 @@ import AuthContext from '@/context/AuthContext'
 import ModalFunction from '@/context/ModalFunction'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import ReactCountryFlag from 'react-country-flag'
 import styles from './ProfilePageTopSection.module.css'
 import ProfilePageTopSectionTab from './profilePageTopSectionTab/ProfilePageTopSectionTab'
@@ -11,6 +11,14 @@ const ProfilePageTopSection = ({activeAnchor}) => {
 
    const modalContext = useContext(ModalFunction)
    const authContext = useContext(AuthContext)
+
+   const [isGameMenuOpen, setIsGameMenuOpen] = useState(false)
+   const [currentGameMenuValue, setCurrentGameMenuValue] = useState('Rust')
+
+   const changeCurrentGame = (game) => {
+      setIsGameMenuOpen(false)
+      setCurrentGameMenuValue(game)
+   }
 
    return <div className={styles.info}>
       <div className={styles.info__top}>
@@ -62,9 +70,44 @@ const ProfilePageTopSection = ({activeAnchor}) => {
                         />
                         <h3 className={styles['info__top-content-top-stats-item-title']}>Game</h3>
                      </div>
-                     <span className={styles['info__top-content-top-stats-item-title-value']}>
-                        CS:GO
-                     </span>
+                     <div className={styles['info__top-content-game-menu']}>
+                        <span className={styles['info__top-content-top-stats-item-title-value']}>
+                           {currentGameMenuValue}
+                        </span>
+                        <button 
+                           className={styles['item__menu-btn']}
+                           onClick={() => setIsGameMenuOpen(!isGameMenuOpen)}
+                        >
+                           <Image
+                              className={styles['item__menu-img']}
+                              width="12"
+                              height="6"
+                              src="/images/icon/arrow-up.svg"
+                           />
+                        </button>
+                        <div className={`${styles['item__menu-body']} ${isGameMenuOpen ? styles.open : ''}`}>
+                           <ul className={styles['item__menu-list']}>
+                              <li className={styles['item__menu-item']}>
+                                 <button 
+                                    className={styles['item__menu-list-btn']}
+                                    onClick={() => changeCurrentGame("Rust")}
+                                 >
+                                    Rust
+                                 </button>
+                              </li>
+                              <li className={styles['item__menu-item']}>
+                                 <button 
+                                    className={styles['item__menu-list-btn']}
+                                    onClick={() => changeCurrentGame("CS:GO")}
+                                 >
+                                    CS:GO
+                                 </button>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     
+                     
                   </div>
                   <div className={styles['info__top-content-top-stats-item']}>
                      <div className={styles['info__top-content-top-stats-item-title-wrapper']}>

@@ -137,6 +137,65 @@
    object-fit: cover;
 }
 
+.info__top-content-game-menu {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   position: relative;
+}
+
+.item__menu-btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.item__menu-img {
+   transform: rotate(180deg);
+}
+
+.item__menu {
+   position: relative;
+}
+
+.item__menu-body {
+   position: absolute;
+   left: 0%;
+   transform: translateY(calc(100% + 10px));
+   width: 90px;
+   right: 0;
+   white-space: nowrap;
+   border: 1px solid var(--light-gray-color);
+   padding: 5px 10px;
+   border-radius: 10px;
+   bottom: 0;
+   /* width: 100%; */
+
+   pointer-events: none;
+   opacity: 0;
+   transition: opacity .2s;
+   background-color: var(--bg-color);
+   z-index: 3;
+   font-weight: 500;
+   line-height: 19px;
+}
+
+.item__menu-body.open {
+   pointer-events: all;
+   opacity: 1;
+}
+
+.item__menu-list {
+   display: flex;
+   flex-direction: column;
+   list-style: none;
+   /* font-size: 14px; */
+}
+
+.item__menu-list-btn {
+   padding:  5px 0;
+}
+
 @media (max-width: 1100px) {
    .info__top-content-top-stats-mob {
       display: block;

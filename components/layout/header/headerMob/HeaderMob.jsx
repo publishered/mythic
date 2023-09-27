@@ -32,7 +32,7 @@ const HeaderMob = ({isOpenMobHeader, setIsPrimeOpen}) => {
          </ul>
          <HeaderSidebar headerHeight={120} isOpenSidebar={true} mobile={true} />
          <div className={styles.header__footer}>
-            <p>2021 - 2022 MYTHIC ESPORTS LTD</p>
+            <p>2021 - 2022 MYTHIC PLAY LTD</p>
             <p>ALL RIGHTS RESERVED.</p>
          </div>
       </div>

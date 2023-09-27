@@ -1,18 +1,26 @@
 import ProfilePage from '@/components/profilePage/ProfilePage'
+import getAllFriends from '@/services/friends/getAllFriends'
 import getFriendsInvites from '@/services/friends/getFriendsInvites'
+import seo from '@/services/seo'
+import Head from 'next/head'
 
-const Profile = ({friendInvites}) => {
+const Profile = ({friendInvites, friends}) => {
 
    return <>
-      <ProfilePage friendInvites={friendInvites} />
+      <Head>
+         <title>{seo.generateTitle('Your profile')}</title>
+      </Head>
+      <ProfilePage friendInvites={friendInvites} friends={friends}/>
    </>
 }
 
 export async function getServerSideProps(context) {
 
    const friendInvites = await getFriendsInvites(context.req.cookies['auth_token'])
+
+   const friends = await getAllFriends(context.req.cookies['auth_token'])
    
-   return { props: { friendInvites } }
+   return { props: { friendInvites, friends} }
 }
 
 

@@ -190,6 +190,10 @@
    display: none;
 }
 
+.item__bottom-steam-img {
+   border-radius: 10px;
+}
+
 @media (max-width: 1220px) {
 
    .item__bottom  {

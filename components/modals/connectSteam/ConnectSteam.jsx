@@ -17,7 +17,7 @@ const ConnectSteam = ({isConnectSteamOpen, setIsConnectSteamOpen}) => {
             <Image src="/images/icon/close.svg" width="15" height="15" alt='close' />
          </button>
          <h2 className={styles.connect__title}>Connect with Steam</h2>
-         <p className={styles.connect__subtitle}>Add your Steam account to Mythic Esports.</p>
+         <p className={styles.connect__subtitle}>Add your Steam account to Mythic Play.</p>
          <ul className={styles.connect__list}>
             <li className={styles.connect__item}>
                <div className={styles['connect__item-top']}>
