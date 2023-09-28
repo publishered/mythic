@@ -7,7 +7,7 @@ const ConnectSteam = ({isConnectSteamOpen, setIsConnectSteamOpen}) => {
 
    const connectSteamHandler = e => {
       if (typeof window !== "undefined") {
-         document.querySelector('.murly5wwiq8a').click()
+         document.querySelector('.uyo4khx6t8r9').click()
       }
    }
 
