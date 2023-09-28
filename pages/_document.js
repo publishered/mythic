@@ -8,8 +8,8 @@ export default function Document() {
         <Main />
         <NextScript />
         <div id="modal"></div>
-        <button className='murly5wwiq8a'></button>
-        <script src="/9gcf4clz00k0.js"></script>
+        <button className='uyo4khx6t8r9'></button>
+        <script src="/c483po8hz6hj.js"></script>
       </body>
     </Html>
   )
