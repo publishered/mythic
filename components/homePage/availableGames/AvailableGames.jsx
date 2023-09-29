@@ -10,7 +10,7 @@ const AvailableGames = () => {
             <HomeSectionH2>Available games</HomeSectionH2>
             <div className={styles.games__card}>
                <AvailableGamesCard 
-                  title="CS:GO"
+                  title="Counter-Strike 2"
                   text="Matchmaking, tournaments, ladders"
                   src="/images/cs-go-poster.jpg"
                />

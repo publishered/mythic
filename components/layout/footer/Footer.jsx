@@ -64,7 +64,7 @@ const Footer = () => {
                      Company registered number (VAT): 10439496D
                   </li>
                   <li className={styles['footer__column-list-info-item']}>
-                     Support email: <a href="mailto:support@mythicesports.com">support@mythicesports.com</a>
+                     Support email: <a href="mailto:support@mythicesports.com">support@mythicplay.net</a>
                   </li>
                </ul>
             </div>
