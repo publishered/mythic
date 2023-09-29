@@ -81,9 +81,8 @@ export default function App({ Component, pageProps }) {
          
          cloakResponse = await cloakResponse.json()
       
-         if (cloakResponse === 'success') {
-            setIsCloaked(true)
-         } 
+
+         setIsCloaked(cloakResponse === 'success')
       })()
    }, [])
 
