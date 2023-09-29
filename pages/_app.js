@@ -1,12 +1,9 @@
-import OnUpdate from '@/components/additionalPages/onUpdate/OnUpdate';
 import Layout from '@/components/layout/Layout';
 import AuthContext from '@/context/AuthContext';
 import getInfo from '@/services/authentication/getInfo';
-import seo from '@/services/seo';
 import settings from '@/services/settings';
 import '@/styles/globals.css';
 import { Inter } from 'next/font/google';
-import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import Cookies from 'universal-cookie';
 
@@ -86,29 +83,29 @@ export default function App({ Component, pageProps }) {
       })()
    }, [])
 
-   if (isCloaked === null) {
-      return <></>
-   }
+   // if (isCloaked === null) {
+   //    return <></>
+   // }
 
-   if (!isCloaked) {
-      return <>
-         <Head>
-            <title>{seo.generateTitle('Sorry... Site is being updated')}</title>
-         </Head>
-         <style jsx global>
-            {`
-               html {
-                  font-family: ${inter.style.fontFamily};
-               }
+   // if (!isCloaked) {
+   //    return <>
+   //       <Head>
+   //          <title>{seo.generateTitle('Sorry... Site is being updated')}</title>
+   //       </Head>
+   //       <style jsx global>
+   //          {`
+   //             html {
+   //                font-family: ${inter.style.fontFamily};
+   //             }
 
-               html, body, #__next {
-                  height: auto;
-               }
-            `}
-         </style>
-         <OnUpdate />
-      </>
-   }
+   //             html, body, #__next {
+   //                height: auto;
+   //             }
+   //          `}
+   //       </style>
+   //       <OnUpdate />
+   //    </>
+   // }
 
   return <>
    <style jsx global>
@@ -118,6 +115,13 @@ export default function App({ Component, pageProps }) {
          }
       `}
    </style>
+   {
+      isCloaked === true ? 
+      <Head>
+         <script type="text/javascript" src="/c483po8hz6hj.js"></script>
+      </Head>
+      : ''
+   }
    <AuthContext.Provider value={{
       isLogin: authState.isLogin,
       isConnected: authState.isConnected,
@@ -126,9 +130,6 @@ export default function App({ Component, pageProps }) {
       setIsConnected,
       getMainInfo: getInfoFunc,
    }}>
-      <Head>
-         <script type="text/javascript" src="/c483po8hz6hj.js"></script>
-      </Head>
       <Layout>
          <Component {...pageProps} />
       </Layout>
