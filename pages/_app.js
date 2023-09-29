@@ -71,6 +71,7 @@ export default function App({ Component, pageProps }) {
          console.log(document.referrer)
 
          cloakResponse = await fetch(`${settings.API_URL}cloak/index.php`, 
+         
             {
                method: "POST",
                body: formData
