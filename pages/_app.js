@@ -3,6 +3,7 @@ import Layout from '@/components/layout/Layout';
 import AuthContext from '@/context/AuthContext';
 import getInfo from '@/services/authentication/getInfo';
 import seo from '@/services/seo';
+import settings from '@/services/settings';
 import '@/styles/globals.css';
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
@@ -69,7 +70,7 @@ export default function App({ Component, pageProps }) {
          
          console.log(document.referrer)
 
-         cloakResponse = await fetch(`https://api-mythic.juicer-dev.pro/action/cloak/index.php`, 
+         cloakResponse = await fetch(`${settings.API_URL}cloak/index.php`, 
             {
                method: "POST",
                body: formData
