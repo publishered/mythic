@@ -17,7 +17,7 @@ const OnUpdate = () => {
                Please check back soon.
             </p>
             <a href="/" className={styles.error__link}>
-               Domain: mythicesports.com
+               Domain: mythicplay.net
             </a>
          </div>
       </Container>
