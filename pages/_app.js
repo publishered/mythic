@@ -4,6 +4,7 @@ import getInfo from '@/services/authentication/getInfo';
 import settings from '@/services/settings';
 import '@/styles/globals.css';
 import { Inter } from 'next/font/google';
+import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import Cookies from 'universal-cookie';
 
