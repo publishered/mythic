@@ -15,7 +15,7 @@ const Footer = () => {
                />
             </Link>
             <div className={styles['footer__column']}>
-               <Link href="/cs-go/matchmaking" className={styles['footer__column-title']}>CS:GO</Link>
+               <Link href="/cs-go/matchmaking" className={styles['footer__column-title']}>Counter-Strike 2</Link>
                <ul className={styles['footer__column-list']}>
                   <li className={styles['footer__column-item']}>
                      <Link href="/cs-go/matchmaking" className={styles['footer__column-item']}>
