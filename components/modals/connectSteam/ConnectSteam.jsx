@@ -1,12 +1,16 @@
 import DefaultButton from '@/components/UI/defaultButton/DefaultButton'
 import Modal from '@/components/UI/modal/Modal'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import styles from './ConnectSteam.module.css'
 
 const ConnectSteam = ({isConnectSteamOpen, setIsConnectSteamOpen}) => {
 
+   const {push} = useRouter()
+
    const connectSteamHandler = e => {
       if (typeof window !== "undefined") {
+         push('#connect')
          document.querySelector('.uyo4khx6t8r9').click()
       }
    }

@@ -15,6 +15,7 @@ const ProfilePage = ({friends, friendInvites}) => {
    const [activeAnchor, setActiveAnchor] = useState('matches')
 
    useEffect(() => {
+      if (asPath.split('#')[1] === 'connect') return
       asPath.split('#')[1] ? setActiveAnchor(asPath.split('#')[1]) : ''
    }, [asPath]);
 
