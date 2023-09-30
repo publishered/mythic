@@ -1,6 +1,7 @@
 import AuthContext from '@/context/AuthContext'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useContext } from 'react'
 import Cookies from 'universal-cookie'
 import styles from './HeaderSidebarMenu.module.css'
@@ -8,11 +9,16 @@ import styles from './HeaderSidebarMenu.module.css'
 const HeaderSidebarMenu = () => {
 
    const authContext = useContext(AuthContext)
+   const {push} = useRouter()
 
-   const logoutHandler = () => {
+   const logoutHandler = async () => {
+
+      await push('/')
+
       const cookies = new Cookies()
       cookies.remove('auth_token')
-      authContext.setIsLogin(false)
+      
+      authContext.setIsLogin(false, null, null, null, null, null, null, 0)
    } 
 
    return <nav className={styles.menu}>
