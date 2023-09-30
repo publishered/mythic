@@ -6,7 +6,7 @@ const PrivacyNotice = () => {
 			<h1>PRIVACY NOTICE FOR RECRUITMENT</h1>
 			<div data-section='section'>
 				<p>
-					<strong>FACEIT</strong>&nbsp;(“We”, “Us”) are committed to
+					<strong>MYTHIC</strong>&nbsp;(“We”, “Us”) are committed to
 					protecting and respecting your privacy. This Privacy Notice
 					(together with any other documents referred to herein) sets out
 					the basis on which the personal data collected from you, or that
@@ -17,8 +17,8 @@ const PrivacyNotice = () => {
 				</p>
 				<p>
 					For the purpose of the General Data Protection Regulation
-					(“GDPR”), the Data Controller is&nbsp;FACE IT LIMITED, whose
-					registered office is Millbank Tower Faceit 25th Floor, 21-24
+					(“GDPR”), the Data Controller is&nbsp;MYTHIC LIMITED, whose
+					registered office is Millbank Tower Mythic 25th Floor, 21-24
 					Millbank, London, England, SW1P 4QP.
 				</p>
 				<p>
@@ -43,7 +43,7 @@ const PrivacyNotice = () => {
 					Notice provisions will apply to Our processing of your personal
 					information in addition to Our other Privacy Notice which has
 					been provided to you separately or is available on Our Website at
-					https://corporate.faceit.com/privacy/.
+					https://mythicplay.net/help/privacy-policy.
 				</p>
 				<p>
 					Where you apply for a job opening via the application function on
@@ -409,8 +409,8 @@ const PrivacyNotice = () => {
 				<p>
 					All questions, comments and requests regarding this Privacy
 					Notice should be addressed to&nbsp;
-					<a href='mailto:privacy@faceit.com'>
-						<strong>privacy@faceit.com</strong>
+					<a href='mailto:support@mythicplay.net'>
+						<strong>support@mythicplay.net</strong>
 					</a>
 				</p>
 			</div>

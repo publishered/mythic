@@ -10,7 +10,7 @@ const Help = () => {
             <li><a href="#connecting-the-correct-discord-account">CONNECTING THE CORRECT DISCORD ACCOUNT</a></li>
             <li><a href="#do-i-have-to-use-discord">DO I HAVE TO USE DISCORD?</a></li>
             <li><a href="#do-i-have-to-pay-to-use-this-service">DO I HAVE TO PAY TO USE THIS SERVICE?</a></li>
-            <li><a href="#do-i-need-faceit-premium">DO I NEED FACEIT PREMIUM?</a></li>
+            <li><a href="#do-i-need-MYTHIC-premium">DO I NEED MYTHIC PREMIUM?</a></li>
             <li><a href="#do-i-need-to-subscribe-to-every-division">DO I NEED TO SUBSCRIBE TO EVERY DIVISION?</a></li>
             <li><a href="#do-we-gain-and-lose-elo">DO WE GAIN AND LOSE ELO?</a></li>
             <li><a href="#how-does-team-and-map-selection-work">HOW DOES TEAM AND MAP SELECTION WORK?</a></li>
@@ -26,18 +26,19 @@ const Help = () => {
             <h1>1. NEW AND RETURNING PLAYERS</h1>
             <div data-section="section">
                <h2>I. NEW PLAYERS</h2>
-               <p>In order to unlock the ability to queue and use Mythic League features first your account must be successfully authorized with our system.</p>
-               <p>Before completing the following setup it is recommended that you ensure that your FACEIT account and your Discord account are logged in on your main web browser. This will reduce the chance of error during the setup process.</p>
+               <p>In order to unlock the ability to queue and use Mythic Play features first your account must be successfully authorized with our system.</p>
+               <p>Before completing the following setup it is recommended that you ensure that your MYTHIC account and your Discord account are logged in on your main web browser. This will reduce the chance of error during the setup process.</p>
             </div>
             <div data-section="section">
                <h2>II. ACCOUNT SETUP / AUTHORIZATION</h2>
                <ol>
-                  <li>Make sure that you reside in one of our <a href="https://mythicleague.com/rules#8">allowed locations.</a></li>
-                  <li>Make sure that you meet the <a href="https://mythicleague.com/rules#1i">minimum match limit</a> for the division that matches your ELO.</li>
-                  <li>Join our <a href="https://discord.mythicleague.com/">Discord Server.</a></li>
+                  <li>Make sure that you reside in one of our allowed locations.</li>
+                  <li>Make sure that you meet the minimum match limit for the division that matches your ELO.</li>
+                  <li>Join our <a href="/">Discord Server.</a></li>
                   <li>Join the division that matches your ELO (Bronze, Silver, Gold)</li>
-                  <li><a href="https://ml-face.it/subscribe">Subscribe</a> to Mythic League.</li>
-                  <li><a href="https://ml-face.it/auth">Authorize</a> your account to our service and complete registration by reviewing and agreeing to the <a href="https://mythicleague.com/rules">Mythic League Rules.</a></li>
+                  <li>Subscribe to Mythic Play.</li>
+                  <li>Authorize your account to our service and complete registration by reviewing and agreeing to the Mythic Play Rules.
+                  </li>
                   <li>Click the "Sync Account" button and watch the screen for a response in RED text. If successful, your Discord username will turn GREEN.</li>
                </ol>
                <p>If you receive an error message after clicking Sync Account please follow that error message to the appropriate FAQ section for resolution.</p>
@@ -45,18 +46,18 @@ const Help = () => {
             <div data-section="section">
                <h2>III. HOW TO PLAY</h2>
                <ol>
-                  <li>Load up FACEIT.com or the FACEIT standalone client.</li>
-                  <li>Load up the FACEIT Anti-Cheat and make sure it is up-to-date.</li>
-                  <li>Join the AUTO-VOIP Discord channel in the Mythic League Discord.</li>
+                  <li>Load up MYTHICPLAY.net or the MYTHIC standalone client.</li>
+                  <li>Load up the MYTHIC Anti-Cheat and make sure it is up-to-date.</li>
+                  <li>Join the AUTO-VOIP Discord channel in the Mythic Play Discord.</li>
                   <li>Press the Play button in your current division!</li>
                </ol>
             </div>
             <div data-section="section">
                <h2>IV. RETURNING PLAYERS</h2>
-               <p>If you were a previously subscribed and authorized player in Mythic League you do not need to complete the Account Setup / Authorization process a second time in most cases. Follow the steps below:</p>
+               <p>If you were a previously subscribed and authorized player in Mythic Play you do not need to complete the Account Setup / Authorization process a second time in most cases. Follow the steps below:</p>
                <ol>
-                  <li>Navigate to your Mythic League profile either through our <a href="https://support.mythicleague.com/profile">Support Website</a>, Discord (!profile) or the Hub chat (!profile)</li>
-                  <li>Check that your details and connections are still the same: Discord account, FACEIT account and tradelink.</li>
+                  <li>Navigate to your Mythic Play profile either through our <a href="https://mythicplay.net/profile">Support Website</a>, Discord (!profile) or the Hub chat (!profile)</li>
+                  <li>Check that your details and connections are still the same: Discord account, MYTHIC account and tradelink.</li>
                   <li>If all details are correct hit the Sync Account button and wait for the response in red text. If successful, your Discord username will turn GREEN and you are ready to play again.</li>
                </ol>
                <p>If you have changed Discord account you can either re-authorize or swap your Discord on your profile page before hitting Sync Account.</p>
@@ -65,7 +66,7 @@ const Help = () => {
          <div data-section="big-section" id="connecting-the-correct-discord-account">
             <h1>2. CONNECTING THE CORRECT DISCORD ACCOUNT</h1>
             <div data-section="section">
-               <p>Check that the Discord identifier (MyAccount#0001) found on your Mythic League profile matches the one that is found in the lower left of your Discord client.</p>
+               <p>Check that the Discord identifier (MyAccount#0001) found on your Mythic Play profile matches the one that is found in the lower left of your Discord client.</p>
                <p>If these do not match, it means that you have a different account signed into the browser as the client and as a result the Account Setup / Authorization process may fail. In order to resolve this, you will need to logout of the Discord browser instance and login with the correct account (the one that your Discord client is using). The steps to do this are:</p>
                <ol>
                   <li>Visit <a href="https://discordapp.com/channels/@me">https://discordapp.com/channels/@me.</a></li>
@@ -78,23 +79,23 @@ const Help = () => {
          <div data-section="big-section" id="do-i-have-to-use-discord">
             <h1>3. DO I HAVE TO USE DISCORD?</h1>
             <div data-section="section">
-               <p>Yes. Discord is required in order to play in Mythic League. You will be asked to link your Discord account with our system during the authorization process before being able to queue. Authorization: <a href="https://mythicleague.com/https://ml-face.it/auth">ml-face.it/auth.</a></p>
+               <p>Yes. Discord is required in order to play in Mythic Play. You will be asked to link your Discord account with our system during the authorization process before being able to queue. Authorization: ml-face.it/auth.</p>
               <p>Your permission to queue in each Division will be restricted until your authorization is successful. (If successful, your Discord username will turn GREEN).</p>
-              <p>Users competing in the Mythic Diamond Division will be using our private TeamSpeak server for their match communication (details can be found <a href="https://mythicleague.com/teamspeak">here</a>) but it is recommended to have your Discord linked in order to use the #support channel as well as queue in the other divisions.</p>
+              <p>Users competing in the Mythic Diamond Division will be using our private TeamSpeak server for their match communication (details can be found here) but it is recommended to have your Discord linked in order to use the #support channel as well as queue in the other divisions.</p>
             </div>
          </div>
          <div data-section="big-section" id="do-i-have-to-pay-to-use-this-service">
             <h1>4. DO I HAVE TO PAY TO USE THIS SERVICE?</h1>
             <div data-section="section">
-               <p>The Mythic League solo queue Divisions (Bronze, Silver, Gold, Diamond) all require a Mythic League organization subscription which starts at $6 per month.</p>
-              <p>The Mythic League Community experience is free to all users but you can represent and support us directly with a profile badge and other extras by purchasing a subscription.</p>
-              <p>Tournaments and Cups hosted by Mythic League will most commonly be free to enter. Any events requiring a Mythic League organization subscription will be clearly described as such.</p>
+               <p>The Mythic Play solo queue Divisions (Bronze, Silver, Gold, Diamond) all require a Mythic Play organization subscription which starts at $6 per month.</p>
+              <p>The Mythic Play Community experience is free to all users but you can represent and support us directly with a profile badge and other extras by purchasing a subscription.</p>
+              <p>Tournaments and Cups hosted by Mythic Play will most commonly be free to enter. Any events requiring a Mythic Play organization subscription will be clearly described as such.</p>
             </div>
          </div>
-         <div data-section="big-section" id="do-i-need-faceit-premium">
-            <h1>5. DO I NEED FACEIT PREMIUM?</h1>
+         <div data-section="big-section" id="do-i-need-MYTHIC-premium">
+            <h1>5. DO I NEED MYTHIC PREMIUM?</h1>
             <div data-section="section">
-               <p>No, you only require an active subscription to our hub organizer, Mythic League.</p>
+               <p>No, you only require an active subscription to our hub organizer, Mythic Play.</p>
             </div>
          </div>
          <div data-section="big-section" id='do-i-need-to-subscribe-to-every-division'>
@@ -106,7 +107,7 @@ const Help = () => {
          <div data-section="big-section" id='do-we-gain-and-lose-elo'>
             <h1>7. DO WE GAIN AND LOSE ELO?</h1>
             <div data-section="section">
-               <p>Yes, ELO is enabled in Mythic League. You can earn and lose ELO when playing solo in Mythic Bronze, Silver and Gold as well as playing either solo or in a group in the Mythic League Community hub.</p>
+               <p>Yes, ELO is enabled in Mythic Play. You can earn and lose ELO when playing solo in Mythic Bronze, Silver and Gold as well as playing either solo or in a group in the Mythic Play Community hub.</p>
             </div>
          </div>
          <div data-section="big-section" id='how-does-team-and-map-selection-work'>
@@ -128,11 +129,11 @@ const Help = () => {
          <div data-section="big-section" id='how-do-i-contact-an-admin-for-help'>
             <h1>10. HOW DO I CONTACT AN ADMIN FOR HELP?</h1>
             <div data-section="section">
-               <p>You can contact the Mythic League Support staff in the following ways:</p>
+               <p>You can contact the Mythic Play Support staff in the following ways:</p>
                <ol>
                   <li>If you are in a live game in any of our solo-queue Divisions, navigate to the matchroom page and hit the Contact Admin button.</li>
                   <li>If you are not in a live game and need assistance with general support queries you can contact us by tagging the @Support role in our #support Discord channel and leave your question.</li>
-                  <li>If you would like to report players for breaking rules anywhere in Mythic League (in-game, Discord, chats) please create a report <a href="https://support.mythicleague.com/reports/create">here</a> on our support website.</li>
+                  <li>If you would like to report players for breaking rules anywhere in Mythic Play (in-game, Discord, chats) please create a report here on our support website.</li>
                </ol>
             </div>
          </div>
@@ -149,18 +150,18 @@ const Help = () => {
             <div data-section="section">
                <p>Prizes are sent out between two and four weeks following the end of the monthly season (the monthly season consists of both Week 1 & 2 and Week 3 & 4 leaderboards).</p>
                <p>If you are placed for a prize, make sure that your tradelink or PayPal address is set correctly on your profile and ensure that you are able to accept trades from all users.</p>
-               <p>Estimated delivery dates for each season as well as other updated information can be found in the #prizes channel on the Mythic League Discord.</p>
+               <p>Estimated delivery dates for each season as well as other updated information can be found in the #prizes channel on the Mythic Play Discord.</p>
             </div>
          </div>
          <div data-section="big-section" id='how-do-you-qualify-for-fpl-challenger'>
             <h1>13. HOW DO YOU QUALIFY FOR FPL CHALLENGER?</h1>
             <div data-section="section">
-               <p>There are two ways to qualify for the NA FPL Challenger division in Mythic League:</p>
+               <p>There are two ways to qualify for the NA FPL Challenger division in Mythic Play:</p>
                <ol>
                   <li>The 45 top placing players of each Diamond monthly season will be rewarded with invitations to the NA FPL-C qualifiers.</li>
                   <li>The top 5 placing players of each Gold monthly season will be rewarded with invitations to the NA FPL-C qualifiers AND a trial invitation to the Diamond division.</li>
                </ol>
-               <p>The NA FPL-C qualifier event will be announced in the following month and all players who qualified will be invited directly by FACEIT. Players will play in a weekend long event which will see the top 5 invited into the FPL Challenger League.</p>
+               <p>The NA FPL-C qualifier event will be announced in the following month and all players who qualified will be invited directly by MYTHIC. Players will play in a weekend long event which will see the top 5 invited into the FPL Challenger League.</p>
             </div>
          </div>
          <div data-section="big-section" id='connection-failed-after-30-retries'>
@@ -189,7 +190,7 @@ const Help = () => {
                <ol>
                   <li>Refresh the lobby page and ensure that you have copied the correct and current IP address for the game before joining through the game console.</li>
                   <li>Exit CS:GO and relaunch the game before joining with the correct IP address through the game console.</li>
-                  <li>Make sure that you are logged into the correct Steam account for your FACEIT account.</li>
+                  <li>Make sure that you are logged into the correct Steam account for your MYTHIC account.</li>
                </ol>
             </div>
             <div data-section="section">

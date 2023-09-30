@@ -9,9 +9,9 @@ const PrivacyPolicy = () => {
 				<h3>PRIVACY</h3>
 				<p> 
 					These terms apply to the use of Clients and other products
-					developed by FACE IT LIMITED (<strong>‘FACEIT</strong>’ / ‘
+					developed by FACE IT LIMITED (<strong>‘MYTHIC</strong>’ / ‘
 					<strong>we</strong>’ / ‘<strong>us</strong>’). Our registered
-					office is at Millbank Tower Faceit 25th Floor, 21-24 Millbank,
+					office is at Millbank Tower Mythic 25th Floor, 21-24 Millbank,
 					London, England, SW1P 4QP. We are a company registered in
 					England, with company number 07751649. &nbsp; &nbsp;
 				</p>
@@ -23,24 +23,24 @@ const PrivacyPolicy = () => {
 					and products made available by us (together the "
 					<strong>Clients</strong>"), as well as any other online features
 					relating to our business including our website at{' '}
-					<a href='http://www.faceit.com' rel='nofollow'>
-						www.faceit.com
+					<a href='http://www.mythicplay.net' rel='nofollow'>
+						www.mythicplay.net
 					</a>
 					, our developer portal at{' '}
-					<a href='https://developers.faceit.com/' rel='nofollow'>
-						www.developers.faceit.com
+					<a href='https://mythicplay.net' rel='nofollow'>
+						www.mythicplay.net
 					</a>
 					, our corporate website at{' '}
-					<a href='http://www.corporate.faceit.com' rel='nofollow'></a>
-					<a href='https://corporate.faceit.com/' rel='nofollow'>
-						www.corporate.faceit.com&nbsp;
+					<a href='http://www.mythicplay.net' rel='nofollow'></a>
+					<a href='https://mythicplay.net' rel='nofollow'>
+						www.mythicplay.net&nbsp;
 					</a>
 					( the “<strong>Websites</strong>”), &nbsp;any mailing lists we
 					operate (the “<strong>Mailing List</strong>”), our online forums
 					&nbsp;(the “<strong>Forums</strong>”) and user support centre at{' '}
-					<a href='http://www.support.faceit.com' rel='nofollow'></a>
-					<a href='https://support.faceit.com/hc/en-us' rel='nofollow'>
-						www.support.faceit.com{' '}
+					<a href='http://www.mythicplay.net' rel='nofollow'></a>
+					<a href='https://mythicplay.net' rel='nofollow'>
+						www.mythicplay.net{' '}
 					</a>
 					(the “<strong>Support Centre</strong>"). Together the Clients,
 					the Website, the Mailing List, the Forums and the Support Centre
@@ -49,9 +49,9 @@ const PrivacyPolicy = () => {
 				<p>
 					If you have any questions or comments about this Privacy Policy,
 					please contact us at{' '}
-					<a href='http://www.support.faceit.com' rel='nofollow'></a>
-					<a href='https://support.faceit.com/hc/en-us' rel='nofollow'>
-						www.support.faceit.com &nbsp;
+					<a href='http://mythicplay.net' rel='nofollow'></a>
+					<a href='https://mythicplay.net' rel='nofollow'>
+						www.mythicplay.net &nbsp;
 					</a>
 				</p>
 				<p>
@@ -148,7 +148,7 @@ const PrivacyPolicy = () => {
 				</p>
 				<p>
 					If you wish, following registration you may add the following
-					information to your FACEIT profile, by using your FACEIT account
+					information to your MYTHIC profile, by using your MYTHIC account
 					settings:
 				</p>
 				<ul>
@@ -165,7 +165,7 @@ const PrivacyPolicy = () => {
 					<li>Google profile.</li>
 				</ul>
 				<p>
-					You are also able to connect your FACEIT account to third party
+					You are also able to connect your MYTHIC account to third party
 					platforms Steam, Wargaming, XBOX, PSN, Battle.net, Google,
 					Discord and HiRez, in which case we collect the following
 					information in respect of each third party platform:
@@ -187,7 +187,7 @@ const PrivacyPolicy = () => {
 					</li>
 				</ul>
 				<p>
-					If you choose to link a game to your FACEIT account, we will
+					If you choose to link a game to your MYTHIC account, we will
 					collect the following information in respect of each game:
 				</p>
 				<ul>
@@ -253,7 +253,7 @@ const PrivacyPolicy = () => {
 				</p>
 				<p>
 					When you sign up, we record the web page from which you have
-					accessed FACEIT.
+					accessed MYTHIC.
 				</p>
 				<p>
 					<strong>
@@ -288,7 +288,7 @@ const PrivacyPolicy = () => {
 					<li>a unique User ID which identifies your account.</li>
 				</ul>
 				<p>
-					Alternatively, you may choose to login with your FACEIT website
+					Alternatively, you may choose to login with your MYTHIC website
 					account.
 				</p>
 				<p>
@@ -308,7 +308,7 @@ const PrivacyPolicy = () => {
 					<li>a unique User ID which identifies your account.</li>
 				</ul>
 				<p>
-					Alternatively, you may choose to login with your FACEIT website
+					Alternatively, you may choose to login with your MYTHIC website
 					account.
 				</p>
 				<p>
@@ -333,7 +333,7 @@ const PrivacyPolicy = () => {
 					<li>Your device operating system &amp; version;</li>
 					<li>Your device make, brand and model;</li>
 					<li>Your browser type, version and language;</li>
-					<li>FACEIT application type and version;</li>
+					<li>MYTHIC application type and version;</li>
 					<li>Game play attempts, progression and results;</li>
 					<li>Session Client time start, end and duration;</li>
 					<li>The country of your device; and</li>
@@ -498,7 +498,7 @@ const PrivacyPolicy = () => {
 					</strong>
 				</p>
 				<p>
-					In order to achieve a “verified status” on your FACEIT account,
+					In order to achieve a “verified status” on your MYTHIC account,
 					you may choose to provide us with the following information:
 				</p>
 				<ul>
@@ -600,8 +600,8 @@ const PrivacyPolicy = () => {
 					community of users) of promoting gameplay and our platform, and
 					acquiring and engaging users. &nbsp;If you are concerned about
 					the content of any such material, please contact us at{' '}
-					<a href='https://support.faceit.com/hc/en-us' rel='nofollow'>
-						support.faceit.com
+					<a href='https://mythicplay.net' rel='nofollow'>
+						mythicplay.net
 					</a>
 					.
 				</p>
@@ -660,9 +660,9 @@ const PrivacyPolicy = () => {
 				<p>
 					We will use information about you (including Basic Information,
 					Registration Information, Optional Information) to deliver the
-					items that you have ordered on our FACEIT shop (
-					<a href='https://www.faceit.com/en/shop' rel='nofollow'>
-						https://www.faceit.com/en/shop
+					items that you have ordered on our MYTHIC shop (
+					<a href='https://www.mythicplay.net' rel='nofollow'>
+						https://www.mythicplay.net
 					</a>
 					) or prizes that you have won in our competitions.
 				</p>
@@ -755,11 +755,11 @@ const PrivacyPolicy = () => {
 					with you to deliver these services.{' '}
 				</p>
 				<p>
-					<strong>To verify your FACEIT account</strong>
+					<strong>To verify your MYTHIC account</strong>
 				</p>
 				<p>
 					We offer you the option to verify your account by authenticating
-					your identity (this applies for all players of the FACEIT
+					your identity (this applies for all players of the MYTHIC
 					platform, with exception of professional players and streamers,
 					who will be verified by other means). Account verification is
 					optional and is offered to foster a fair play environment and to
@@ -778,10 +778,10 @@ const PrivacyPolicy = () => {
 				<p>
 					Your ID Verification Information is stored on Daon's European
 					Datacenters for as long as you wish to maintain the “verified”
-					status in your account. If you would like to delete your FACEIT
+					status in your account. If you would like to delete your MYTHIC
 					account, please contact us at{' '}
-					<a href='https://support.faceit.com/hc/en-us'>
-						www.support.faceit.com.
+					<a href='https://mythicplay.net'>
+						www.mythicplay.net.
 					</a>
 				</p>
 			</div>
@@ -804,7 +804,7 @@ const PrivacyPolicy = () => {
 							</td>
 							<td width='281'>
 								<p style={{ 'text-align': 'justify' }}>
-									These cookies are set by FACEIT or a third party on
+									These cookies are set by MYTHIC or a third party on
 									our behalf and are essential to enable you to use the
 									basic features of our Services, such as logging you
 									into our Website and Clients and keeping you logged
@@ -916,7 +916,7 @@ const PrivacyPolicy = () => {
 					<strong>Consent Management Platform</strong>
 				</p>
 				<p>
-					In addition, FACEIT uses a consent management platform ("CMP")
+					In addition, MYTHIC uses a consent management platform ("CMP")
 					called OneTrust. You may view the CMP and access your cookie
 					settings at CMP. The CMP allows you to consent to the setting of
 					optional cookies by us and our third-party partners. Using the
@@ -1182,22 +1182,22 @@ const PrivacyPolicy = () => {
             <p><u>Group members, personnel, suppliers or subcontractors</u>: We keep your information confidential, but may disclose it to any member of our group (which means our subsidiaries, affiliates, sister companies and our ultimate holding company and its subsidiaries and affiliates, as defined in section 1159 of the Companies Act 2006), our personnel, suppliers or subcontractors insofar as it is reasonably necessary for the purposes set out in this Privacy Policy. However, this is on the basis that they have agreed to safeguard the personal information.</p>
             <p><u>Merger or acquisition:</u> If we are involved in a merger, acquisition, or sale of all or a portion of its assets, you will be notified via, account message and/or a prominent notice on our website of any change in ownership or uses of this information, as well as any choices you may have regarding this information.</p>
             <p><u>Required by law:</u> In addition, we may disclose your information to the extent that we are required to do so by law (which may include to government bodies and law enforcement agencies); in connection with any legal proceedings or prospective legal proceedings; and in order to establish, exercise or defend our legal rights (including providing information to others for the purposes of fraud prevention).</p>
-            <p><u>Enforcement:</u> We may also disclose your personal information to third parties in order to enforce or apply the terms of agreements, to investigate potential breaches, or to protect the rights, property or safety of FACEIT, our customers, or others.</p>
+            <p><u>Enforcement:</u> We may also disclose your personal information to third parties in order to enforce or apply the terms of agreements, to investigate potential breaches, or to protect the rights, property or safety of MYTHIC, our customers, or others.</p>
          </div>
          <div data-section="section">
             <h2>6. CONSUMER CONTROL AND OPT-OUT OPTIONS</h2>
-            <p>If you do not wish to receive promotional or other marketing material from us or third parties then you can opt-out by clicking unsubscribe in any of our communications, changing your account settings in the Online Services at any time. Alternatively, you can contact us via <a href="https://support.faceit.com/hc/en-us" rel="nofollow">www.support.faceit.com</a> and let us know that you no longer wish to receive promotional or other marketing material from us or third parties. &nbsp;</p>
+            <p>If you do not wish to receive promotional or other marketing material from us or third parties then you can opt-out by clicking unsubscribe in any of our communications, changing your account settings in the Online Services at any time. Alternatively, you can contact us via <a href="https://mythicplay.net" rel="nofollow">www.mythicplay.net</a> and let us know that you no longer wish to receive promotional or other marketing material from us or third parties. &nbsp;</p>
          </div>
          <div data-section="section">
             <h2>7.	YOUR RIGHTS IN RELATION TO PERSONAL DATA WHICH WE PROCESS RELATING TO YOU</h2>
             <p>You have the following rights over the way we process personal data relating to you, as set out in the table below. &nbsp;We aim to comply without undue delay, and within one month at the latest.</p>
-            <p>To make a request, please let us know by sending an email to <a href="http://www.support.faceit.com" rel="nofollow"></a><a href="https://support.faceit.com/hc/en-us" rel="nofollow">www.support.faceit.com. </a>&nbsp; &nbsp;</p>
+            <p>To make a request, please let us know by sending an email to <a href="http://www.mythicplay.net" rel="nofollow"></a><a href="https://mythicplay.net" rel="nofollow">www.mythicplay.net. </a>&nbsp; &nbsp;</p>
             <p><strong>Ask for a copy of data we are processing about you and have inaccuracies corrected</strong></p>
             <p>You have the right to request a copy of the personal information we hold about you and to have any inaccuracies corrected.</p>
             <p>We will use reasonable efforts to the extent required by law to supply, correct or delete personal information held about you on our files (and with any third parties to whom it has been disclosed to).</p>
             <p><strong>Object to us processing data about you</strong></p>
             <p>You can ask us to restrict, stop processing, or to delete your personal data if:</p>
-            <ul><li>you consented to our processing the personal data, and have withdrawn that consent;</li><li>we no longer need to process that personal data for the reason it was collected;</li><li>we are processing that personal data because it is in the public interest or it is in order to pursue a legitimate interest of FACEIT or a third party, you don’t agree with that processing, and there is no overriding legitimate interest for us to continue processing it;</li><li>the personal data was unlawfully processed;</li><li>you need the personal data to be deleted in order to comply with legal obligations;</li><li>the personal data is processed in relation to the offer of a service to a child.</li></ul>
+            <ul><li>you consented to our processing the personal data, and have withdrawn that consent;</li><li>we no longer need to process that personal data for the reason it was collected;</li><li>we are processing that personal data because it is in the public interest or it is in order to pursue a legitimate interest of MYTHIC or a third party, you don’t agree with that processing, and there is no overriding legitimate interest for us to continue processing it;</li><li>the personal data was unlawfully processed;</li><li>you need the personal data to be deleted in order to comply with legal obligations;</li><li>the personal data is processed in relation to the offer of a service to a child.</li></ul>
             <p ><strong>Obtain a machine readable copy of your personal data, which you can use with another service provider</strong></p>
             <ul><li>If we are processing data in order to perform our obligations to you, or because you consented, or if that processing is carried out by automated means, we will help you to move, copy or transfer your personal data to other IT systems.</li><li>If you request, we will supply you with the relevant personal data in a commonly used, machine-readable and interoperable format. Where it is technically feasible, you can ask us to send this information directly to another IT system provider if you prefer.</li></ul>
             <p><strong>Make a complaint to a Supervisory Authority</strong></p>
@@ -1206,25 +1206,25 @@ const PrivacyPolicy = () => {
          <div data-section="section">
             <h2>8. DATA RETENTION</h2>
             <p>We will hold your personal information on our systems for as long as is necessary for the relevant service, or as otherwise described in this Privacy Policy.</p>
-            <p>User Content and Forum Information are retained indefinitely. If you would like us to delete your Forum account or any User Content that you have posted, please contact us via<a href="https://support.faceit.com/hc/en-us" rel="nofollow"> www.support.faceit.com</a><a href="http://www.support.faceit.com/" rel="nofollow"></a>.</p>
+            <p>User Content and Forum Information are retained indefinitely. If you would like us to delete your Forum account or any User Content that you have posted, please contact us via<a href="https://mythicplay.net" rel="nofollow"> www.mythicplay.net</a><a href="http://www.mythicplay.net/" rel="nofollow"></a>.</p>
          </div>
          <div data-section="section">
             <h2>9. CHILDREN</h2>
-            <p>We do not use our Online Services to knowingly solicit information from or market to children under the age of 13. Our terms of use prohibit users aged under 13 years from accessing our Online Services. &nbsp;In the event that we learn that we have collected personal information from a child under 13 years of age we will delete that information as quickly as possible. If you believe that we might have any information from or about a child under 13 years of age please contact us at <a href="http://www.support.faceit.com/" rel="nofollow"></a><a href="https://support.faceit.com/hc/en-us" rel="nofollow">www.support.faceit.com.</a> &nbsp;</p>
+            <p>We do not use our Online Services to knowingly solicit information from or market to children under the age of 13. Our terms of use prohibit users aged under 13 years from accessing our Online Services. &nbsp;In the event that we learn that we have collected personal information from a child under 13 years of age we will delete that information as quickly as possible. If you believe that we might have any information from or about a child under 13 years of age please contact us at <a href="http://www.mythicplay.net/" rel="nofollow"></a><a href="https://mythicplay.net" rel="nofollow">www.mythicplay.net.</a> &nbsp;</p>
          </div>
          <div data-section="section">
             <h2>10. SECURITY</h2>
-            <p>We will take all reasonable technical and organisational precautions to prevent the loss misuse or alteration of your personal information. For example, our databases are password protected and limited to essential employees only (such as FACEIT management or employees whose main role requires system access). Please be aware that, although we endeavour to provide reasonable security for information we process and maintain, no security system can prevent all potential security breaches.</p>
+            <p>We will take all reasonable technical and organisational precautions to prevent the loss misuse or alteration of your personal information. For example, our databases are password protected and limited to essential employees only (such as MYTHIC management or employees whose main role requires system access). Please be aware that, although we endeavour to provide reasonable security for information we process and maintain, no security system can prevent all potential security breaches.</p>
          </div>
          <div data-section="section">
             <h2>11. INTERNATIONAL DATA TRANSFERS</h2>
-            <p>It is possible that your personal information may be transferred outside of the EEA by third parties referred to in the policies as being the recipients of your data, and specifically your personal information may be transferred to other companies that belong to the same company group as FACEIT. We recommend that you refer to the privacy policies and/or terms and conditions of these third parties if you are concerned about your data being transferred outside the EEA.</p>
+            <p>It is possible that your personal information may be transferred outside of the EEA by third parties referred to in the policies as being the recipients of your data, and specifically your personal information may be transferred to other companies that belong to the same company group as MYTHIC. We recommend that you refer to the privacy policies and/or terms and conditions of these third parties if you are concerned about your data being transferred outside the EEA.</p>
             <p>Our databases are run using MongoDB, MySQL and Redis. Our servers are hosted AWS and Google.&nbsp; We use Digital Ocean to help us manage our cloud computing.&nbsp; Some files are stored using Dropbox.</p>
-            <p>Where we transfer your information outside of the EEA, we have agreements in place with those parties which include standard data protection clauses adopted by a data protection regulator and approved by the European Commission to ensure that appropriate safeguards are in place to protect your personal data.&nbsp; If you would like to find out more about these safeguards, please contact us at <a href="http://www.support.faceit.com" rel="nofollow"></a><a href="https://support.faceit.com/hc/en-us" rel="nofollow">www.support.faceit.com.</a></p>
+            <p>Where we transfer your information outside of the EEA, we have agreements in place with those parties which include standard data protection clauses adopted by a data protection regulator and approved by the European Commission to ensure that appropriate safeguards are in place to protect your personal data.&nbsp; If you would like to find out more about these safeguards, please contact us at <a href="http://www.mythicplay.net" rel="nofollow"></a><a href="https://mythicplay.net" rel="nofollow">www.mythicplay.net.</a></p>
          </div>
          <div data-section="section">
             <h2>12. CONTACT INFORMATION</h2>
-            <p>All questions, comments or enquiries should be directed to FACEIT at <a href="https://support.faceit.com/hc/en-us" rel="nofollow">www.support.faceit.com</a>. &nbsp; &nbsp;We will endeavour to respond to any query or questions within three business days.</p>
+            <p>All questions, comments or enquiries should be directed to MYTHIC at <a href="https://mythicplay.net" rel="nofollow">www.mythicplay.net</a>. &nbsp; &nbsp;We will endeavour to respond to any query or questions within three business days.</p>
             <p>© 2021 FACE IT LIMITED. &nbsp;All trade marks are the property of the relevant owners. All rights reserved</p>
             <span class="otnotice-timestamp">04.05.2023, 19:33:49</span>
          </div>
