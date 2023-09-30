@@ -2,7 +2,7 @@ import AuthContext from '@/context/AuthContext'
 import ModalFunction from '@/context/ModalFunction'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import ReactCountryFlag from 'react-country-flag'
 import styles from './ProfilePageTopSection.module.css'
 import ProfilePageTopSectionTab from './profilePageTopSectionTab/ProfilePageTopSectionTab'
@@ -18,7 +18,14 @@ const ProfilePageTopSection = ({activeAnchor}) => {
    const changeCurrentGame = (game) => {
       setIsGameMenuOpen(false)
       setCurrentGameMenuValue(game)
+      localStorage.setItem('profile_game', game) 
    }
+
+   useEffect(() => {
+      setCurrentGameMenuValue(localStorage.getItem('profile_game') 
+      ? localStorage.getItem('profile_game') 
+      : currentGameMenuValue)
+   }, [])
 
    return <div className={styles.info}>
       <div className={styles.info__top}>

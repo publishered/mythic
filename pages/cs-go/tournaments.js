@@ -8,7 +8,7 @@ const CsGoTournaments = ({tournaments}) => {
 
    return <DefaultSection>
       <Head>
-         <title>{seo.generateTitle(`Tournaments in CS:GO`)}</title>
+         <title>{seo.generateTitle(`Tournaments in Counter-Strike 2`)}</title>
       </Head>
       <TournamentsPage tournaments={tournaments} game="cs-go" />
    </DefaultSection>

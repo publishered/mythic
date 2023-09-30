@@ -8,7 +8,7 @@ const CsGoTournaments = ({teams}) => {
 
    return <DefaultSection>
       <Head>
-         <title>{seo.generateTitle(`Vote for teams in CS:GO`)}</title>
+         <title>{seo.generateTitle(`Vote for teams in Counter-Strike 2`)}</title>
       </Head>
       <VoteForATeam teams={teams} />
    </DefaultSection>
