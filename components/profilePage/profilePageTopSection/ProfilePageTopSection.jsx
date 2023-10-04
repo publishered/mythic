@@ -105,7 +105,7 @@ const ProfilePageTopSection = ({activeAnchor}) => {
                               <li className={styles['item__menu-item']}>
                                  <button 
                                     className={styles['item__menu-list-btn']}
-                                    onClick={() => changeCurrentGame("CS:GO")}
+                                    onClick={() => changeCurrentGame("CS 2")}
                                  >
                                     CS 2
                                  </button>
