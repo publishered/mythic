@@ -20,7 +20,7 @@ const TournamentsTable = ({tournaments}) => {
                src={item.icon_url}
                title={item.name}
                checkIn={`${item.check_in}m`}
-               startsIn={`${item.starts_in}m`}
+               startsIn={`${item.starts_in}`}
                reward={`$${item.reward}`}
                registered={`${item.current_teams} / ${item.max_teams}`}
                mode={item.mode}

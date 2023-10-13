@@ -18,7 +18,7 @@ const TournamentIntro = ({tournament}) => {
                <h1 className={styles['tournament__intro-title']}>{tournament.name}</h1>
                <div className={styles['tournament__intro-info']}>
                   <div className={styles['tournament__intro-info-item']}>
-                     <h2 className={styles['tournament__intro-info-item-title']}>Starts in: {tournament.starts_in}m</h2>
+                     <h2 className={styles['tournament__intro-info-item-title']}>Starts in: {tournament.starts_in}</h2>
                      <p className={styles['tournament__intro-info-item-text']}>Check in: {tournament.check_in}m before start</p>
                   </div>
                   <div className={styles['tournament__intro-info-item']}>
