@@ -79,8 +79,8 @@ const TournamentsPage = ({tournaments, game}) => {
       {
          Object.keys(filteredTournamentsByModeAndTime).map((keyName, index) => (
             <div className={styles.group} key={index}>
-               <h2 className={styles.tournaments__date}>{tournaments[keyName][0].date}</h2>
-               <TournamentsTable tournaments={tournaments[keyName]}/>
+               <h2 className={styles.tournaments__date}>{filteredTournamentsByModeAndTime[keyName][0].date}</h2>
+               <TournamentsTable tournaments={filteredTournamentsByModeAndTime[keyName]}/>
                {/* <button className={styles.tournaments__loadMore}>
                   load more
                </button> */}
