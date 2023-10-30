@@ -50,9 +50,14 @@ const TournamentsPage = ({tournaments, game}) => {
    const [timeFilter, setTimeFilter] = useState('upcoming')
    const [modeFilter, setModeFilter] = useState('1v1')
 
+   console.log(timeFilter)
+
    const filteredTournamentsByModeAndTime = (game === 'cs-go') ?
    sortObject(filterAndSortData(tournaments, modeFilter, timeFilter)) :
    sortObject(filterAndSortDataWithoutMode(tournaments, timeFilter))
+
+   console.log(filteredTournamentsByModeAndTime)
+
 
    return <>
       <TitleSection 
