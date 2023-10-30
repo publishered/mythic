@@ -4,12 +4,12 @@ import seo from '@/services/seo'
 import getTeams from '@/services/teams/getTeams'
 import Head from 'next/head'
 
-const DotaVoteForATeam = () => {
+const DotaVoteForATeam = ({teams}) => {
    return <DefaultSection>
       <Head>
          <title>{seo.generateTitle(`Vote for teams in Dota 2`)}</title>
       </Head>
-      <VoteForATeamItem />
+      <VoteForATeamItem teams={teams} />
    </DefaultSection>
 }
 

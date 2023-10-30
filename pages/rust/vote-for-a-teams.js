@@ -4,12 +4,12 @@ import seo from '@/services/seo'
 import getTeams from '@/services/teams/getTeams'
 import Head from 'next/head'
 
-const RustVoteForATeam = () => {
+const RustVoteForATeam = ({teams}) => {
    return <DefaultSection>
       <Head>
          <title>{seo.generateTitle(`Vote for teams in Rust`)}</title>
       </Head>
-      <VoteForATeam />
+      <VoteForATeam teams={teams} />
    </DefaultSection>
 }
 
